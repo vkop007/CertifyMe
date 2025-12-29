@@ -7,27 +7,8 @@ import {
   MessageSquare,
   Briefcase,
 } from "lucide-react";
-
-const VENDORS = [
-  "CompTIA",
-  "Oracle",
-  "AWS",
-  "VMware",
-  "Microsoft",
-  "ISTQB",
-  "Kubernetes",
-  "Salesforce",
-  "ISACA",
-  "EC-Council",
-  "Cisco",
-  "Pega",
-  "Splunk",
-  "DellEMC",
-  "SAS",
-  "Fortinet",
-  "Check Point",
-  "Juniper",
-];
+import Image from "next/image";
+import { VENDORS } from "../lib/index";
 
 export default function EnquirySection() {
   return (
@@ -57,9 +38,13 @@ export default function EnquirySection() {
                   key={index}
                   className="bg-white border border-gray-100 rounded-xl p-4 h-20 flex items-center justify-center shadow-sm hover:shadow-md transition-shadow"
                 >
-                  <span className="font-bold text-gray-600 text-sm md:text-base">
-                    {vendor}
-                  </span>
+                    <Image
+                      src={vendor.src}
+                      alt={vendor.name}
+                      width={160}
+                      height={80}
+                      className="object-contain transition"
+                    />
                 </div>
               ))}
             </div>
@@ -125,7 +110,7 @@ export default function EnquirySection() {
                 <select className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all appearance-none bg-white text-gray-400">
                   <option>Select Vendor</option>
                   {VENDORS.map((v) => (
-                    <option key={v}>{v}</option>
+                    <option key={v.name}>{v.name}</option>
                   ))}
                 </select>
               </div>
