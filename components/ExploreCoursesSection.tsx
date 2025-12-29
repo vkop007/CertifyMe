@@ -2,68 +2,7 @@ import Link from "next/link";
 import { Star, ArrowRight } from "lucide-react";
 // Placeholder for course images - in a real app these would be imported or from a CMS
 
-const COURSES = [
-  {
-    id: 1,
-    category: "UI/UX Design",
-    title: "Learn Figma Beginner to Advanced",
-    author: "Mr. Jack",
-    rating: 4.9,
-    reviews: 120,
-    price: 30,
-    imageColor: "bg-blue-100",
-  },
-  {
-    id: 2,
-    category: "Web Design",
-    title: "Mastering Web Interface Design",
-    author: "Ms. Sarah",
-    rating: 4.8,
-    reviews: 85,
-    price: 45,
-    imageColor: "bg-green-100",
-  },
-  {
-    id: 3,
-    category: "Development",
-    title: "Full Stack Web Development",
-    author: "Dr. Alex",
-    rating: 5.0,
-    reviews: 200,
-    price: 59,
-    imageColor: "bg-purple-100",
-  },
-  {
-    id: 4,
-    category: "Marketing",
-    title: "Digital Marketing Strategy",
-    author: "Mr. John",
-    rating: 4.7,
-    reviews: 95,
-    price: 25,
-    imageColor: "bg-teal-100",
-  },
-  {
-    id: 5,
-    category: "Business",
-    title: "Startup Business Management",
-    author: "Ms. Emily",
-    rating: 4.9,
-    reviews: 150,
-    price: 35,
-    imageColor: "bg-red-100",
-  },
-  {
-    id: 6,
-    category: "Photography",
-    title: "Professional Photography Masterclass",
-    author: "Mr. David",
-    rating: 4.8,
-    reviews: 110,
-    price: 40,
-    imageColor: "bg-yellow-100",
-  },
-];
+import { COURSES } from "../lib/index";
 
 export default function ExploreCoursesSection() {
   return (
