@@ -5,6 +5,7 @@ import CategorySection from "@/components/CategorySection";
 import EnquirySection from "@/components/EnquirySection";
 import ReviewsSection from "@/components/ReviewsSection";
 import Footer from "@/components/footer/Footer";
+import FAQ from "@/components/FAQSection";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <ExploreCoursesSection />
       <EnquirySection />
       <ReviewsSection />
+      <FAQ />
       <Footer />
     </main>
   );

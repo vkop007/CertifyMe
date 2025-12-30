@@ -19,22 +19,23 @@ export default function HeroSection() {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-md text-white shadow-lg mb-8 animate-[fadeIn_1s_ease-out]">
               <Sparkles className="w-4 h-4 text-[#FCD34D]" />
               <span className="text-sm font-semibold tracking-wide">
-                UNLOCK YOUR POTENTIAL
+                Trusted by IT Professionals, Backed by Businesses
               </span>
             </div>
 
-            <h1 className="text-5xl lg:text-7xl font-bold text-white leading-[1.1] mb-8 tracking-tight">
-              Master New <br />
-              <span className="text-transparent bg-clip-text bg-linear-to-r from-[#6EE7B7] to-[#34D399]">
-                Digital Skills
-              </span>{" "}
-              <br />
-              With Experts
+            <h1 className="text-4xl lg:text-4xl font-medium! text-white leading-[1.1] mb-8 tracking-tight">
+              <span className="block whitespace-nowrap font-bold">
+                Authorized Discounted
+              </span>
+              <span className="block whitespace-nowrap text-transparent bg-clip-text bg-linear-to-r from-[#6EE7B7] to-[#34D399] font-bold">
+                IT Voucher Reseller
+              </span>
             </h1>
 
             <p className="text-lg text-emerald-50/90 mb-10 leading-relaxed font-light max-w-lg">
-              Unlock your true potential with our industry-leading courses. Join
-              a community of thousands of learners achieving their dreams.
+              A global pioneer that provides recognized IT certifications exam
+              vouchers at the best deal. Unleash your IT genius with
+              industry-led trainers and Save Huge on your Booking.
             </p>
 
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
@@ -55,16 +56,16 @@ export default function HeroSection() {
                 </svg>
               </button>
 
-              <button className="flex items-center gap-3 text-white font-medium hover:text-[#6EE7B7] transition-colors group">
+              {/* <button className="flex items-center gap-3 text-white font-medium hover:text-[#6EE7B7] transition-colors group">
                 <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center border border-white/20 backdrop-blur-sm group-hover:bg-white/20 transition-all">
                   <PlayCircle className="w-6 h-6 fill-current" />
                 </div>
                 <span>Watch Demo</span>
-              </button>
+              </button> */}
             </div>
 
             {/* Quick Stats Grid */}
-            <div className="grid grid-cols-3 gap-8 mt-16 border-t border-white/10 pt-8">
+            {/* <div className="grid grid-cols-3 gap-8 mt-16 border-t border-white/10 pt-8">
               <div className="text-white">
                 <div className="flex items-center gap-2 mb-1 text-emerald-200">
                   <PlayCircle className="w-4 h-4" />
@@ -92,7 +93,7 @@ export default function HeroSection() {
                 </div>
                 <p className="text-3xl font-bold">45+</p>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Right Content - Visual Composition */}

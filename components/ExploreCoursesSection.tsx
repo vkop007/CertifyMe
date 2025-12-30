@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { Star, ArrowRight } from "lucide-react";
+import { Star, ArrowRight, ShoppingCart, LayoutList } from "lucide-react";
 // Placeholder for course images - in a real app these would be imported or from a CMS
 
-import { COURSES } from "../lib/index";
+import { COURSES, CompTIA } from "../lib/index";
 
 export default function ExploreCoursesSection() {
   return (
@@ -33,67 +33,69 @@ export default function ExploreCoursesSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {COURSES.map((course) => (
+          {CompTIA.slice(0, 6).map((course, index) => (
             <div
-              key={course.id}
-              className="bg-white rounded-2xl p-4 border border-gray-100 hover:shadow-xl transition-shadow group"
+              key={index}
+              className="bg-white rounded-2xl p-6 border border-gray-100 hover:shadow-xl transition-shadow group flex flex-col"
             >
-              <div
-                className={`h-48 rounded-xl w-full mb-4 ${course.imageColor} relative overflow-hidden`}
-              >
-                {/* Placeholder for actual image */}
-                <div className="absolute inset-0 flex items-center justify-center text-gray-400 opacity-50">
-                  Course Image
-                </div>
-                <div className="absolute top-3 left-3 bg-white px-2 py-1 rounded text-xs font-semibold text-text-dark">
-                  {course.category}
-                </div>
+              {/* Image Section */}
+              <div className="h-48 flex items-center justify-center mb-6 bg-gray-50 rounded-xl p-4">
+                <img
+                  src={course.image}
+                  alt={course.name}
+                  className="max-h-full max-w-full object-contain hover:scale-105 transition-transform duration-300"
+                />
               </div>
 
-              <div className="flex items-center gap-2 mb-2 text-xs text-text-light">
-                <div className="flex text-yellow-500">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className={`w-3 h-3 ${
-                        i < Math.floor(course.rating)
-                          ? "fill-current"
-                          : "text-gray-300"
-                      }`}
-                    />
-                  ))}
-                </div>
-                <span>({course.reviews} Reviews)</span>
-              </div>
-
-              <h3 className="text-xl font-bold text-text-dark mb-3 line-clamp-2 group-hover:text-primary transition-colors">
-                {course.title}
+              {/* Title */}
+              <h3 className="text-xl font-bold text-accent-blue mb-4 line-clamp-2 group-hover:text-primary transition-colors">
+                {course.name.length > 25
+                  ? course.name.slice(0, 25) + "..."
+                  : course.name}
               </h3>
 
-              <div className="flex items-center justify-between border-t border-gray-100 pt-4 mt-4">
-                <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-full bg-gray-200"></div>
-                  <div>
-                    <p className="text-xs text-text-light">
-                      By{" "}
-                      <span className="text-text-dark font-medium">
-                        {course.author}
-                      </span>
-                    </p>
-                  </div>
+              <div className="border-t border-gray-200 my-4"></div>
+
+              {/* Price Section */}
+              <div className="space-y-2 mb-4">
+                <div className="flex justify-between items-center text-sm">
+                  <span className="text-text-dark font-medium">Actual</span>
+                  <span className="text-gray-500 line-through">
+                    Rs {course.actualPrice}
+                  </span>
                 </div>
-                <div className="text-primary font-bold text-lg">
-                  ${course.price}
+                <div className="flex justify-between items-center font-bold text-lg">
+                  <span className="text-text-dark">Our Price</span>
+                  <span className="text-primary">Rs {course.ourPrice}</span>
                 </div>
+              </div>
+
+              {/* Note */}
+              <p className="text-xs text-text-light mb-6">
+                *The above-quoted prices are inclusive of taxes
+              </p>
+
+              {/* Buttons */}
+              <div className="grid grid-cols-2 gap-3 mt-auto">
+                <button className="flex items-center justify-center gap-2 bg-primary text-white py-2.5 px-4 rounded-lg hover:bg-accent-blue transition-colors text-sm font-medium">
+                  <ShoppingCart className="w-4 h-4" />
+                  Buy Now
+                </button>
+                <button className="flex items-center justify-center gap-2 bg-white text-primary border border-primary py-2.5 px-4 rounded-lg hover:bg-green-50 transition-colors text-sm font-medium">
+                  <LayoutList className="w-4 h-4" />
+                  View Details
+                </button>
               </div>
             </div>
           ))}
         </div>
 
         <div className="text-center mt-12">
-          <button className="px-8 py-3 rounded-full bg-secondary/10 text-secondary font-semibold hover:bg-secondary hover:text-white transition-all">
-            View All Courses
-          </button>
+          <Link href="/course">
+            <button className="px-8 py-3 rounded-full bg-secondary/10 text-secondary font-semibold hover:bg-secondary hover:text-white transition-all">
+              View All Courses
+            </button>
+          </Link>
         </div>
       </div>
     </section>
