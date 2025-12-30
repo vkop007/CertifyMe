@@ -91,9 +91,11 @@ export default function ExploreCoursesSection() {
         </div>
 
         <div className="text-center mt-12">
-          <button className="px-8 py-3 rounded-full bg-secondary/10 text-secondary font-semibold hover:bg-secondary hover:text-white transition-all">
-            View All Courses
-          </button>
+          <Link href="/course">
+            <button className="px-8 py-3 rounded-full bg-secondary/10 text-secondary font-semibold hover:bg-secondary hover:text-white transition-all">
+              View All Courses
+            </button>
+          </Link>
         </div>
       </div>
     </section>
