@@ -38,13 +38,13 @@ export default function EnquirySection() {
                   key={index}
                   className="bg-white border border-gray-100 rounded-xl p-4 h-20 flex items-center justify-center shadow-sm hover:shadow-md transition-shadow"
                 >
-                    <Image
-                      src={vendor.src}
-                      alt={vendor.name}
-                      width={160}
-                      height={80}
-                      className="object-contain transition"
-                    />
+                  <Image
+                    src={vendor.src}
+                    alt={vendor.name}
+                    width={160}
+                    height={80}
+                    className="object-contain transition"
+                  />
                 </div>
               ))}
             </div>
@@ -53,7 +53,7 @@ export default function EnquirySection() {
           {/* Right Column: Enquiry Form */}
           <div className="bg-white p-8 md:p-10 rounded-3xl shadow-lg border border-gray-100 relative overflow-hidden">
             {/* Decorative top border */}
-            <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-secondary to-primary"></div>
+            <div className="absolute top-0 left-0 w-full h-2 bg-linear-to-r from-secondary to-primary"></div>
 
             <h3 className="text-2xl font-bold text-text-dark mb-8 text-center">
               Enquiry
