@@ -104,86 +104,16 @@ export default function HeroSection() {
             {/* Main Image */}
             <div className="relative z-10 w-full lg:max-w-none flex flex-col items-center">
               {/* Image Container with subtle border/glow */}
-              <div className="relative rounded-[3rem] overflow-visible">
-                <div className="absolute inset-0 bg-emerald-500/10 rounded-[3rem] blur-sm transform rotate-3 scale-105" />
+              <div className="relative rounded-2xl overflow-visible">
+                <div className="absolute inset-0 bg-emerald-500/10 rounded-2xl blur-sm transform rotate-1 scale-105" />
                 <Image
-                  src="/hero.png"
-                  alt="Student with backpack"
-                  width={850}
-                  height={1000}
-                  className="relative z-10 object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:scale-[1.02] transition-transform duration-500 w-full max-h-[800px]"
+                  src="/hero2.webp"
+                  alt="Hero Image 2"
+                  width={400}
+                  height={300}
+                  className="relative z-10 object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:scale-[1.02] transition-transform duration-500"
                   priority
                 />
-                <div className="flex gap-3">
-                  <Image
-                    src="/logos/comptia.webp"
-                    alt="Comptia"
-                    width={120}
-                    height={120}
-                    className="relative z-10 object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:scale-[1.02] transition-transform duration-500 bg-white rounded-2xl"
-                    priority
-                  />
-                  <Image
-                    src="/logos/oracle.webp"
-                    alt="Oracle"
-                    width={120}
-                    height={120}
-                    className="relative z-10 object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:scale-[1.02] transition-transform duration-500 bg-white rounded-2xl"
-                    priority
-                  />
-                  <Image
-                    src="/logos/microsoft.webp"
-                    alt="Microsoft"
-                    width={120}
-                    height={120}
-                    className="relative z-10 object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:scale-[1.02] transition-transform duration-500 bg-white rounded-2xl"
-                    priority
-                  />
-                  <Image
-                    src="/logos/vmware.webp"
-                    alt="VMware"
-                    width={120}
-                    height={120}
-                    className="relative z-10 object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:scale-[1.02] transition-transform duration-500 bg-white rounded-2xl"
-                    priority
-                  />
-                </div>
-                <div>
-                  <div className="flex gap-3 mt-5">
-                    <Image
-                      src="/logos/aws.webp"
-                      alt="AWS"
-                      width={120}
-                      height={120}
-                      className="relative z-10 object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:scale-[1.02] transition-transform duration-500 bg-white rounded-2xl"
-                      priority
-                    />
-                    <Image
-                      src="/logos/salesforce.webp"
-                      alt="Salesforce"
-                      width={120}
-                      height={120}
-                      className="relative z-10 object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:scale-[1.02] transition-transform duration-500 bg-white rounded-2xl"
-                      priority
-                    />
-                    <Image
-                      src="/logos/kubernetes.webp"
-                      alt="Kubernetes"
-                      width={120}
-                      height={120}
-                      className="relative z-10 object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:scale-[1.02] transition-transform duration-500 bg-white rounded-2xl"
-                      priority
-                    />
-                    <Image
-                      src="/logos/istqb.webp"
-                      alt="ISTQB"
-                      width={120}
-                      height={120}
-                      className="relative z-10 object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:scale-[1.02] transition-transform duration-500 bg-white rounded-2xl"
-                      priority
-                    />
-                  </div>
-                </div>
               </div>
             </div>
           </div>
