@@ -49,7 +49,9 @@ export default function ExploreCoursesSection() {
 
               {/* Title */}
               <h3 className="text-xl font-bold text-accent-blue mb-4 line-clamp-2 group-hover:text-primary transition-colors">
-                {course.name}
+                {course.name.length > 25
+                  ? course.name.slice(0, 25) + "..."
+                  : course.name}
               </h3>
 
               <div className="border-t border-gray-200 my-4"></div>

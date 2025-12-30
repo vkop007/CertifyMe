@@ -23,7 +23,7 @@ export default function HeroSection() {
               </span>
             </div>
 
-            <h1 className="text-4xl lg:text-4xl !font-medium text-white leading-[1.1] mb-8 tracking-tight">
+            <h1 className="text-4xl lg:text-4xl font-medium! text-white leading-[1.1] mb-8 tracking-tight">
               <span className="block whitespace-nowrap font-bold">
                 Authorized Discounted
               </span>
