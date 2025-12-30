@@ -1,10 +1,10 @@
 // List of vendor names for the EnquirySection (EnquirySection) & (CategoriesSection)
 export const VENDORS = [
   { name: "AWS", src: "/logos/aws.webp" },
-  { name: "Check Point", src: "/logos/checkpoints.webp" },
+  { name: "Checkpoint", src: "/logos/checkpoints.webp" },
   { name: "CompTIA", src: "/logos/comptia.webp" },
-  { name: "Dell", src: "/logos/dell.webp" },
-  { name: "EC-Council", src: "/logos/ec-council.webp" },
+  { name: "DELLEMC", src: "/logos/dell.webp" },
+  { name: "ECCouncil", src: "/logos/ec-council.webp" },
   { name: "Fortinet", src: "/logos/fortinet.webp" },
   { name: "ISACA", src: "/logos/isaca.webp" },
   { name: "ISTQB", src: "/logos/istqb.webp" },
@@ -2344,7 +2344,7 @@ Key Benefits of COBIT® 2019 Certification
 export const ECCouncil = [
   {
     name: "CEH v13 Exam Voucher",
-    category: "EC-Council",
+    category: "ECCouncil",
     actualPrice: 42480,
     ourPrice: 34220,
     image: "/Certificates/EC-Council/CEH_v13_Exam_Voucher.webp",
@@ -2434,7 +2434,7 @@ Book your CEH v13 exam smartly with our authorized discounted voucher and accele
   },
   {
     name: "CEH Practical",
-    category: "EC-Council",
+    category: "ECCouncil",
     actualPrice: 21240,
     ourPrice: 17700,
     image: "/Certificates/EC-Council/CEH_Practical.webp",
@@ -2507,7 +2507,7 @@ Earning the CEH Practical certification demonstrates that you not only understan
   },
   {
     name: "Computer Hacking Forensic Investigator (CHFI)",
-    category: "EC-Council",
+    category: "ECCouncil",
     actualPrice: 41300,
     ourPrice: 35400,
     image:
@@ -2907,8 +2907,8 @@ Splunk certification prerequisites vary depending on the certification level. Be
 
 export const DELLEMC = [
   {
-    name: "Dell EMC Certification Exam Voucher",
-    category: "DELL EMC",
+    name: "DellEMC Certification Exam Voucher",
+    category: "DELLEMC",
     actualPrice: 22600,
     ourPrice: 16520,
     image: "/Certificates/Dell/Dell_EMC_Certification_Exam_Voucher.webp",

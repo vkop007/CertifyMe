@@ -7,22 +7,44 @@ import VendorSlider from "@/components/VendorSlider";
 import CourseGrid from "@/components/CourseGrid";
 import {
   VENDORS,
+  Checkpoint,
+  DELLEMC,
+  Fortinet,
+  PEGA,
+  ISACA,
   CompTIA,
   ORACLE,
+  Juniper,
+  KUBERNETES,
   AWS,
   VMWARE,
   Microsoft,
+  SALESFORCE,
   ISTQB,
+  SAS,
+  SPLUNK,
+  ECCouncil,
 } from "@/lib/index";
 
 // Map vendor names to their respective course arrays
 const COURSE_MAP: Record<string, any[]> = {
   AWS: AWS,
+  Checkpoint: Checkpoint,
+  PEGA: PEGA,
+  ISACA: ISACA,
+  DELLEMC: DELLEMC,
   CompTIA: CompTIA,
+  Fortinet: Fortinet,
   Oracle: ORACLE,
+  Juniper: Juniper,
+  KUBERNETES: KUBERNETES,
   VMware: VMWARE,
+  SAS: SAS,
+  ECCouncil: ECCouncil,
   Microsoft: Microsoft,
+  SALESFORCE: SALESFORCE,
   ISTQB: ISTQB,
+  SPLUNK: SPLUNK,
   // Add fuzzy matching or other vendors if needed
 };
 
