@@ -11,10 +11,10 @@ export default function ExploreCoursesSection() {
         <div className="flex flex-col md:flex-row justify-between items-end mb-12">
           <div>
             <div className="inline-block px-4 py-1.5 rounded-full bg-green-100 text-secondary text-sm font-semibold mb-4">
-              Explore Our Course
+              Explore Our Exam Vouchers
             </div>
             <h2 className="text-4xl font-bold text-text-dark">
-              Explore Our <span className="gradient-text">Courses</span>
+              Explore Our <span className="gradient-text">Exam Vouchers</span>
             </h2>
           </div>
 

@@ -13,18 +13,19 @@ export default function Footer() {
   return (
     <footer className="bg-green-50/50 pt-20 pb-10">
       <div className="container-custom">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="flex justify-between items-center gap-12 mb-16">
           {/* Brand Column */}
           <div>
             <Link href="/" className="flex items-center gap-2 mb-6">
               <span className="text-2xl font-bold bg-clip-text text-transparent bg-linear-to-r from-primary to-secondary">
-                DEVSKILL
+                CERTIFYME
               </span>
               <div className="w-2 h-2 rounded-full bg-secondary mb-3"></div>
             </Link>
             <p className="text-text-light text-sm leading-relaxed mb-6">
-              We are passionate about empowering learners. We provide with
-              high-quality, accessible & engaging education.
+              Certifyme focuses on availing countless <br />
+              discounted vouchers to help you achieve <br />
+              your certification goals affordably.
             </p>
             <div className="flex items-center gap-4">
               {[Facebook, Twitter, Instagram, Linkedin].map((Icon, i) => (
@@ -40,7 +41,7 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div>
+          {/* <div>
             <h4 className="font-bold text-text-dark mb-6">Company Us</h4>
             <ul className="space-y-4 text-sm text-text-light">
               {["About Us", "Our Team", "Careers", "Mentors", "Blog"].map(
@@ -56,10 +57,10 @@ export default function Footer() {
                 )
               )}
             </ul>
-          </div>
+          </div> */}
 
           {/* Categories */}
-          <div>
+          {/* <div>
             <h4 className="font-bold text-text-dark mb-6">Categories</h4>
             <ul className="space-y-4 text-sm text-text-light">
               {[
@@ -79,7 +80,7 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
           {/* Contact */}
           <div>
@@ -95,7 +96,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary shrink-0" />
-                <span>info@devskill.com</span>
+                <span>info@certify.com</span>
               </li>
             </ul>
           </div>
@@ -103,16 +104,16 @@ export default function Footer() {
 
         <div className="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-text-light">
-            © 2023 DevSkill. All rights reserved.
+            © 2025 Certifyme. All rights reserved.
           </p>
 
           {/* Payment Icons Placeholder */}
-          <div className="flex items-center gap-4 opacity-70 grayscale">
+          {/* <div className="flex items-center gap-4 opacity-70 grayscale">
             <div className="h-6 w-10 bg-gray-300 rounded"></div>
             <div className="h-6 w-10 bg-gray-300 rounded"></div>
             <div className="h-6 w-10 bg-gray-300 rounded"></div>
             <div className="h-6 w-10 bg-gray-300 rounded"></div>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
