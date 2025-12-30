@@ -119,29 +119,29 @@ export const FAQS = [
 export const REVIEWS = [
   {
     id: 1,
-    name: "Sarah Johnson",
-    role: "UI/UX Designer",
-    image: "SJ",
+    name: "Shaykha Alhammadi",
+    role: "Software Engineer",
+    image: "SA",
     content:
-      "The courses here are absolutely amazing. I went from knowing nothing about design to landing my first job in just 3 months!",
+      "I had a very good experience! Excellent communication and support throughout the process. Their prices for vouchers are very good and affordable. Highly recommended!",
     rating: 5,
   },
   {
     id: 2,
-    name: "Michael Chen",
-    role: "Web Developer",
-    image: "MC",
+    name: "Nandish N",
+    role: "Devops Engineer",
+    image: "NN",
     content:
-      "The instructors are top-notch and the community support is incredible. Highly recommend specifically the Full Stack path.",
+      "Discounted exam vouchers for Cisco, Citrix, and Microsoft are available through Global IT Success. I purchased the Cisco CCNP ENARSI exam voucher for ₹27,500 and saved ₹4,500.",
     rating: 5,
   },
   {
     id: 3,
-    name: "Emily Davis",
-    role: "Digital Marketer",
-    image: "ED",
+    name: "Mehul Kulshreshtha",
+    role: "Devsec Engineer",
+    image: "MK",
     content:
-      "Great content structure and flexible learning hours. Perfect for working professionals looking to upskill.",
+      "The coupon they offer works and is definitely cheaper. This was my anxiety before booking Comptia Security+ and it worked. Now I am looking forward to booking my next certifications with them.",
     rating: 4,
   },
 ];

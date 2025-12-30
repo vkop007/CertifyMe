@@ -19,7 +19,7 @@ export default function Header() {
   };
 
   return (
-    <header className="py-6">
+    <header className="py-6 sticky top-0 bg-white z-50">
       <div className="container-custom flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
