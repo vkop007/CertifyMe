@@ -88,30 +88,37 @@ export const COURSES = [
 
 export const FAQS = [
   {
-    question: "Why should I choose DevSkill Academy?",
+    question: "Do vouchers expire?",
     answer:
-      "We provide high-quality education with expert mentors and flexible learning options tailored to your needs.",
+      "Yes, all the exam vouchers have an expiry date. You must take the exam on or before the expiry date. It’s important to keep in mind that the expiry dates mentioned on vouchers cannot be changed or extended. You are advised to check the expiry date before purchasing the voucher since vouchers once purchased can’t be refunded under any circumstance.",
   },
   {
-    question: "Do we get a certificate after course completion?",
+    question: "When is a voucher issued to a person?",
     answer:
-      "Yes, all our courses come with a verified certificate upon successful completion.",
+      "Once you make the payment for a voucher, a unique code will be sent to your registered Email Id. At this moment, the voucher is not issued for anyone and can be used by anyone. But as you apply the voucher code to Pearson’s test booking site, it will be issued to a person who is using the code.",
   },
   {
-    question: "How can I contact the support team?",
+    question: "How soon can I expect my exam vouchers?",
     answer:
-      "You can reach our support team 24/7 via email or through our community discord server.",
+      "Once you purchase a voucher from us, we will process your order within 24 hours or less. Generally, vouchers are sent to you within a few minutes of ordering during regular business hours with an email confirming that we have received your order.",
   },
   {
-    question: "Is there any refund policy?",
+    question: "Can I use a voucher for more than one exam?",
     answer:
-      "We offer a 30-day money-back guarantee if you are not satisfied with our course content.",
+      "No, A voucher can only be used to take one exam at a time. It also cannot be used to cover retakes if you don't pass the first time.",
   },
   {
-    question: "Can I access the course material offline?",
-    answer:
-      "Yes, our mobile app allows you to download lessons for offline viewing.",
-  },
+    question: "How do I cancel or reschedule my exam?",
+    answer: `To cancel or reschedule your exam, visit Pearson’s official website. Login to your account and browse the upcoming appointment section.
+
+  1. Click the ‘Schedule exam’ option
+  2. You will see the ‘Reschedule’ or ‘Cancel’ exam option
+  3. If you click ‘Reschedule’, it will ask you to select new dates
+  4. If you click ‘Cancel’, it will take you to the cancel appointment page`
+  }
+
+
+
 ];
 
 // List of reviews for the ReviewsSection (ReviewsSection)
