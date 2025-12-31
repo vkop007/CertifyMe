@@ -20,6 +20,18 @@ export const VENDORS = [
   { name: "Juniper", src: "/logos/juniper.webp" },
 ];
 
+export const clients = [
+  { name: "Wipro", src: "/OurClients/wipro.webp" },
+  { name: "Cognizant", src: "/OurClients/cognizant.webp" },
+  { name: "IBM", src: "/OurClients/ibm.webp" },
+  { name: "Convergys", src: "/OurClients/convergys.webp" },
+  { name: "HCL", src: "/OurClients/hcl.webp" },
+  { name: "Infosys", src: "/OurClients/infosys.webp" },
+  { name: "Tech Mahindra", src: "/OurClients/mahindra.webp" },
+  { name: "MPhasis", src: "/OurClients/mphasis.webp" },
+];
+
+
 // List of courses for the ExploreCoursesSection (ExploreCoursesSection)
 export const COURSES = [
   {
@@ -1876,10 +1888,66 @@ Book your CKA exam smartly with authorized discounted exam vouchers and make you
 
 export const SALESFORCE = [
   {
-    name: "Salesforce Exam Vouchers",
+    name: "Salesforce Exam Vouchers ($200 Exam)",
     category: "Salesforce",
     actualPrice: 19824,
-    ourPrice: 16520,
+    ourPrice: 14999,
+    image: "/Certificates/Salesforce/Salesforce_Exam_Vouchers.webp",
+
+    content: `Salesforce Exam Vouchers
+
+Salesforce Certifications are your gateway to some of the most in-demand roles in the CRM and cloud ecosystem. These certifications validate your ability to design, implement, and manage Salesforce solutions that drive customer engagement and business growth.
+
+Salesforce is a powerful cloud-based ecosystem trusted by organizations worldwide. With over 45 Salesforce certifications available across Administration, App Development, Consulting, Marketing, and Architecture roles, Salesforce certifications help professionals stand out in a highly competitive job market.
+
+Becoming Salesforce certified demonstrates your commitment to continuous learning and positions you as a valuable asset capable of optimizing business processes and improving customer relationships. Certified Salesforce professionals are highly sought after due to the rapid growth of Salesforce adoption across industries.
+
+Global IT Success offers authorized discounted Salesforce exam vouchers, helping you reduce the high cost of certification exams. These vouchers provide a smart and affordable way to advance your Salesforce career without financial stress.
+
+Start your Salesforce certification journey today and unlock new career opportunities in one of the fastest-growing technology ecosystems.`,
+
+    examDetails: `
+<table width="100%">
+  <tbody>
+    <tr>
+      <th>Exam Pattern</th>
+      <td>Multiple-choice questions</td>
+    </tr>
+    <tr>
+      <th>Total Questions</th>
+      <td>60 Questions</td>
+    </tr>
+    <tr>
+      <th>Exam Duration</th>
+      <td>105 Minutes</td>
+    </tr>
+    <tr>
+      <th>Passing Score</th>
+      <td>65% or higher</td>
+    </tr>
+    <tr>
+      <th>Voucher Validity</th>
+      <td>Applicable for Salesforce exams priced at ₹19,824</td>
+    </tr>
+    <tr>
+      <th>Prerequisites</th>
+      <td>
+        No strict prerequisites <br/>
+        Hands-on Salesforce experience and Trailhead training recommended
+      </td>
+    </tr>
+    <tr>
+      <th>Certification Provider</th>
+      <td>Salesforce</td>
+    </tr>
+  </tbody>
+</table>`,
+  },
+    {
+    name: "Salesforce Exam Vouchers ($400 Exam)",
+    category: "Salesforce",
+    actualPrice: 35965,
+    ourPrice: 18999,
     image: "/Certificates/Salesforce/Salesforce_Exam_Vouchers.webp",
 
     content: `Salesforce Exam Vouchers
