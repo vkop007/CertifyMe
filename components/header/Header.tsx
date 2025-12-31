@@ -44,7 +44,13 @@ export default function Header() {
             href="#"
             className="font-medium text-text-light hover:text-primary"
           >
-            Learning
+            Trainings
+          </Link>
+                    <Link
+            href="#"
+            className="font-medium text-text-light hover:text-primary"
+          >
+            Certifications
           </Link>
           <Link
             href="#"

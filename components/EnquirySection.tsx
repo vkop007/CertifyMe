@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
-import { VENDORS, AWS, Checkpoint, CompTIA, DELLEMC, ECCouncil, Fortinet, ISACA, ISTQB, KUBERNETES, Microsoft, ORACLE, PEGA, SALESFORCE, SAS, SPLUNK, VMWARE } from "../lib/index";
+import { VENDORS, AWS, Checkpoint, CompTIA, DELLEMC, ECCouncil, Fortinet, ISACA, ISTQB, KUBERNETES, Microsoft, Juniper, ORACLE, PEGA, SALESFORCE, SAS, SPLUNK, VMWARE } from "../lib/index";
 
 export default function EnquirySection() {
   const [selectedVendor, setSelectedVendor] = useState("");
@@ -19,10 +19,11 @@ export default function EnquirySection() {
 
   const vendorToCertificates = {
     "AWS": AWS,
-    "Check Point": Checkpoint,
+    "Checkpoint": Checkpoint,
     "CompTIA": CompTIA,
-    "Dell": DELLEMC,
-    "EC-Council": ECCouncil,
+    "DELLEMC": DELLEMC,
+    "Juniper": Juniper,
+    "ECCouncil": ECCouncil,
     "Fortinet": Fortinet,
     "ISACA": ISACA,
     "ISTQB": ISTQB,
@@ -82,7 +83,7 @@ export default function EnquirySection() {
             <div className="absolute top-0 left-0 w-full h-2 bg-linear-to-r from-secondary to-primary"></div>
 
             <h3 className="text-2xl font-bold text-text-dark mb-8 text-center">
-              Enquiry
+              We’re Here to Help
             </h3>
 
             <form className="space-y-4">
