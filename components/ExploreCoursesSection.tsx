@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import { addToCartRequest } from "@/lib/redux/slices/cartSlice";
 
 import { COURSES, CompTIA } from "../lib/index";
+import { generateSlug } from "@/lib/utils";
 
 export default function ExploreCoursesSection() {
   const dispatch = useDispatch();
@@ -58,15 +59,11 @@ export default function ExploreCoursesSection() {
               <div className="space-y-2 mb-6">
                 <div className="flex justify-between text-sm">
                   <span>Actual</span>
-                  <span className="line-through">
-                    Rs {course.actualPrice}
-                  </span>
+                  <span className="line-through">Rs {course.actualPrice}</span>
                 </div>
                 <div className="flex justify-between font-bold">
                   <span>Our Price</span>
-                  <span className="text-primary">
-                    Rs {course.ourPrice}
-                  </span>
+                  <span className="text-primary">Rs {course.ourPrice}</span>
                 </div>
               </div>
 
@@ -80,10 +77,15 @@ export default function ExploreCoursesSection() {
                   Buy Now
                 </button>
 
-                <button className="flex items-center justify-center gap-2 border border-primary text-primary py-2.5 rounded-lg hover:bg-green-50">
+                <Link
+                  href={`/course/${generateSlug(course.category)}/${generateSlug(
+                    course.name
+                  )}`}
+                  className="flex items-center justify-center gap-2 bg-white text-primary border border-primary py-2.5 px-4 rounded-lg hover:bg-green-50 transition-colors text-sm font-medium"
+                >
                   <LayoutList className="w-4 h-4" />
                   View Details
-                </button>
+                </Link>
               </div>
             </div>
           ))}
