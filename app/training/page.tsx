@@ -56,7 +56,7 @@ export default function TrainingPage() {
               </p>
 
               <Link
-                href="/contact"
+                href="/contactus"
                 className="inline-flex items-center gap-3 bg-primary text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl hover:scale-[1.03] transition"
               >
                 Contact Us Now
@@ -65,19 +65,27 @@ export default function TrainingPage() {
             </div>
 
             <div className="hidden md:flex justify-center">
-              <div className="w-full h-72 rounded-3xl bg-linear-to-br from-[#0D9488] via-[#10B981] to-[#34D399] opacity-90 shadow-inner" />
+              <div className="h-72 rounded-3xl bg-linear-to-br from-[#0D9488] via-[#10B981] to-[#34D399] opacity-90 shadow-inner relative overflow-hidden flex items-center justify-center" style={{ width: '400px' }}>
+                <Image
+                  src="/hero2.webp"
+                  alt="IT Training"
+                  width={350}
+                  height={180}
+                  className="object-contain rounded-2xl"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* ================= TRAININGS ================= */}
-      <section className="container-custom py-24">
+      <section className="container-custom py-24 mt-16 mb-16">
         <h2 className="text-4xl font-extrabold text-center mb-16 text-text-dark">
           Our <span className="text-primary">Training Programs</span>
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-10">
+        <div className="grid md:grid-cols-3 gap-10 pt-10 pb-10">
           {TRAININGS.map((item) => (
             <div
               key={item.title}

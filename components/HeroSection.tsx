@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Sparkles } from "lucide-react";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const SLIDES = [
   {
@@ -82,7 +83,7 @@ export default function HeroSection() {
               {slide.description}
             </p>
 
-            <button className="group bg-white text-[#065F46] px-8 py-4 rounded-full font-bold text-lg hover:bg-emerald-50 transition-all shadow-[0_4px_14px_0_rgba(0,0,0,0.2)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.23)] hover:-translate-y-1 flex items-center gap-2">
+            <Link href="/contactus" className="group bg-white text-[#065F46] px-8 py-4 rounded-full font-bold text-lg hover:bg-emerald-50 transition-all shadow-[0_4px_14px_0_rgba(0,0,0,0.2)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.23)] hover:-translate-y-1 inline-flex items-center gap-2">
               Contact Us
               <svg
                 className="w-5 h-5 transition-transform group-hover:translate-x-1"
@@ -97,7 +98,7 @@ export default function HeroSection() {
                   d="M17 8l4 4m0 0l-4 4m4-4H3"
                 />
               </svg>
-            </button>
+            </Link>
           </div>
 
           {/* RIGHT */}
