@@ -62,7 +62,6 @@ export default function ContactUsPage() {
       {/* 🌿 BACKGROUND */}
       <section className="relative py-24 bg-gradient-to-br from-[#ECFDF5] via-[#F0FDFA] to-[#FFFFFF]">
         <div className="container-custom mx-auto px-6 grid lg:grid-cols-2 gap-20 relative z-10">
-
           {/* LEFT CONTENT */}
           <div className="pt-6">
             <h1 className="text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
@@ -99,14 +98,16 @@ export default function ContactUsPage() {
               href="https://wa.me/919484756964?text=Hello%20I%20need%20course%20service"
               target="_blank"
               className="
-                inline-flex items-center gap-3
-                px-8 py-4 rounded-full
-                bg-gradient-to-r from-green-500 to-emerald-600
-                text-white font-semibold
-                shadow-[0_20px_45px_rgba(16,185,129,0.45)]
-                hover:scale-[1.03]
-                transition-all
-              "
+    inline-flex items-center gap-3
+    px-8 py-4 rounded-full
+    bg-[#059669]
+    hover:bg-[#047857]
+    text-white font-semibold
+    shadow-lg shadow-green-900/10
+    shadow-[0_20px_45px_rgba(16,185,129,0.45)]
+    hover:scale-[1.03]
+    transition-all
+  "
             >
               <MessageCircle className="w-5 h-5" />
               WhatsApp Consultation
@@ -114,14 +115,16 @@ export default function ContactUsPage() {
           </div>
 
           {/* 🧊 PREMIUM FORM */}
-          <div className="
+          <div
+            className="
             relative
             bg-white/85 backdrop-blur-xl
             rounded-[32px]
             p-10
             border border-green-100
             shadow-[0_35px_80px_rgba(16,185,129,0.25)]
-          ">
+          "
+          >
             <h2 className="text-3xl font-bold text-gray-900 mb-1">
               Get in Touch
             </h2>
@@ -130,11 +133,7 @@ export default function ContactUsPage() {
             </p>
 
             <form className="space-y-5">
-              {[
-                "Full Name",
-                "Phone Number",
-                "Email Address",
-              ].map((label) => (
+              {["Full Name", "Phone Number", "Email Address"].map((label) => (
                 <input
                   key={label}
                   placeholder={label}
@@ -181,7 +180,9 @@ export default function ContactUsPage() {
                 "
               >
                 <option>
-                  {selectedVendor ? "Select Course" : "Select Course (Select Vendor First)"}
+                  {selectedVendor
+                    ? "Select Course"
+                    : "Select Course (Select Vendor First)"}
                 </option>
                 {courses.map((course, idx) => (
                   <option key={idx}>
@@ -204,13 +205,14 @@ export default function ContactUsPage() {
               <button
                 type="submit"
                 className="
-                  w-full py-4 rounded-full
-                  bg-gradient-to-r from-green-500 to-emerald-600
-                  text-white font-bold text-lg
-                  shadow-[0_20px_50px_rgba(16,185,129,0.45)]
-                  hover:scale-[1.02]
-                  transition-all
-                "
+    w-full py-4 rounded-full
+    bg-[#059669]
+    hover:bg-[#047857]
+    text-white font-bold text-lg
+    shadow-[0_20px_50px_rgba(16,185,129,0.45)]
+    hover:scale-[1.02]
+    transition-all
+  "
               >
                 Send Message
               </button>
