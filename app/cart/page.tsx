@@ -10,6 +10,8 @@ import {
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
 import { useState } from "react";
 
 export default function CheckoutPage() {
@@ -33,6 +35,16 @@ export default function CheckoutPage() {
       <section className="container-custom pt-28 pb-20">
         {/* ===== UNIQUE HEADING ===== */}
         <div className="mb-12 mt-5">
+          <Link
+            href="/course"
+            className="inline-flex items-center gap-2 text-gray-500 hover:text-primary transition-colors mb-6 text-sm font-medium"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            Back to Courses
+          </Link>
+
+          <br />
+
           <span className="inline-block mb-3 px-4 py-1 rounded-full bg-green-100 text-primary text-sm font-medium">
             🔒 100% Secure Payment
           </span>
@@ -48,7 +60,6 @@ export default function CheckoutPage() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
-
           {/* ================= BILLING DETAILS ================= */}
           <div className="lg:col-span-2">
             <div className="bg-green-50 border rounded-2xl p-8">
@@ -122,12 +133,9 @@ export default function CheckoutPage() {
 
           {/* ================= RIGHT SIDE ================= */}
           <div className="space-y-6">
-
             {/* YOUR ORDER */}
             <div className="bg-green-50 border rounded-2xl p-6 max-h-[320px] overflow-y-auto">
-              <h3 className="text-lg font-bold mb-4">
-                Your Order
-              </h3>
+              <h3 className="text-lg font-bold mb-4">Your Order</h3>
 
               {cartItems.map((item) => (
                 <div
@@ -143,31 +151,21 @@ export default function CheckoutPage() {
                   />
 
                   <div className="flex-1">
-                    <p className="text-sm font-medium">
-                      {item.name}
-                    </p>
-                    <p className="text-primary font-bold">
-                      ₹{item.price}
-                    </p>
+                    <p className="text-sm font-medium">{item.name}</p>
+                    <p className="text-primary font-bold">₹{item.price}</p>
 
                     <div className="flex items-center gap-2 mt-2">
                       <button
-                        onClick={() =>
-                          dispatch(decreaseQuantity(item.id))
-                        }
+                        onClick={() => dispatch(decreaseQuantity(item.id))}
                         className="px-2 py-1 border rounded bg-white"
                       >
                         –
                       </button>
 
-                      <span className="font-medium">
-                        {item.quantity}
-                      </span>
+                      <span className="font-medium">{item.quantity}</span>
 
                       <button
-                        onClick={() =>
-                          dispatch(addToCartRequest(item))
-                        }
+                        onClick={() => dispatch(addToCartRequest(item))}
                         className="px-2 py-1 border rounded bg-white"
                       >
                         +
@@ -184,9 +182,7 @@ export default function CheckoutPage() {
 
             {/* ORDER SUMMARY */}
             <div className="bg-green-50 border rounded-2xl p-6">
-              <h3 className="text-lg font-bold mb-4">
-                Order Summary
-              </h3>
+              <h3 className="text-lg font-bold mb-4">Order Summary</h3>
 
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
