@@ -64,7 +64,7 @@ export default function Header() {
         {/* LOGO */}
         <Link href="/" className="flex items-center gap-2">
           <span className="text-2xl font-bold bg-clip-text text-transparent bg-linear-to-r from-primary to-secondary">
-            CERTIMASTERS
+            CERTIFY
           </span>
           <span className="w-2 h-2 rounded-full bg-secondary mb-3" />
         </Link>
