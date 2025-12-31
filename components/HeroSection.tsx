@@ -37,7 +37,7 @@ export default function HeroSection() {
   const slide = SLIDES[current];
 
   return (
-    <section className="relative max-w-7xl m-auto rounded-3xl p-20 pt-12 pb-5 lg:pt-8 lg:pb-10 overflow-hidden bg-linear-to-br from-[#0F766E] via-[#10B981] to-[#6EE7B7]
+    <section className="relative mt-10 max-w-7xl m-auto rounded-3xl p-20 pt-12 pb-5 lg:pt-8 lg:pb-10 overflow-hidden bg-linear-to-br from-[#0F766E] via-[#10B981] to-[#6EE7B7]
 ">
       
       {/* LEFT DARK → RIGHT LIGHT GREEN SHADOW */}
