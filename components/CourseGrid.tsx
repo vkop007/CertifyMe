@@ -6,16 +6,14 @@ import { ShoppingCart, LayoutList } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { generateSlug } from "@/lib/utils";
 
 interface CourseGridProps {
   courses: any[];
   vendorName: string;
 }
 
-export default function CourseGrid({
-  courses,
-  vendorName,
-}: CourseGridProps) {
+export default function CourseGrid({ courses, vendorName }: CourseGridProps) {
   const dispatch = useDispatch();
   const router = useRouter();
 
@@ -38,12 +36,8 @@ export default function CourseGrid({
   if (!courses || courses.length === 0) {
     return (
       <div className="text-center py-20">
-        <h2 className="text-xl font-semibold mb-2">
-          No courses available
-        </h2>
-        <p className="text-gray-500">
-          Please select another vendor
-        </p>
+        <h2 className="text-xl font-semibold mb-2">No courses available</h2>
+        <p className="text-gray-500">Please select another vendor</p>
       </div>
     );
   }
@@ -84,9 +78,7 @@ export default function CourseGrid({
 
             <div className="flex justify-between items-center font-bold text-lg">
               <span>Our Price</span>
-              <span className="text-primary">
-                ₹{course.ourPrice}
-              </span>
+              <span className="text-primary">₹{course.ourPrice}</span>
             </div>
           </div>
 
@@ -107,9 +99,9 @@ export default function CourseGrid({
 
             {/* DETAILS */}
             <Link
-              href={`/course/${vendorName
-                .toLowerCase()
-                .replace(/\s+/g, "-")}`}
+              href={`/course/${generateSlug(vendorName)}/${generateSlug(
+                course.name
+              )}`}
               className="flex items-center justify-center gap-2 bg-white text-primary border border-primary py-2.5 px-4 rounded-lg hover:bg-green-50 transition-colors text-sm font-medium"
             >
               <LayoutList className="w-4 h-4" />
