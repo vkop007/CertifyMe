@@ -25,7 +25,7 @@ export default function ReviewsSection() {
               </div>
 
               <p className="text-text-light italic mb-6 leading-relaxed">
-                "{review.content}"
+                {review.content}
               </p>
 
               <div className="mt-auto">
