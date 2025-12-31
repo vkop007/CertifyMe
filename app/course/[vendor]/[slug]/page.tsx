@@ -174,32 +174,39 @@ export default function CourseDetailsPage() {
 
             {/* Right Sidebar / Sticky Card */}
             <div className="lg:col-span-1">
-              <div className="sticky top-24 bg-white rounded-2xl border border-gray-200 shadow-lg p-6 lg:p-8">
+              <div className="sticky top-24 bg-green-50 border rounded-2xl p-6 lg:p-8">
                 {/* Desktop Image */}
-                <div className="hidden lg:block relative h-48 w-full mb-8 bg-gray-50 rounded-xl p-4">
+                <div className="hidden lg:flex relative h-56 w-full mb-8 bg-white rounded-xl p-4 border items-center justify-center">
                   <Image
                     src={course.image}
                     alt={course.name}
-                    fill
-                    className="object-contain"
+                    width={200}
+                    height={200}
+                    className="object-contain max-h-full"
                   />
                 </div>
 
                 <div className="space-y-6">
                   <div>
-                    <p className="text-gray-500 text-sm mb-1">Standard Price</p>
-                    <p className="text-lg line-through text-gray-400">
-                      ₹{course.actualPrice.toLocaleString()}
-                    </p>
-                  </div>
-
-                  <div className="pt-2 pb-6 border-b border-gray-100">
-                    <p className="text-gray-500 text-sm mb-1">Our Price</p>
-                    <div className="flex items-baseline gap-2">
-                      <p className="text-4xl font-bold text-gray-900">
-                        ₹{course.ourPrice.toLocaleString()}
+                    <div className="flex justify-between items-center mb-1">
+                      <p className="text-gray-500 text-sm font-medium">
+                        Standard Price
                       </p>
-                      <span className="text-green-600 font-bold bg-green-50 px-2 py-1 rounded text-sm">
+                      <span className="text-sm line-through text-gray-400">
+                        ₹{course.actualPrice.toLocaleString()}
+                      </span>
+                    </div>
+
+                    <div className="flex justify-between items-end">
+                      <div>
+                        <p className="text-gray-500 text-sm font-medium mb-1">
+                          Our Price
+                        </p>
+                        <p className="text-4xl font-extrabold text-primary tracking-tight">
+                          ₹{course.ourPrice.toLocaleString()}
+                        </p>
+                      </div>
+                      <span className="mb-2 text-xs font-bold text-green-700 bg-green-100 px-3 py-1 rounded-full">
                         {Math.round(
                           ((course.actualPrice - course.ourPrice) /
                             course.actualPrice) *
@@ -208,20 +215,44 @@ export default function CourseDetailsPage() {
                         % OFF
                       </span>
                     </div>
+                    <p className="text-xs text-gray-500 mt-3 text-right">
+                      Inclusive of all taxes
+                    </p>
                   </div>
 
-                  <div className="space-y-4">
+                  <div className="border-t border-gray-200"></div>
+
+                  <ul className="space-y-4">
+                    <li className="flex items-center gap-3 text-sm text-gray-700">
+                      <CheckCircle className="w-5 h-5 text-primary shrink-0" />
+                      <span>Official Exam Voucher</span>
+                    </li>
+                    <li className="flex items-center gap-3 text-sm text-gray-700">
+                      <CheckCircle className="w-5 h-5 text-primary shrink-0" />
+                      <span>Instant Email Delivery</span>
+                    </li>
+                    <li className="flex items-center gap-3 text-sm text-gray-700">
+                      <CheckCircle className="w-5 h-5 text-primary shrink-0" />
+                      <span>100% Secure Payment</span>
+                    </li>
+                  </ul>
+
+                  <div className="space-y-4 pt-2">
                     <button
                       onClick={handleBuyNow}
-                      className="w-full flex items-center justify-center gap-2 bg-primary text-white py-4 px-6 rounded-xl hover:bg-accent-blue transition-all transform hover:-translate-y-1 font-bold text-lg shadow-lg hover:shadow-xl shadow-primary/30"
+                      className="w-full flex items-center justify-center gap-2 bg-primary text-white py-4 px-6 rounded-xl hover:bg-accent-blue transition-all transform hover:-translate-y-0.5 font-bold text-lg shadow-lg shadow-primary/20"
                     >
                       <ShoppingCart className="w-5 h-5" />
-                      Buy Now
+                      Add to Cart
                     </button>
 
-                    <p className="text-center text-xs text-gray-400 mt-4">
-                      Secure payment via Stripe • Instant Digital Delivery
-                    </p>
+                    <div className="flex items-center justify-center gap-2 text-xs text-gray-500 font-medium">
+                      <span className="relative flex h-2.5 w-2.5">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+                      </span>
+                      24 people bought this in the last hour
+                    </div>
                   </div>
                 </div>
               </div>
