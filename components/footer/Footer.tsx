@@ -18,7 +18,7 @@ export default function Footer() {
           <div>
             <Link href="/" className="flex items-center gap-2 mb-6">
               <span className="text-2xl font-bold bg-clip-text text-transparent bg-linear-to-r from-primary to-secondary">
-                CERTIMASTERS
+                CERTIFY
               </span>
               <div className="w-2 h-2 rounded-full bg-secondary mb-3"></div>
             </Link>
