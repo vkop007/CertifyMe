@@ -1,10 +1,27 @@
+"use client";
 import Link from "next/link";
 import { Star, ArrowRight, ShoppingCart, LayoutList } from "lucide-react";
+import { useDispatch } from "react-redux";
+import { addToCartRequest } from "@/lib/redux/slices/cartSlice";
 // Placeholder for course images - in a real app these would be imported or from a CMS
 
 import { COURSES, CompTIA } from "../lib/index";
 
 export default function ExploreCoursesSection() {
+  const dispatch = useDispatch();
+
+ const handleAddToCart = (course: any) => {
+  dispatch(
+    addToCartRequest({
+      id: course.id ?? course.name,
+      name: course.name,
+      price: course.ourPrice,
+      image: course.image,
+      quantity: 1,
+    })
+  );
+};
+
   return (
     <section className="py-20 bg-white">
       <div className="container-custom">
@@ -77,10 +94,14 @@ export default function ExploreCoursesSection() {
 
               {/* Buttons */}
               <div className="grid grid-cols-2 gap-3 mt-auto">
-                <button className="flex items-center justify-center gap-2 bg-primary text-white py-2.5 px-4 rounded-lg hover:bg-accent-blue transition-colors text-sm font-medium">
+                <button
+                  onClick={() => handleAddToCart(course)}
+                  className="flex items-center justify-center gap-2 bg-primary text-white py-2.5 px-4 rounded-lg hover:bg-accent-blue transition-colors text-sm font-medium"
+                >
                   <ShoppingCart className="w-4 h-4" />
                   Buy Now
                 </button>
+
                 <button className="flex items-center justify-center gap-2 bg-white text-primary border border-primary py-2.5 px-4 rounded-lg hover:bg-green-50 transition-colors text-sm font-medium">
                   <LayoutList className="w-4 h-4" />
                   View Details

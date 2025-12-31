@@ -4,6 +4,9 @@ import Link from "next/link";
 import { Search, ShoppingBag, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { useSelector } from "react-redux";
+import { RootState } from "@/lib/redux/store";
+
 
 const VOUCHERS = [
   "AWS",
@@ -39,6 +42,10 @@ export default function Header() {
       setQuery("");
     }
   };
+
+  const cartCount = useSelector((state: RootState) =>
+  state.cart.items.reduce((total, item) => total + item.quantity, 0)
+);
 
   return (
     <header className="py-3 sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100">
@@ -142,9 +149,19 @@ export default function Header() {
           )}
 
           {/* Cart */}
-          <button className="hidden md:flex p-2 rounded-full hover:bg-gray-100 text-text-dark hover:text-primary transition">
-            <ShoppingBag className="w-5 h-5" />
-          </button>
+         <button
+  onClick={() => router.push("/cart")}
+  className="relative hidden md:flex p-2 rounded-full hover:bg-gray-100 text-text-dark hover:text-primary transition"
+>
+  <ShoppingBag className="w-5 h-5" />
+
+  {cartCount > 0 && (
+    <span className="absolute -top-1 -right-1 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">
+      {cartCount}
+    </span>
+  )}
+</button>
+
 
           {/* Mobile Menu */}
           <button className="md:hidden p-2">
