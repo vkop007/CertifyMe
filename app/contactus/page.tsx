@@ -82,21 +82,21 @@ export default function ContactUsPage() {
 
               <div className="flex gap-4 items-center">
                 <Phone className="w-5 h-5 text-primary" />
-                +91 8121488625
+                +91 9484756964
               </div>
 
               <div className="flex gap-4">
                 <MapPin className="w-5 h-5 text-primary mt-1" />
                 <span>
-                  A-228, Neeladri Nagar, Phase-1 <br />
-                  Electronic City, Bangalore – 560100
+                  A-111, Neeladri Nagar, Phase-1 <br />
+                  Ele City, Pune – 560100
                 </span>
               </div>
             </div>
 
             {/* WHATSAPP CTA */}
             <Link
-              href="https://wa.me/918121488625?text=Hello%20I%20need%20course%20service"
+              href="https://wa.me/919484756964?text=Hello%20I%20need%20course%20service"
               target="_blank"
               className="
                 inline-flex items-center gap-3
@@ -181,7 +181,7 @@ export default function ContactUsPage() {
                 "
               >
                 <option>
-                  {selectedVendor ? "Select Course" : "Select Vendor First"}
+                  {selectedVendor ? "Select Course" : "Select Course (Select Vendor First)"}
                 </option>
                 {courses.map((course, idx) => (
                   <option key={idx}>
