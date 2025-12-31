@@ -81,7 +81,7 @@ export default function TrainingPage() {
 
       {/* ================= TRAININGS ================= */}
       <section className="container-custom py-24 mt-16 mb-16">
-        <h2 className="text-4xl font-extrabold text-center mb-16 text-text-dark">
+        <h2 className="text-4xl font-extrabold mt-6 text-center text-text-dark">
           Our <span className="text-primary">Training Programs</span>
         </h2>
 

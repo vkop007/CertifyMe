@@ -29,6 +29,13 @@ const cartSlice = createSlice({
       state.error = null;
     },
 
+    // ✅ CLEAR CART (FIXED)
+    clearCart(state) {
+      state.items = [];
+      state.loading = false;
+      state.error = null;
+    },
+
     addToCartSuccess(state, action: PayloadAction<CartItem>) {
       const existing = state.items.find(
         (item) => item.id === action.payload.id
@@ -78,6 +85,7 @@ export const {
   addToCartFailure,
   removeFromCart,
   decreaseQuantity,
+  clearCart, // ✅ EXPORT WAS MISSING
 } = cartSlice.actions;
 
 export default cartSlice.reducer;
