@@ -107,7 +107,7 @@ export default function TrainingPage() {
       </section>
 
       {/* ================= VOUCHERS ================= */}
-      <section className="bg-green-50 py-24">
+      {/* <section className="bg-green-50 py-24">
         <div className="container-custom">
           <h2 className="text-4xl font-extrabold text-center mb-16 text-text-dark">
             Certification <span className="text-primary">Vouchers</span>
@@ -149,7 +149,7 @@ export default function TrainingPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
     </>

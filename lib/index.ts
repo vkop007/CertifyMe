@@ -44,7 +44,7 @@ export const TRAININGS = [
   {
     title: "GCP",
     desc: "Hands-on Cloud & DevOps training covering AWS, Azure, GCP, CI/CD pipelines, Docker, Kubernetes, and automation tools.",
-    src: "/Training/aws.webp",
+    src: "/Training/google.webp",
   },
   {
     title: "AWS",
@@ -185,30 +185,39 @@ export const FAQS = [
 export const REVIEWS = [
   {
     id: 1,
-    name: "Shaykha Alhammadi",
+    name: "Sai Kumar",
     role: "Software Engineer",
-    image: "SA",
+    image: "/Reviewer/person1.jpeg",
     content:
       "I had a very good experience! Excellent communication and support throughout the process. Their prices for vouchers are very good and affordable. Highly recommended!",
     rating: 5,
   },
   {
     id: 2,
-    name: "Nandish N",
+    name: "Eswar",
     role: "Devops Engineer",
-    image: "NN",
+    image: "/Reviewer/person2.jpeg",
     content:
       "Discounted exam vouchers for Cisco, Citrix, and Microsoft are available through Global IT Success. I purchased the Cisco CCNP ENARSI exam voucher for ₹27,500 and saved ₹4,500.",
     rating: 5,
   },
   {
     id: 3,
-    name: "Mehul Kulshreshtha",
+    name: "Aparna",
     role: "Devsec Engineer",
-    image: "MK",
+    image: "/Reviewer/person3.jpeg",
     content:
       "The coupon they offer works and is definitely cheaper. This was my anxiety before booking Comptia Security+ and it worked. Now I am looking forward to booking my next certifications with them.",
     rating: 4,
+  },
+  {
+    id: 4,
+    name: "Ajay Kumar",
+    role: "Manager",
+    image: "/Reviewer/person4.jpeg",
+    content:
+      "Outstanding service and great value for certification vouchers. The team was very helpful in guiding me through the process. Highly satisfied with the experience!",
+    rating: 5,
   },
 ];
 
