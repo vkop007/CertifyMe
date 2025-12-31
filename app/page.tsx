@@ -5,6 +5,9 @@ import CategorySection from "@/components/CategorySection";
 import EnquirySection from "@/components/EnquirySection";
 import ReviewsSection from "@/components/ReviewsSection";
 import Footer from "@/components/footer/Footer";
+import FAQ from "@/components/FAQSection";
+import WhyChooseUsSection from "@/components/WhyChooseUsSection";
+import ClientsSection from "@/components/ClientsSection";
 
 export default function Home() {
   return (
@@ -14,7 +17,10 @@ export default function Home() {
       <CategorySection />
       <ExploreCoursesSection />
       <EnquirySection />
+      <ClientsSection />
+      <WhyChooseUsSection />
       <ReviewsSection />
+      <FAQ />
       <Footer />
     </main>
   );

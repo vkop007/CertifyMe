@@ -31,7 +31,7 @@ export default function FAQSection() {
                   <Plus className="w-4 h-4 group-open:rotate-45 transition-transform" />
                 </div>
               </summary>
-              <div className="px-6 pb-6 text-text-light leading-relaxed">
+              <div className="px-6 pb-6 text-text-light leading-relaxed" style={{whiteSpace: "pre-line"}}>
                 {faq.answer}
               </div>
             </details>

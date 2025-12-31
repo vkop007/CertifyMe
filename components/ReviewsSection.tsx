@@ -9,7 +9,7 @@ export default function ReviewsSection() {
           Testimonials
         </div>
         <h2 className="text-4xl font-bold text-text-dark mb-12">
-          What Our <span className="gradient-text">Students Say</span>
+          Our <span className="gradient-text">Products Reviews</span>
         </h2>
 
         <div className="grid md:grid-cols-3 gap-8">

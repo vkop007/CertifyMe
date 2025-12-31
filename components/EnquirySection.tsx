@@ -1,3 +1,5 @@
+"use client";
+
 import {
   User,
   Phone,
@@ -8,9 +10,34 @@ import {
   Briefcase,
 } from "lucide-react";
 import Image from "next/image";
-import { VENDORS } from "../lib/index";
+import { useState } from "react";
+import { VENDORS, AWS, Checkpoint, CompTIA, DELLEMC, ECCouncil, Fortinet, ISACA, ISTQB, KUBERNETES, Microsoft, Juniper, ORACLE, PEGA, SALESFORCE, SAS, SPLUNK, VMWARE } from "../lib/index";
 
 export default function EnquirySection() {
+  const [selectedVendor, setSelectedVendor] = useState("");
+  const [selectedCourse, setSelectedCourse] = useState("");
+
+  const vendorToCertificates = {
+    "AWS": AWS,
+    "Checkpoint": Checkpoint,
+    "CompTIA": CompTIA,
+    "DELLEMC": DELLEMC,
+    "Juniper": Juniper,
+    "ECCouncil": ECCouncil,
+    "Fortinet": Fortinet,
+    "ISACA": ISACA,
+    "ISTQB": ISTQB,
+    "Kubernetes": KUBERNETES,
+    "Microsoft": Microsoft,
+    "Oracle": ORACLE,
+    "Pega": PEGA,
+    "Salesforce": SALESFORCE,
+    "SAS": SAS,
+    "Splunk": SPLUNK,
+    "VMware": VMWARE,
+  };
+
+  const availableCourses = selectedVendor ? vendorToCertificates[selectedVendor as keyof typeof vendorToCertificates] || [] : [];
   return (
     <section className="py-20 bg-green-50/30">
       <div className="container-custom">
@@ -38,13 +65,13 @@ export default function EnquirySection() {
                   key={index}
                   className="bg-white border border-gray-100 rounded-xl p-4 h-20 flex items-center justify-center shadow-sm hover:shadow-md transition-shadow"
                 >
-                    <Image
-                      src={vendor.src}
-                      alt={vendor.name}
-                      width={160}
-                      height={80}
-                      className="object-contain transition"
-                    />
+                  <Image
+                    src={vendor.src}
+                    alt={vendor.name}
+                    width={160}
+                    height={80}
+                    className="object-contain transition"
+                  />
                 </div>
               ))}
             </div>
@@ -53,10 +80,10 @@ export default function EnquirySection() {
           {/* Right Column: Enquiry Form */}
           <div className="bg-white p-8 md:p-10 rounded-3xl shadow-lg border border-gray-100 relative overflow-hidden">
             {/* Decorative top border */}
-            <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-secondary to-primary"></div>
+            <div className="absolute top-0 left-0 w-full h-2 bg-linear-to-r from-secondary to-primary"></div>
 
             <h3 className="text-2xl font-bold text-text-dark mb-8 text-center">
-              Enquiry
+              We’re Here to Help
             </h3>
 
             <form className="space-y-4">
@@ -107,10 +134,17 @@ export default function EnquirySection() {
               {/* Select Vendor */}
               <div className="relative">
                 <Briefcase className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-                <select className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all appearance-none bg-white text-gray-400">
-                  <option>Select Vendor</option>
+                <select 
+                  value={selectedVendor}
+                  onChange={(e) => {
+                    setSelectedVendor(e.target.value);
+                    setSelectedCourse(""); // Reset course when vendor changes
+                  }}
+                  className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all appearance-none bg-white text-gray-400"
+                >
+                  <option value="">Select Vendor</option>
                   {VENDORS.map((v) => (
-                    <option key={v.name}>{v.name}</option>
+                    <option key={v.name} value={v.name}>{v.name}</option>
                   ))}
                 </select>
               </div>
@@ -118,10 +152,16 @@ export default function EnquirySection() {
               {/* Select Course */}
               <div className="relative">
                 <BookOpen className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-                <select className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all appearance-none bg-white text-gray-400">
-                  <option>Select Course</option>
-                  <option>Course 1</option>
-                  <option>Course 2</option>
+                <select 
+                  value={selectedCourse}
+                  onChange={(e) => setSelectedCourse(e.target.value)}
+                  disabled={!selectedVendor}
+                  className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all appearance-none bg-white text-gray-400 disabled:bg-gray-100 disabled:cursor-not-allowed"
+                >
+                  <option value="">Select Course</option>
+                  {availableCourses.map((course, index) => (
+                    <option key={index} value={course.name}>{course.name}</option>
+                  ))}
                 </select>
               </div>
 
