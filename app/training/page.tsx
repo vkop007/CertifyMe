@@ -3,22 +3,9 @@
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-
-const TRAININGS = [
-  {
-    title: "SAP",
-    desc: "SAP is one of the world’s leading ERP solutions that helps organizations manage business operations efficiently and at scale.",
-  },
-  {
-    title: "Salesforce",
-    desc: "Get trained by Salesforce-certified experts in administration, development, automation, security, analytics, and Lightning framework.",
-  },
-  {
-    title: "Cloud & DevOps (AWS / Azure / GCP)",
-    desc: "AI-powered Cloud & DevOps training covering AWS, Azure, GCP, CI/CD pipelines, automation tools, and real-world projects.",
-  },
-];
+import { TRAININGS } from "../../lib/index";
 
 const ENGLISH_EXAMS = ["TOEFL", "GRE", "IELTS", "PTE", "Duolingo"];
 
@@ -43,19 +30,16 @@ export default function TrainingPage() {
     <>
       <Header />
 
-      {/* ================= HERO (DESIGN COMBO) ================= */}
+      {/* ================= HERO ================= */}
       <section className="relative overflow-hidden py-28">
-        {/* COLOR SHAPES */}
         <div className="absolute inset-0">
           <div className="absolute -left-20 top-10 w-96 h-96 bg-[#34D399] rounded-full opacity-40 blur-3xl" />
           <div className="absolute right-0 top-0 w-[500px] h-[500px] bg-[#0D9488] rounded-full opacity-30 blur-3xl" />
           <div className="absolute left-1/3 bottom-0 w-[400px] h-[400px] bg-[#10B981] rounded-full opacity-30 blur-3xl" />
         </div>
 
-        {/* CONTENT CARD */}
         <div className="relative container-custom">
           <div className="bg-white rounded-[36px] shadow-2xl px-12 py-16 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            {/* LEFT */}
             <div>
               <span className="inline-block mb-5 px-5 py-1.5 rounded-full bg-green-100 text-primary text-sm font-semibold">
                 Professional Career Learning
@@ -68,8 +52,7 @@ export default function TrainingPage() {
 
               <p className="text-lg text-gray-600 leading-relaxed max-w-xl mb-10">
                 Explore industry-recognized IT training programs designed to
-                elevate your career. Learn from experts, work on real-world
-                projects, and prepare for global certifications with confidence.
+                elevate your career with hands-on projects and expert guidance.
               </p>
 
               <Link
@@ -81,7 +64,6 @@ export default function TrainingPage() {
               </Link>
             </div>
 
-            {/* RIGHT */}
             <div className="hidden md:flex justify-center">
               <div className="w-full h-72 rounded-3xl bg-linear-to-br from-[#0D9488] via-[#10B981] to-[#34D399] opacity-90 shadow-inner" />
             </div>
@@ -99,14 +81,26 @@ export default function TrainingPage() {
           {TRAININGS.map((item) => (
             <div
               key={item.title}
-              className="bg-white rounded-3xl p-8 shadow-md hover:shadow-2xl transition border border-gray-100"
+              className="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition border border-gray-100 group"
             >
-              <h3 className="text-2xl font-bold text-primary mb-4">
-                {item.title}
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                {item.desc}
-              </p>
+              <div className="relative h-48 w-full flex items-center justify-center">
+                <Image
+                  src={item.src}
+                  alt={item.title}
+                  width={150}
+                  height={100}
+                  className="object-contain"
+                />
+              </div>
+
+              <div className="p-8">
+                <h3 className="text-2xl font-bold text-primary mb-4">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
             </div>
           ))}
         </div>
@@ -120,7 +114,6 @@ export default function TrainingPage() {
           </h2>
 
           <div className="grid md:grid-cols-3 gap-10">
-            {/* English */}
             <div className="bg-white rounded-3xl p-8 shadow-lg">
               <h3 className="text-xl font-bold text-primary mb-6">
                 English Exam Vouchers
@@ -137,7 +130,6 @@ export default function TrainingPage() {
               </ul>
             </div>
 
-            {/* IT */}
             <div className="md:col-span-2 bg-white rounded-3xl p-8 shadow-lg">
               <h3 className="text-xl font-bold text-primary mb-6">
                 IT Certification Vouchers

@@ -30,6 +30,54 @@ export const clients = [
   { name: "MPhasis", src: "/OurClients/mphasis.webp" },
 ];
 
+export const TRAININGS = [
+  {
+    title: "SAP",
+    desc: "SAP is one of the world’s leading ERP solutions that helps organizations manage business operations efficiently and at scale.",
+    src: "/Training/SAP.webp",
+  },
+  {
+    title: "Salesforce",
+    desc: "Get trained by Salesforce-certified experts in administration, development, automation, security, analytics, and Lightning framework.",
+    src: "/Training/salesforce.webp",
+  },
+  {
+    title: "GCP",
+    desc: "Hands-on Cloud & DevOps training covering AWS, Azure, GCP, CI/CD pipelines, Docker, Kubernetes, and automation tools.",
+    src: "/Training/aws.webp",
+  },
+  {
+    title: "AWS",
+    desc: "AWS certification is a degree of Amazon Web Services cloud knowledge that an IT professional can earn by completing one or more of the public cloud provider's examinations.",
+    src: "/Training/aws.webp",
+  },
+  {
+    title: "Microsoft",
+    desc: "Microsoft has traditionally provided certifications for students and professionals. These can assist students prepare for professional and technical careers while also supplementing their degrees. These certificates can help professionals advance in their careers.",
+    src: "/Training/microsoft.webp",
+  },
+    {
+    title: "CISCO",
+    desc: "Cisco Systems, one of the world's leading networking companies, provides the Cisco Certified Network Associate (CCNA) certification program. The CCNA certifies a candidate's ability to install, configure, operate, and troubleshoot medium-sized routed and switched networks.",
+    src: "/Training/cisco.webp",
+  },
+  {
+    title: "ISACA",
+    desc: "Certified by ISACA, specializing in IT governance, risk management, and cybersecurity. Committed to upholding industry standards and implementing effective controls to safeguard organizational assets and ensure optimal performance.",
+    src: "/Training/isaca.webp",
+  },
+  {
+    title: "Paloalto Networks",
+    desc: "The Palo Alto Networks Certified Network Security Administrator (PCNSA) certification is a validation of expertise in deploying, configuring, and managing Palo Alto Networks next-generation firewalls to protect networks from modern cyber threats.",
+    src: "/Training/paloalto.webp",
+  },
+  {
+    title: "Project Management Institute",
+    desc: "Experienced IT professional with a passion for project management. Earned certification from the Project Management Institute, demonstrating proficiency in leading IT projects effectively.",
+    src: "/Training/pmi.webp",
+  },
+];
+
 
 // List of courses for the ExploreCoursesSection (ExploreCoursesSection)
 export const COURSES = [
