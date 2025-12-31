@@ -10,7 +10,7 @@ import { RootState } from "@/lib/redux/store";
 
 const VOUCHERS = [
   "AWS",
-  "Microsoft Azure",
+  "Microsoft",
   "Salesforce",
   "Oracle",
   "CompTIA",

@@ -243,7 +243,7 @@ export default function CourseDetailsPage() {
                       className="w-full flex items-center justify-center gap-2 bg-primary text-white py-4 px-6 rounded-xl hover:bg-accent-blue transition-all transform hover:-translate-y-0.5 font-bold text-lg shadow-lg shadow-primary/20"
                     >
                       <ShoppingCart className="w-5 h-5" />
-                      Add to Cart
+                      Buy Now
                     </button>
 
                     <div className="flex items-center justify-center gap-2 text-xs text-gray-500 font-medium">
