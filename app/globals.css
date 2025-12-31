@@ -4,11 +4,11 @@
   --background: #ffffff;
   --foreground: #171717;
   --primary: #059669; /* Emerald 600 - Main Green */
-  --secondary: #10B981; /* Emerald 500 - Lighter Green */
-  --accent-green: #34D399; /* Emerald 400 - Bright Accent */
-  --accent-blue: #064E3B; /* Dark Green for contrast */
-  --text-dark: #1F2937;
-  --text-light: #6B7280;
+  --secondary: #10b981; /* Emerald 500 - Lighter Green */
+  --accent-green: #34d399; /* Emerald 400 - Bright Accent */
+  --accent-blue: #064e3b; /* Dark Green for contrast */
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
 }
 
 @theme inline {
@@ -46,6 +46,17 @@ body {
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .animate-scroll {
   display: flex;
   width: max-content;
@@ -58,7 +69,7 @@ body {
 }
 
 .gradient-text {
-  background: linear-gradient(to right, #10B981, #34D399); /* Green gradient */
+  background: linear-gradient(to right, #10b981, #34d399); /* Green gradient */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
