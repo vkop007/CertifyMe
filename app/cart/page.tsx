@@ -140,7 +140,7 @@ export default function CheckoutPage() {
               {cartItems.map((item) => (
                 <div
                   key={item.id}
-                  className="flex gap-4 items-center border-b pb-4 mb-4"
+                  className="flex gap-4 items-center border-b pb-4 mb-4 scrollbar-hide"
                 >
                   <Image
                     src={item.image}
@@ -150,7 +150,7 @@ export default function CheckoutPage() {
                     className="rounded-md bg-white"
                   />
 
-                  <div className="flex-1">
+                  <div className="flex-1 scrollbar-hide">
                     <p className="text-sm font-medium">{item.name}</p>
                     <p className="text-primary font-bold">₹{item.price}</p>
 

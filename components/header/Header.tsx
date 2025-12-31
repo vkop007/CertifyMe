@@ -6,6 +6,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useSelector } from "react-redux";
 import { RootState } from "@/lib/redux/store";
+import { usePathname } from "next/navigation";
 
 const VOUCHERS = [
   "AWS",
@@ -32,6 +33,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
   const router = useRouter();
+  const pathname = usePathname();
 
   const cartCount = useSelector((state: RootState) =>
     state.cart.items.reduce((total, item) => total + item.quantity, 0)
@@ -58,7 +60,14 @@ export default function Header() {
 
         {/* NAVIGATION */}
         <nav className="hidden md:flex items-center gap-8 relative">
-          <Link href="/" className="font-medium text-primary">
+          <Link
+            href="/"
+            className={`font-medium ${
+              pathname === "/"
+                ? "text-primary"
+                : "text-text-light hover:text-primary"
+            } transition`}
+          >
             Home
           </Link>
 
@@ -66,7 +75,11 @@ export default function Header() {
           <div className="relative group">
             <Link
               href="/course"
-              className="flex items-center gap-1 font-medium text-text-light hover:text-primary transition"
+              className={`flex items-center gap-1 font-medium ${
+                pathname.startsWith("/course")
+                  ? "text-primary"
+                  : "text-text-light hover:text-primary"
+              } transition`}
             >
               Vouchers
               <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
@@ -84,9 +97,7 @@ export default function Header() {
                 {VOUCHERS.map((item) => (
                   <Link
                     key={item}
-                    href={`/course/${item
-                      .toLowerCase()
-                      .replace(/\s+/g, "-")}`}
+                    href={`/course/${item.toLowerCase().replace(/\s+/g, "-")}`}
                     className="px-3 py-2 rounded-lg text-sm text-text-dark
                     hover:bg-green-50 hover:text-primary transition"
                   >
@@ -100,28 +111,44 @@ export default function Header() {
           {/* TRAININGS */}
           <Link
             href="/training"
-            className="font-medium text-text-light hover:text-primary transition"
+            className={`font-medium ${
+              pathname.startsWith("/training")
+                ? "text-primary"
+                : "text-text-light hover:text-primary"
+            } transition`}
           >
             Trainings
           </Link>
 
           <Link
             href="#"
-            className="font-medium text-text-light hover:text-primary transition"
+            className={`font-medium ${
+              pathname.startsWith("/certifications")
+                ? "text-primary"
+                : "text-text-light hover:text-primary"
+            } transition`}
           >
             Certifications
           </Link>
 
           <Link
             href="#"
-            className="font-medium text-text-light hover:text-primary transition"
+            className={`font-medium ${
+              pathname.startsWith("/about")
+                ? "text-primary"
+                : "text-text-light hover:text-primary"
+            } transition`}
           >
             About Us
           </Link>
 
           <Link
             href="#"
-            className="font-medium text-text-light hover:text-primary transition"
+            className={`font-medium ${
+              pathname.startsWith("/contact")
+                ? "text-primary"
+                : "text-text-light hover:text-primary"
+            } transition`}
           >
             Contact Us
           </Link>
