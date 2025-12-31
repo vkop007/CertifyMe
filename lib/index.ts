@@ -4,6 +4,7 @@ export const VENDORS = [
   { name: "Checkpoint", src: "/logos/checkpoints.webp" },
   { name: "CompTIA", src: "/logos/comptia.webp" },
   { name: "DELLEMC", src: "/logos/dell.webp" },
+  { name: "Cisco", src: "/logos/cisco.webp" },
   { name: "ECCouncil", src: "/logos/ec-council.webp" },
   { name: "Fortinet", src: "/logos/fortinet.webp" },
   { name: "ISACA", src: "/logos/isaca.webp" },

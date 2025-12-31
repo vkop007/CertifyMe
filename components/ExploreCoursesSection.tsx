@@ -32,6 +32,29 @@ export default function ExploreCoursesSection() {
     <section className="py-20 bg-white">
       <div className="container-custom">
         {/* ---- UI SAME AS BEFORE ---- */}
+        <div className="flex flex-col md:flex-row justify-between items-end mb-12">
+          <div>
+            <div className="inline-block px-4 py-1.5 rounded-full bg-green-100 text-secondary text-sm font-semibold mb-4">
+              Explore Our Course
+            </div>
+            <h2 className="text-4xl font-bold text-text-dark">
+              Explore Our <span className="gradient-text">Courses</span>
+            </h2>
+          </div>
+
+          {/* <div className="flex items-center gap-4 mt-6 md:mt-0">
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="Search..."
+                className="pl-4 pr-10 py-2 border border-gray-200 rounded-full text-sm focus:outline-none focus:border-primary w-64"
+              />
+            </div>
+            <button className="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center">
+              <ArrowRight className="w-5 h-5" />
+            </button>
+          </div> */}
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {CompTIA.slice(0, 6).map((course, index) => (
@@ -78,9 +101,9 @@ export default function ExploreCoursesSection() {
                 </button>
 
                 <Link
-                  href={`/course/${generateSlug(course.category)}/${generateSlug(
-                    course.name
-                  )}`}
+                  href={`/course/${generateSlug(
+                    course.category
+                  )}/${generateSlug(course.name)}`}
                   className="flex items-center justify-center gap-2 bg-white text-primary border border-primary py-2.5 px-4 rounded-lg hover:bg-green-50 transition-colors text-sm font-medium"
                 >
                   <LayoutList className="w-4 h-4" />

@@ -111,7 +111,7 @@ export default function Header() {
             Certifications
           </Link> */}
 
-          <Link href="#" className="font-medium text-text-light hover:text-primary transition">
+          <Link href="/about" className={`font-medium transition ${pathname === "/about" ? "text-primary" : "text-text-light hover:text-primary"}`}>
             ABOUT US
           </Link>
 
