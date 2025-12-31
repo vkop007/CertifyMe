@@ -17,7 +17,6 @@ export const VENDORS = [
   { name: "SAS", src: "/logos/sas.webp" },
   { name: "Splunk", src: "/logos/splunk-logo.webp" },
   { name: "VMware", src: "/logos/vmware.webp" },
-  { name: "Juniper", src: "/logos/juniper.webp" },
 ];
 
 export const clients = [

@@ -104,7 +104,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-text-light">
-            © 2025 Certifyme. All rights reserved.
+            © 2026 Certifyme. All rights reserved.
           </p>
 
           {/* Payment Icons Placeholder */}

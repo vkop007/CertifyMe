@@ -83,7 +83,7 @@ export default function HeroSection() {
             </p>
 
             <button className="group bg-white text-[#065F46] px-8 py-4 rounded-full font-bold text-lg hover:bg-emerald-50 transition-all shadow-[0_4px_14px_0_rgba(0,0,0,0.2)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.23)] hover:-translate-y-1 flex items-center gap-2">
-              Get Started
+              Contact Us
               <svg
                 className="w-5 h-5 transition-transform group-hover:translate-x-1"
                 fill="none"
