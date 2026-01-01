@@ -11,13 +11,18 @@ export default function ClientsSection() {
       <div className="container-custom">
 
         {/* Heading – SAME AS REVIEWS */}
-        <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-bold text-text-dark mb-4">
-            Our <span className="gradient-text">Clients</span>
+<div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-700 text-[10px] font-black uppercase tracking-[0.3em] mb-6">
+            Corporate Trust
+          </div>
+
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 leading-[1.1] tracking-tighter mb-6">
+            Trusted by Industry <span className="text-emerald-600 italic">Leaders.</span>
           </h2>
-          <p className="text-text-light text-lg">
-            We feel privileged to have our association with some of the
-            prestigious companies.
+
+          <p className="text-lg text-slate-500 font-medium leading-relaxed max-w-2xl mx-auto">
+            We are proud to partner with <span className="text-slate-900 font-bold">prestigious organizations</span> worldwide, 
+            helping their teams stay ahead with official certification vouchers.
           </p>
         </div>
 

@@ -10,16 +10,27 @@ export default function EnquirySection() {
     <section className="py-16 bg-linear-to-b from-green-100/70 via-white/40 to-green-100/70">
       <div className="container-custom">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-text-dark mb-4">
-            Our Top <span className="gradient-text">Vendors</span>
+
+        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] font-black uppercase tracking-[0.3em] mb-6">
+            Official Partnerships
+          </div>
+
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 leading-[1.1] tracking-tighter mb-6">
+            Our Top Global{" "}
+            <span className="text-primary italic underline decoration-primary/20 underline-offset-8">
+              Vendors
+            </span>
           </h2>
-          <p className="text-text-light leading-relaxed">
-            Partnering with globally recognized trainers, we offer a range of IT
-            exam vouchers at affordable prices. Choose the ones that best align
-            with your career goals.
+
+          <p className="text-lg text-gray-500 font-medium leading-relaxed max-w-2xl mx-auto">
+            Partnering with globally recognized certification providers to offer
+            authentic IT exam vouchers. Select the path that best aligns with
+            your <span className="text-gray-900 font-bold">career goals</span>.
           </p>
         </div>
+
+        {/* ... rest of your grid and form ... */}
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left Column: Exam Vouchers Grid */}
