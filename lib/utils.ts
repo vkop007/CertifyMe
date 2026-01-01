@@ -19,6 +19,11 @@ import {
   Databricks,
   TOEFL,
   GRE,
+  GCP,
+  Snowflake,
+  SERVICENOW,
+  SAP,
+  TABLEAU,
 } from "@/lib/index";
 
 export const generateSlug = (text: string) => {
@@ -52,6 +57,11 @@ const ALL_COURSES = [
   ...(Databricks || []),  
   ...(TOEFL || []),
   ...(GRE || []),
+  ...(GCP || []),
+  ...(Snowflake || []),
+  ...(SERVICENOW || []),
+  ...(SAP || []),
+  ...(TABLEAU || []),
 ];
 
 export const getCourseBySlug = (slug: string) => {

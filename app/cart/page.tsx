@@ -6,6 +6,8 @@ import {
   addToCartRequest,
   decreaseQuantity,
 } from "@/lib/redux/slices/cartSlice";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import Image from "next/image";
@@ -45,17 +47,17 @@ export default function CheckoutPage() {
       newErrors.fullName = "Full name is required";
     }
 
-    if (!email.trim()) {
-      newErrors.email = "Email is required";
-    } else if (!isValidEmail(email)) {
-      newErrors.email = "Enter a valid email address";
-    }
+if (!email.trim()) {
+  newErrors.email = "Email is required";
+} else if (!isValidEmail(email)) {
+  newErrors.email = "Enter a valid email address";
+}
 
-    if (!phone.trim()) {
-      newErrors.phone = "Mobile number is required";
-    } else if (!isValidPhone(phone)) {
-      newErrors.phone = "Enter a valid 10-digit mobile number";
-    }
+if (!phone.trim()) {
+  newErrors.phone = "Mobile number is required";
+} else if (!isValidPhone(phone)) {
+  newErrors.phone = "Enter a valid 10-digit mobile number";
+}
 
     setErrors(newErrors);
 
@@ -372,24 +374,24 @@ export default function CheckoutPage() {
               </div>
 
               {/* Dark Payment Section */}
-              <div className="bg-slate-900 p-6 text-white">
+              <div className="bg-gradient-to-b from-[#f3faf7] to-white overflow-hidden p-6 text-black">
                 <div className="space-y-3 mb-6">
-                  <div className="flex justify-between text-slate-400 text-sm">
+                  <div className="flex justify-between text-black text-sm">
                     <span>Subtotal</span>
-                    <span className="text-white font-medium">
+                    <span className="text-black font-medium">
                       ₹{totalAmount}
                     </span>
                   </div>
-                  <div className="flex justify-between text-slate-400 text-sm">
+                  <div className="flex justify-between text-black text-sm">
                     <span>Tax (GST 18%)</span>
-                    <span className="text-white font-medium">₹{gst}</span>
+                    <span className="text-black font-medium">₹{gst}</span>
                   </div>
                   <div className="pt-4 border-t border-slate-800 flex justify-between items-end">
                     <div>
-                      <p className="text-[10px] text-slate-500 uppercase font-black tracking-[0.2em] mb-1">
+                      <p className="text-[10px] text-black uppercase font-black tracking-[0.2em] mb-1">
                         Total Payable
                       </p>
-                      <p className="text-3xl font-black text-white">
+                      <p className="text-3xl font-black text-black">
                         ₹{grandTotal}
                       </p>
                     </div>

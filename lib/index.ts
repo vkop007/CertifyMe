@@ -10,11 +10,11 @@ export const VENDORS = [
   { name: "Kubernetes", src: "/logos/kubernetes.webp" },
   { name: "Juniper", src: "/logos/juniper.webp" },
   { name: "ISTQB", src: "/logos/istqb.webp" },
-  { name: "SnowFlake", src: "/logos/snowflake.webp" },
+  { name: "Snowflake", src: "/logos/snowflake.webp" },
   { name: "CompTIA", src: "/logos/comptia.webp" },
   { name: "Oracle", src: "/logos/oracle.webp" },
-  { name: "Tableau", src: "/logos/tableau.webp" },
-  { name: "ServiceNow", src: "/logos/servicenow.webp" },
+  { name: "TABLEAU", src: "/logos/tableau.webp" },
+  { name: "SERVICENOW", src: "/logos/servicenow.webp" },
   { name: "DELLEMC", src: "/logos/dell.webp" },
   { name: "Cisco", src: "/logos/cisco.webp" },
   { name: "ECCouncil", src: "/logos/ec-council.webp" },
@@ -65,7 +65,7 @@ export const TRAININGS = [
     desc: "Microsoft has traditionally provided certifications for students and professionals. These can assist students prepare for professional and technical careers while also supplementing their degrees. These certificates can help professionals advance in their careers.",
     src: "/Training/microsoft.webp",
   },
-    {
+  {
     title: "CISCO",
     desc: "Cisco Systems, one of the world's leading networking companies, provides the Cisco Certified Network Associate (CCNA) certification program. The CCNA certifies a candidate's ability to install, configure, operate, and troubleshoot medium-sized routed and switched networks.",
     src: "/Training/cisco.webp",
@@ -86,7 +86,6 @@ export const TRAININGS = [
     src: "/Training/pmi.webp",
   },
 ];
-
 
 // List of courses for the ExploreCoursesSection (ExploreCoursesSection)
 export const COURSES = [
@@ -182,11 +181,8 @@ export const FAQS = [
   1. Click the ‘Schedule exam’ option
   2. You will see the ‘Reschedule’ or ‘Cancel’ exam option
   3. If you click ‘Reschedule’, it will ask you to select new dates
-  4. If you click ‘Cancel’, it will take you to the cancel appointment page`
-  }
-
-
-
+  4. If you click ‘Cancel’, it will take you to the cancel appointment page`,
+  },
 ];
 
 // List of reviews for the ReviewsSection (ReviewsSection)
@@ -228,7 +224,7 @@ export const REVIEWS = [
       "Outstanding service and great value for certification vouchers. The team was very helpful in guiding me through the process. Highly satisfied with the experience!",
     rating: 5,
   },
-    {
+  {
     id: 5,
     name: "Rakesh",
     role: "Devsec Engineer",
@@ -440,8 +436,6 @@ To boost your career prospects Oracle Certifications can prove most rewarding. T
   },
 ];
 
-
-
 export const TOEFL = [
   {
     name: "TOEFL Exam Voucher",
@@ -507,6 +501,572 @@ This ensures a smooth, secure, and stress-free exam booking experience.`,
     <tr>
       <th>Scoring Scale</th>
       <td>0 – 120</td>
+    </tr>
+  </tbody>
+</table>
+`,
+  },
+];
+
+export const GCP = [
+  {
+    name: "Google Cloud Professional Voucher",
+    category: "Google Cloud",
+    actualPrice: 17956,
+    ourPrice: 14999,
+    image: "/Certificates/GCP/gcp.webp",
+
+    content: `Google Cloud Professional Exam Voucher 
+
+The Google Cloud Professional certification validates advanced skills in designing, deploying, managing, and securing solutions on Google Cloud Platform (GCP). These certifications are globally recognized and are ideal for professionals working in cloud architecture, data engineering, DevOps, security, and machine learning roles.
+
+This voucher is delivered through Kryterion, Google Cloud’s authorized exam delivery partner, ensuring a secure and authentic exam experience. It can be used for all Google Cloud Professional-level certification exams.
+
+Using a Google Cloud exam voucher helps candidates avoid international card charges, simplifies the registration process, and provides flexibility to schedule the exam at their convenience.
+
+Voucher Highlights
+• Valid for all Google Cloud Professional certification exams  
+• Exam delivered via Kryterion (authorized test provider)  
+• Online proctored and test-center options available  
+• Ideal for working professionals and enterprise candidates  
+
+Global IT Success provides genuine and discounted Google Cloud exam vouchers to help you certify affordably and stress-free.`,
+
+    examDetails: `
+<table width="100%">
+  <tbody>
+    <tr>
+      <th>Certification Level</th>
+      <td>Professional</td>
+    </tr>
+    <tr>
+      <th>Exam Provider</th>
+      <td>Google Cloud via Kryterion</td>
+    </tr>
+    <tr>
+      <th>Exam Format</th>
+      <td>Online Proctored / Test Center</td>
+    </tr>
+    <tr>
+      <th>Voucher Validity</th>
+      <td>Until May 2026</td>
+    </tr>
+    <tr>
+      <th>Applicable Exams</th>
+      <td>All Google Cloud Professional Certifications</td>
+    </tr>
+  </tbody>
+</table>
+`,
+  },
+];
+
+export const SAP = [
+  {
+    name: "SAP Certification Exam Voucher",
+    category: "SAP",
+    actualPrice: 17956,
+    ourPrice: 14999,
+    image: "/Certificates/SAP/SAP.webp",
+
+    content: `SAP Certification Exam Voucher
+
+SAP certifications validate professional expertise in SAP solutions used by enterprises worldwide. These certifications are globally recognized and help professionals demonstrate their skills in SAP functional, technical, and consulting roles.
+
+This SAP exam voucher can be used for a wide range of SAP certification exams, including functional, technical, and S/4HANA-related certifications. It provides a secure and convenient way to register for SAP exams without international card charges.
+
+Voucher Highlights
+• Applicable to SAP certification exams  
+• Official and authorized SAP exam voucher  
+• Online proctored exam delivery  
+• Flexible exam scheduling  
+
+Global IT Success offers genuine and discounted SAP exam vouchers to help professionals certify affordably and stress-free.`,
+
+    examDetails: `
+<table width="100%">
+  <tbody>
+    <tr>
+      <th>Certification Provider</th>
+      <td>SAP</td>
+    </tr>
+    <tr>
+      <th>Exam Format</th>
+      <td>Online Proctored</td>
+    </tr>
+    <tr>
+      <th>Voucher Validity</th>
+      <td>12 Months from Date of Purchase</td>
+    </tr>
+    <tr>
+      <th>Applicable Exams</th>
+      <td>All Eligible SAP Certification Exams</td>
+    </tr>
+    <tr>
+      <th>Attempts</th>
+      <td>Single Exam Attempt</td>
+    </tr>
+  </tbody>
+</table>
+`,
+  },
+
+  {
+    name: "SAP S/4HANA Functional Consultant Exam Voucher",
+    category: "SAP",
+    actualPrice: 17956,
+    ourPrice: 14999,
+    image: "/Certificates/SAP/SAP.webp",
+
+    content: `SAP S/4HANA Functional Consultant Exam Voucher
+
+The SAP S/4HANA Functional Consultant certification validates expertise in SAP’s next-generation ERP system. It is designed for professionals working in SAP Finance, Logistics, Supply Chain, or other functional domains within S/4HANA environments.
+
+This voucher allows candidates to schedule the SAP S/4HANA certification exam securely using SAP’s official exam delivery platform.
+
+Voucher Highlights
+• Valid for SAP S/4HANA Functional Consultant exams  
+• Official SAP certification voucher  
+• Online proctored exam delivery  
+• Ideal for SAP functional consultants  
+
+Global IT Success provides genuine and discounted SAP vouchers with instant delivery.`,
+
+    examDetails: `
+<table width="100%">
+  <tbody>
+    <tr>
+      <th>Certification</th>
+      <td>SAP S/4HANA Functional Consultant</td>
+    </tr>
+    <tr>
+      <th>Exam Provider</th>
+      <td>SAP</td>
+    </tr>
+    <tr>
+      <th>Exam Format</th>
+      <td>Online Proctored</td>
+    </tr>
+    <tr>
+      <th>Voucher Validity</th>
+      <td>12 Months</td>
+    </tr>
+    <tr>
+      <th>Attempts</th>
+      <td>Single Attempt</td>
+    </tr>
+  </tbody>
+</table>
+`,
+  },
+
+  {
+    name: "SAP Certified Development Associate (ABAP) Exam Voucher",
+    category: "SAP",
+    actualPrice: 17956,
+    ourPrice: 14999,
+    image: "/Certificates/SAP/SAP.webp",
+
+    content: `SAP Certified Development Associate (ABAP) Exam Voucher
+
+The SAP ABAP certification validates a developer’s ability to build, customize, and enhance SAP applications using ABAP programming. It is ideal for technical consultants and developers working on SAP implementations and custom development projects.
+
+This voucher enables candidates to register for the SAP ABAP certification exam using SAP’s official exam platform.
+
+Voucher Highlights
+• Valid for SAP ABAP certification exams  
+• Official SAP exam voucher  
+• Online proctored delivery  
+• Ideal for SAP technical consultants and developers  
+
+Global IT Success ensures authentic and discounted SAP exam vouchers with reliable support.`,
+
+    examDetails: `
+<table width="100%">
+  <tbody>
+    <tr>
+      <th>Certification</th>
+      <td>SAP Certified Development Associate – ABAP</td>
+    </tr>
+    <tr>
+      <th>Exam Provider</th>
+      <td>SAP</td>
+    </tr>
+    <tr>
+      <th>Exam Format</th>
+      <td>Online Proctored</td>
+    </tr>
+    <tr>
+      <th>Voucher Validity</th>
+      <td>12 Months</td>
+    </tr>
+    <tr>
+      <th>Attempts</th>
+      <td>Single Attempt</td>
+    </tr>
+  </tbody>
+</table>
+`,
+  },
+];
+
+export const TABLEAU = [
+  {
+    name: "Tableau Desktop Specialist Exam Voucher",
+    category: "Tableau",
+    actualPrice: 8978,
+    ourPrice: 6999,
+    image: "/Certificates/Tableau/desktop-specialist.webp",
+
+    content: `Tableau Desktop Specialist Exam Voucher
+
+The Tableau Desktop Specialist certification validates foundational skills in data visualization using Tableau. It is ideal for beginners and professionals who want to demonstrate their ability to build basic charts, dashboards, and visual analytics using Tableau Desktop.
+
+This voucher allows candidates to register for the Tableau Desktop Specialist exam through Tableau’s official exam delivery platform, ensuring a secure and authentic certification experience.
+
+Using a Tableau exam voucher helps candidates avoid international card charges and simplifies the exam registration process.
+
+Voucher Highlights
+• Valid for Tableau Desktop Specialist certification exam  
+• Official and authorized Tableau exam voucher  
+• Online proctored exam delivery  
+• Ideal for beginners and data professionals  
+
+Global IT Success provides genuine and discounted Tableau exam vouchers with instant delivery.`,
+
+    examDetails: `
+<table width="100%">
+  <tbody>
+    <tr>
+      <th>Certification</th>
+      <td>Tableau Desktop Specialist</td>
+    </tr>
+    <tr>
+      <th>Exam Provider</th>
+      <td>Tableau</td>
+    </tr>
+    <tr>
+      <th>Exam Format</th>
+      <td>Online Proctored</td>
+    </tr>
+    <tr>
+      <th>Voucher Validity</th>
+      <td>12 Months from Date of Purchase</td>
+    </tr>
+    <tr>
+      <th>Attempts</th>
+      <td>Single Exam Attempt</td>
+    </tr>
+  </tbody>
+</table>
+`,
+  },
+
+  {
+    name: "Tableau Certified Data Analyst Exam Voucher",
+    category: "Tableau",
+    actualPrice: 22445,
+    ourPrice: 18999,
+    image: "/Certificates/Tableau/data-analyst.webp",
+
+    content: `Tableau Certified Data Analyst Exam Voucher
+
+The Tableau Certified Data Analyst certification validates advanced skills in data preparation, analysis, visualization, and dashboard design using Tableau. It is designed for professionals who work with complex datasets and deliver business insights through Tableau.
+
+This voucher enables candidates to register for the Tableau Data Analyst certification exam using Tableau’s official exam system.
+
+Voucher Highlights
+• Valid for Tableau Certified Data Analyst exam  
+• Official and authorized Tableau exam voucher  
+• Online proctored exam delivery  
+• Ideal for analysts and BI professionals  
+
+Global IT Success ensures genuine Tableau vouchers with secure and hassle-free delivery.`,
+
+    examDetails: `
+<table width="100%">
+  <tbody>
+    <tr>
+      <th>Certification</th>
+      <td>Tableau Certified Data Analyst</td>
+    </tr>
+    <tr>
+      <th>Exam Provider</th>
+      <td>Tableau</td>
+    </tr>
+    <tr>
+      <th>Exam Format</th>
+      <td>Online Proctored</td>
+    </tr>
+    <tr>
+      <th>Voucher Validity</th>
+      <td>12 Months</td>
+    </tr>
+    <tr>
+      <th>Attempts</th>
+      <td>Single Attempt</td>
+    </tr>
+  </tbody>
+</table>
+`,
+  },
+
+  {
+    name: "Tableau Certification Exam Voucher (Applies to All Tableau Exams)",
+    category: "Tableau",
+    actualPrice: 22445,
+    ourPrice: 18999,
+    image: "/Certificates/Tableau/tableau.webp",
+
+    content: `Tableau Certification Exam Voucher
+
+This Tableau certification voucher can be used for multiple Tableau certification exams, including Desktop Specialist and Data Analyst certifications. It offers flexibility for candidates who want to choose or upgrade their exam later.
+
+Using an official Tableau voucher ensures secure exam booking, avoids international payment issues, and provides a smooth certification experience.
+
+Voucher Highlights
+• Applicable to Tableau certification exams  
+• Official and authorized voucher  
+• Online proctored exam delivery  
+• Flexible exam scheduling  
+
+Global IT Success provides discounted and genuine Tableau exam vouchers to support your certification goals.`,
+
+    examDetails: `
+<table width="100%">
+  <tbody>
+    <tr>
+      <th>Certification Provider</th>
+      <td>Tableau</td>
+    </tr>
+    <tr>
+      <th>Exam Format</th>
+      <td>Online Proctored</td>
+    </tr>
+    <tr>
+      <th>Voucher Validity</th>
+      <td>12 Months from Purchase</td>
+    </tr>
+    <tr>
+      <th>Applicable Exams</th>
+      <td>All Eligible Tableau Certification Exams</td>
+    </tr>
+    <tr>
+      <th>Attempts</th>
+      <td>Single Exam Attempt</td>
+    </tr>
+  </tbody>
+</table>
+`,
+  },
+];
+
+
+export const SERVICENOW = [
+  {
+    name: "ServiceNow Certified System Administrator (CSA) Exam Voucher",
+    category: "ServiceNow",
+    actualPrice: 26934,
+    ourPrice: 24999,
+    image: "/Certificates/ServiceNow/servicenow.webp",
+
+    content: `ServiceNow Certified System Administrator (CSA) Exam Voucher
+
+The ServiceNow Certified System Administrator (CSA) certification validates a professional’s ability to configure, manage, and maintain ServiceNow applications. It is one of the most popular entry-level certifications for ServiceNow professionals and a prerequisite for advanced certifications.
+
+This voucher is valid for a single attempt of the CSA exam and is delivered through ServiceNow’s authorized exam provider, ensuring a secure and genuine exam experience.
+
+Using a ServiceNow exam voucher helps candidates avoid international card charges and allows flexible exam scheduling with complete peace of mind.
+
+Voucher Highlights
+• Valid for ServiceNow CSA exam  
+• Official and authorized exam voucher  
+• Online proctored exam delivery  
+• Ideal for administrators and beginners in ServiceNow  
+
+Global IT Success provides genuine and discounted ServiceNow exam vouchers to support your certification journey.`,
+
+    examDetails: `
+<table width="100%">
+  <tbody>
+    <tr>
+      <th>Certification</th>
+      <td>Certified System Administrator (CSA)</td>
+    </tr>
+    <tr>
+      <th>Exam Provider</th>
+      <td>ServiceNow</td>
+    </tr>
+    <tr>
+      <th>Exam Format</th>
+      <td>Online Proctored</td>
+    </tr>
+    <tr>
+      <th>Voucher Validity</th>
+      <td>12 Months from Date of Purchase</td>
+    </tr>
+    <tr>
+      <th>Attempts</th>
+      <td>Single Exam Attempt</td>
+    </tr>
+  </tbody>
+</table>
+`,
+  },
+
+  {
+    name: "ServiceNow Certified Application Developer (CAD) Exam Voucher",
+    category: "ServiceNow",
+    actualPrice: 26934,
+    ourPrice: 24999,
+    image: "/Certificates/ServiceNow/servicenow.webp",
+
+    content: `ServiceNow Certified Application Developer (CAD) Exam Voucher
+
+The ServiceNow Certified Application Developer (CAD) certification validates skills in designing, building, and maintaining custom applications on the ServiceNow platform. It is ideal for developers working on ServiceNow implementations and customizations.
+
+This voucher allows candidates to register for the CAD exam securely using ServiceNow’s official exam delivery system.
+
+Voucher Highlights
+• Valid for ServiceNow CAD exam  
+• Official exam voucher  
+• Online proctored delivery  
+• Suitable for ServiceNow developers  
+
+Global IT Success ensures genuine vouchers with instant delivery.`,
+
+    examDetails: `
+<table width="100%">
+  <tbody>
+    <tr>
+      <th>Certification</th>
+      <td>Certified Application Developer (CAD)</td>
+    </tr>
+    <tr>
+      <th>Exam Provider</th>
+      <td>ServiceNow</td>
+    </tr>
+    <tr>
+      <th>Exam Format</th>
+      <td>Online Proctored</td>
+    </tr>
+    <tr>
+      <th>Voucher Validity</th>
+      <td>12 Months from Purchase</td>
+    </tr>
+    <tr>
+      <th>Attempts</th>
+      <td>Single Attempt</td>
+    </tr>
+  </tbody>
+</table>
+`,
+  },
+
+  {
+    name: "ServiceNow CIS – IT Service Management (ITSM) Exam Voucher",
+    category: "ServiceNow",
+    actualPrice: 26934,
+    ourPrice: 24999,
+    image: "/Certificates/ServiceNow/servicenow.webp",
+
+    content: `ServiceNow Certified Implementation Specialist – ITSM Exam Voucher
+
+The CIS–ITSM certification validates expertise in implementing IT Service Management processes using ServiceNow. It is ideal for consultants, implementation specialists, and professionals involved in ITSM deployments.
+
+This voucher is valid for one CIS–ITSM exam attempt and is delivered through ServiceNow’s official exam platform.
+
+Voucher Highlights
+• Valid for CIS–ITSM certification  
+• Official and authorized voucher  
+• Online proctored exam  
+• Ideal for consultants and ITSM professionals  
+
+Global IT Success offers discounted and genuine ServiceNow exam vouchers.`,
+
+    examDetails: `
+<table width="100%">
+  <tbody>
+    <tr>
+      <th>Certification</th>
+      <td>CIS – IT Service Management (ITSM)</td>
+    </tr>
+    <tr>
+      <th>Exam Provider</th>
+      <td>ServiceNow</td>
+    </tr>
+    <tr>
+      <th>Exam Format</th>
+      <td>Online Proctored</td>
+    </tr>
+    <tr>
+      <th>Voucher Validity</th>
+      <td>12 Months</td>
+    </tr>
+    <tr>
+      <th>Attempts</th>
+      <td>Single Attempt</td>
+    </tr>
+  </tbody>
+</table>
+`,
+  },
+];
+
+
+export const Snowflake = [
+  {
+    name: "SnowPro Core Certification Exam Voucher",
+    category: "Snowflake",
+    actualPrice: 12569,
+    ourPrice: 9999,
+    image: "/Certificates/Snowflake/Snowflake.webp",
+
+    content: `SnowPro Core Certification Exam Voucher
+
+The SnowPro Core Certification is Snowflake’s foundational certification designed to validate a candidate’s understanding of Snowflake’s cloud data platform. It demonstrates knowledge of core concepts such as Snowflake architecture, virtual warehouses, data storage, security, data sharing, and account management.
+
+This exam voucher is valid for a single registration of the SnowPro Core Certification Exam and is administered through Snowflake’s official exam delivery partner, Pearson VUE.
+
+Each voucher is valid for a period of twelve (12) months from the date of purchase, providing candidates ample time to schedule and complete their exam. The voucher has no cash or monetary value and cannot be exchanged or used for any other purpose.
+
+Once your order is placed, you will receive a confirmation email from Pearson.com containing your unique exam voucher number. This voucher number is required to register for the SnowPro Core exam. Please ensure that a valid email address is provided and that your system allows emails from Pearson.com.
+
+Voucher Terms & Conditions
+• Valid for one SnowPro Core Certification Exam attempt  
+• Voucher validity: 12 months from purchase date  
+• Exam must be scheduled and taken before voucher expiry  
+• Vouchers are country-specific  
+• All voucher sales are final and non-refundable  
+
+This voucher is ideal for data professionals, architects, analysts, and engineers looking to validate their Snowflake expertise.`,
+
+    examDetails: `
+<table width="100%">
+  <tbody>
+    <tr>
+      <th>Exam Name</th>
+      <td>SnowPro Core Certification Exam</td>
+    </tr>
+    <tr>
+      <th>Certification Provider</th>
+      <td>Snowflake</td>
+    </tr>
+    <tr>
+      <th>Exam Delivery Partner</th>
+      <td>Pearson VUE</td>
+    </tr>
+    <tr>
+      <th>Voucher Validity</th>
+      <td>12 Months from Date of Purchase</td>
+    </tr>
+    <tr>
+      <th>Number of Attempts</th>
+      <td>Single Exam Registration</td>
+    </tr>
+    <tr>
+      <th>Refund Policy</th>
+      <td>Non-refundable</td>
     </tr>
   </tbody>
 </table>
@@ -589,7 +1149,6 @@ This ensures a smooth, secure, and stress-free GRE exam booking experience.`,
 `,
   },
 ];
-
 
 export const AWS = [
   {
@@ -1570,7 +2129,6 @@ NOTE: Voucher validity and usage terms are subject to Databricks certification p
   },
 ];
 
-
 export const VMWARE = [
   {
     name: "VMware Certified Advanced Professional (VCAP-DCV)",
@@ -2279,7 +2837,7 @@ Book your CKA exam smartly with authorized discounted exam vouchers and make you
 ];
 
 export const SALESFORCE = [
-        {
+  {
     name: "Salesforce Exam Vouchers (Applies to all $150 Exam)",
     category: "Salesforce",
     actualPrice: 15750,
@@ -2391,7 +2949,7 @@ Start your Salesforce certification journey today and unlock new career opportun
   </tbody>
 </table>`,
   },
-    {
+  {
     name: "Salesforce Exam Vouchers (Applies to all $400 Exam)",
     category: "Salesforce",
     actualPrice: 35965,

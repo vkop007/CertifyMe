@@ -3,8 +3,8 @@ import nodemailer from "nodemailer";
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: process.env.MAIL_USER,
-    pass: process.env.MAIL_PASS,
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS,
   },
 });
 
@@ -20,7 +20,7 @@ export async function sendPaymentSuccessEmail({
   paymentId: string;
 }) {
   await transporter.sendMail({
-    from: `"CERTIFY" <${process.env.MAIL_USER}>`,
+    from: `"CERTIFY" <${process.env.SMTP_USER}>`,
     to,
     subject: "Payment Successful 🎉",
     html: `
