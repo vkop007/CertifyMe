@@ -6,7 +6,7 @@ import ContactForm from "@/components/ContactForm";
 
 export default function EnquirySection() {
   return (
-    <section className="py-20 bg-green-50/30">
+    <section className="py-10 bg-green-50/30">
       <div className="container-custom">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
