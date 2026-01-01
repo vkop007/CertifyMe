@@ -14,8 +14,8 @@ export default function WhatsAppButton() {
         bottom-6
         right-6
         z-[9999]
-        w-12
-        h-12
+        w-15
+        h-15
         rounded-full
         bg-white
         shadow-[0_10px_40px_rgba(0,0,0,0.25)]
@@ -29,7 +29,7 @@ export default function WhatsAppButton() {
       <img
         src="/WhatsApp.svg"
         alt="WhatsApp"
-        className="w-9 h-9"
+        className="w-12 h-12"
       />
     </a>
   );
