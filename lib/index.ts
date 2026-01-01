@@ -1,23 +1,31 @@
 // List of vendor names for the EnquirySection (EnquirySection) & (CategoriesSection)
 export const VENDORS = [
   { name: "AWS", src: "/logos/aws.webp" },
+  { name: "Databricks", src: "/logos/databrick.webp" },
+  { name: "GCP", src: "/logos/gcp.webp" },
   { name: "Checkpoint", src: "/logos/checkpoints.webp" },
+  { name: "SAP", src: "/logos/sap.webp" },
+  { name: "Salesforce", src: "/logos/salesforce.webp" },
+  { name: "Microsoft", src: "/logos/microsoft.webp" },
+  { name: "Kubernetes", src: "/logos/kubernetes.webp" },
+  { name: "Juniper", src: "/logos/juniper.webp" },
+  { name: "ISTQB", src: "/logos/istqb.webp" },
+  { name: "SnowFlake", src: "/logos/snowflake.webp" },
   { name: "CompTIA", src: "/logos/comptia.webp" },
+  { name: "Oracle", src: "/logos/oracle.webp" },
+  { name: "Tableau", src: "/logos/tableau.webp" },
+  { name: "ServiceNow", src: "/logos/servicenow.webp" },
   { name: "DELLEMC", src: "/logos/dell.webp" },
   { name: "Cisco", src: "/logos/cisco.webp" },
   { name: "ECCouncil", src: "/logos/ec-council.webp" },
   { name: "Fortinet", src: "/logos/fortinet.webp" },
   { name: "ISACA", src: "/logos/isaca.webp" },
-  { name: "ISTQB", src: "/logos/istqb.webp" },
-  { name: "Juniper", src: "/logos/juniper.webp" },
-  { name: "Kubernetes", src: "/logos/kubernetes.webp" },
-  { name: "Microsoft", src: "/logos/microsoft.webp" },
   { name: "Pega", src: "/logos/new-pega.webp" },
-  { name: "Oracle", src: "/logos/oracle.webp" },
-  { name: "Salesforce", src: "/logos/salesforce.webp" },
   { name: "SAS", src: "/logos/sas.webp" },
   { name: "Splunk", src: "/logos/splunk-logo.webp" },
   { name: "VMware", src: "/logos/vmware.webp" },
+  { name: "GRE", src: "/logos/gre.webp" },
+  { name: "TOEFL", src: "/logos/toefl.webp" },
 ];
 
 export const clients = [
@@ -199,7 +207,7 @@ export const REVIEWS = [
     role: "Devops Engineer",
     image: "/Reviewer/person2.jpeg",
     content:
-      "Discounted exam vouchers for Cisco, Citrix, and Microsoft are available through Global IT Success. I purchased the Cisco CCNP ENARSI exam voucher for ₹27,500 and saved ₹4,500.",
+      "Discounted exam vouchers for Cisco, Citrix, and Microsoft are available through CertiMasters. I purchased the Salesforce exam voucher for 14,999 and saved ₹6,500",
     rating: 5,
   },
   {
@@ -208,11 +216,29 @@ export const REVIEWS = [
     role: "Devsec Engineer",
     image: "/Reviewer/person3.jpeg",
     content:
-      "The coupon they offer works and is definitely cheaper. This was my anxiety before booking Comptia Security+ and it worked. Now I am looking forward to booking my next certifications with them.",
+      "The coupon they offer works and is definitely cheaper. This was my anxiety before booking Power BI(PL300) and it worked. Now I am looking forward to booking my next certifications with them.",
     rating: 4,
   },
   {
     id: 4,
+    name: "Ajay Kumar",
+    role: "Manager",
+    image: "/Reviewer/person4.jpeg",
+    content:
+      "Outstanding service and great value for certification vouchers. The team was very helpful in guiding me through the process. Highly satisfied with the experience!",
+    rating: 5,
+  },
+    {
+    id: 5,
+    name: "Rakesh",
+    role: "Devsec Engineer",
+    image: "/Reviewer/person2.jpeg",
+    content:
+      "The coupon they offer works and is definitely cheaper. This was my anxiety before booking Power BI(PL300) and it worked. Now I am looking forward to booking my next certifications with them.",
+    rating: 4,
+  },
+  {
+    id: 6,
     name: "Ajay Kumar",
     role: "Manager",
     image: "/Reviewer/person4.jpeg",
@@ -229,7 +255,7 @@ export const CompTIA = [
     name: "CompTIA A+ (220-1201 or 220-1202)",
     category: "CompTIA",
     actualPrice: 28026,
-    ourPrice: 14802,
+    ourPrice: 13999,
     image: "/Certificates/CompTIA/CompTIA_A_220-1201__220-1202.webp",
     content:
       "CompTIA A+ (220-1201 or 220-1202)\nCompTIA A+ remains one of the top choices among IT certifications. Certified professionals are regarded as problem solvers. The certification prepares individuals to troubleshoot and solve technical issues, from networking and operating systems to mobile devices. A+ Certification is a computer industry-accredited credential that validates the skillset of the PC Service Specialists. The candidate will learn how to demonstrate expertise in IT and computer tech and attempt the necessary configurations of the device operating system that incorporates Windows, Linux, Chrome OS, Mac, Android, & iOS, and SaaS software.\n\nNumerous IT-related job positions, including IT Support Analyst, IT Support Technician, or IT Engineer, are open to the CompTIA A+ certified experts. The CompTIA A+ certification comprises of:\n\nCompTIA A+ 220-1201:\nCovers mobile devices, networking technology, hardware, virtualization, and cloud computing.\n\nCompTIA A+ 220-1202:\nCovers operating systems, security, software, and operational procedures.\n\nWho Should Take the CompTIA A+ Exam?\nAspiring IT professionals looking to start their career\nCurrent IT technicians seeking validation of their skills\nStudents and career changers entering the tech industry\nAnyone passionate about troubleshooting and technology\n\nCompTIA A+ Certification Benefits\nStay competent in the IT job market with an enhanced resume.\nHarness salary hike with validated skills showcasing your commitment to career growth.\nClimb the professional ladder with higher-level IT roles and advanced certifications.\n\nAvailable Job Roles after getting CompTIA A+ certified\nHelp Desk Technician\nIT Specialist\nField Service Technician\nIT Support Manager\nBusiness Analyst\nData Support Technician\nTechnical Support Specialist\nMSP Personnel\nIT Server Technician\n\nMake your professional journey smooth using discounted vouchers at the best deal because we have partnered with the vendor to provide career-committed professionals to validate their skills for less than the standard fee. Purchase our discounted CompTIA A+ certification vouchers today and reduce your exam fee.\n\nPrerequisites\nThere is no educational, training, or certification needed, but one must:\n\nReview the recommended experience in the Exam Details section on the individual certification pages.\nMust be at least 13 years old.\n\nRecommended\n9 to 12 months of hands-on experience in the lab or field.",
@@ -240,7 +266,7 @@ export const CompTIA = [
     name: "CompTIA Data+ (DA0-001)",
     category: "CompTIA",
     actualPrice: 18376,
-    ourPrice: 10120,
+    ourPrice: 9999,
     image: "/Certificates/CompTIA/CompTIA_Data_DA0-001.webp",
     content:
       "CompTIA Data+ (DA0-001)\nThe CompTIA Data+ certification is an early-career level certificate for data-driven decision-making business development professionals. It validates that the successful candidate possesses the skills and knowledge to make business requirements actionable by mining and manipulating data, using basic statistical practices, interpreting complex data sets, and adhering to governance and quality standards throughout the data life cycle.\n\nSkills You’ll Learn\nData Concepts and Environments: Grasp data schemas, dimensions, and distinctions between popular data structures and file types.\n\nData Mining: Master data acquisition, cleansing, profiling, and manipulation skills.\n\nData Analysis: Use descriptive statistical techniques and critical analysis methods.\n\nVisualization: Transform business needs into efficient reports or dashboards with the proper design.\n\nData Governance, Quality, & Controls: Master data governance principles and use data quality control concepts.\n\nJobs You Can Land with CompTIA Data+\nData Architect\nData Analyst\nBusiness Analyst\nReporting Analyst\nOperations Analyst\nMarketing Analyst\n\nGlobal IT Success has partnered with the vendor to ease your exam-related financial hurdles by offering a discounted CompTIA Data+ Certification Exam (DA0-001) certification exam voucher. Join the network of successful candidates today by purchasing our exclusive discounts. Reduce your exam fees and make your certification journey hassle-free.\n\nPrerequisites\nCompTIA suggests that the ideal candidate has worked for 18-24 months as a report/business analyst with experience in databases in line with analytical tools, fundamental knowledge of statistics, and data visualization.",
@@ -251,7 +277,7 @@ export const CompTIA = [
     name: "CompTIA Network+ (N10-009)",
     category: "CompTIA",
     actualPrice: 28026,
-    ourPrice: 14802,
+    ourPrice: 13999,
     image: "/Certificates/CompTIA/CompTIA_Network_N10-009.webp",
     content:
       "CompTIA Network+ (N10-009)\nCompTIA Network+ proves your ability and expertise in networking, equipping you with the skills to design, troubleshoot, and secure networks, laying the foundation for a thriving career in IT and cybersecurity. Network+ certification prepares individuals to support networks on any platform. It is the only credential that includes the specific skills network professionals require.\n\nStart your career strong with CompTIA Network+ certification and stay competent in opportunities as network administrators, network architects, network engineers, and more. Investing smartly in the in-demand skills will be setting yourself up for a flourishing career and better job satisfaction armed with efficiency.\n\nCompTIA Network+ (N10-009) certification is a widely accepted credential that confirms basic networking competencies. Some of the essential advantages of obtaining this certification are:\n\nIndustry Recognition\nRecognized by employers worldwide, CompTIA Network+ certification covers networking concepts, infrastructure, network operations, network security, and network troubleshooting that can be applied to various technologies and vendors. Starting your career with CompTIA Network+, a vendor-neutral certification, is one of the best career advancement tools for IT professionals just dipping their toes into the IT industry.\n\nCareer Advancement\nThe certification enables you to leverage career opportunities as a Network Administrator, IT Support Specialist, Network Engineer, Systems Administrator, and Security Analyst. It can increase income and is the passport to unlocking new doors of higher-level certifications such as CCNA, Security+, and CySA+.\n\nStrong Foundation in Networking\nCompTIA Network+ helps you build a strong networking foundation by empowering you with practical skills to configure, manage, and troubleshoot networks.\n\nSupports Cybersecurity Knowledge\nThe CompTIA Network+ also helps in foundational networking knowledge, which is useful for cybersecurity roles. The certification equips the test-takers to understand network vulnerabilities, security best practices, and risk management.\n\nVendor-Neutral and Broad Scope\nCompTIA Network+’s vendor-neutral features have a broader scope because it covers wired and wireless networking, cloud computing, and virtualization.\n\nNo Experience Prerequisites\nCompTIA Network+ certification is a foundational-level certification. There are no prerequisites for taking the certification exam, making it ideal for career beginners in IT networking.\n\nJob Roles After Achieving the Certification\nTier II IT Support Technician\nIT Support Manager\nNetwork Administrator\nSystems Administrator\nData Center Technician\n\nCertify smart with smart booking using an authorized discounted exam from Global IT Success, your trusted partner for affordable success. With our vouchers, you can reduce your high CompTIA Network+ certification exam fee, allocate a saved amount for preparation materials, and focus on what matters.\n\nPrerequisite\nCompTIA A+ certification\n\nRecommended\nA minimum of 9 - 12 months progression in practical work as a junior network administrator or network support technician.",
@@ -262,7 +288,7 @@ export const CompTIA = [
     name: "CompTIA Cloud+ (CV0-004)",
     category: "CompTIA",
     actualPrice: 28026,
-    ourPrice: 14802,
+    ourPrice: 13999,
     image: "/Certificates/CompTIA/CompTIA_Cloud_CV0-004.webp",
     content:
       "CompTIA Cloud+ (CV0-004)\nCompTIA Cloud+ (CV0-004) is the premier cloud certification uniquely tailored to in-demand job roles with real-world demands of cloud operations and validating essential skills needed to excel in cloud environments. As the only vendor-neutral cloud certification, it confirms the technical and hands-on expertise required for secure cloud operations across all platforms. It also aligns with four NICE/DCWF work roles: Network Operations Specialist, Systems Administrator, Enterprise Architect, and Security Architect.\n\nThe certification validates essential skills to implement, maintain, optimize, and troubleshoot cloud-based infrastructure services. Candidates gain knowledge in cloud architecture and design concepts, ensuring they can successfully provision, configure, and manage cloud resources. Security remains a core focus, equipping professionals to implement and maintain secure cloud environments. The integration and deployment of cloud services with observability, scaling, and automation are included in the certification, as is the basic understanding of DevOps concepts.\n\nMoreover, CompTIA Cloud+ guarantees that certified professionals can resolve basic issues surrounding cloud management, preparing them to control the entire lifecycle of cloud environments.\n\nWhat Skills Will You Learn?\nCloud Architecture\nEvaluate the particulars of varied business needs to formulate the most suitable cloud model.\n\nDeployment\nAssess system specifications for the optimal execution of workload relocations to the cloud.\n\nOperations\nOversee and enhance automation, scaling, backup and recovery processes, and resource lifecycle management within the cloud environment.\n\nSecurity\nEstablish effective measures for securing cloud systems, including risk analysis, compliance enforcement, and security layer deployment.\n\nDevOps Fundamentals\nFamiliarize yourself with tools and concepts of version control, CI/CD, system integration, and other DevOps activities.\n\nTroubleshooting\nTroubleshoot problems with deployment, networking, and security of cloud services.\n\nJobs You Can Land with CompTIA Cloud+\nCloud System Administrator\n\nYou can book your CompTIA Cloud+ certification exam with a discount using a voucher price of Rs 14802 against the standard price of Rs 20432. Purchase and save Rs 5630 (28%) on your booking. Invest smart and ace affordably for a flourishing future.\n\nPrerequisite\nAbout 5 years total IT experience, including 2-3 years as a systems administrator or cloud engineer.",
@@ -273,7 +299,7 @@ export const CompTIA = [
     name: "CompTIA Linux+ (XK0-005)",
     category: "CompTIA",
     actualPrice: 28026,
-    ourPrice: 14802,
+    ourPrice: 13999,
     image: "/Certificates/CompTIA/CompTIA_Linux_XK0-005.webp",
     content:
       "CompTIA Linux+ (XK0-005)\nCompTIA Linux+ offers a general understanding of all Linux distributions which serves as a base for more vendor and distro-specific knowledge. As the only job-focused Linux certification, it confidently provides practitioners with the most current basic skills recruiters seek. It demonstrates the necessary skills for junior system administrators who maintain Linux environments.\n\nThe certification proves that the certified professional is equipped with the right skills for managing tech systems in the current world. The exam is tailored towards the current technological trends in the enterprise world, it looks at all the Linux operating systems and is famous in job ads.\n\nAs Linux becomes more integral to cloud environments, CompTIA Linux+ has shifted focus to covering automation and orchestration. It adopts newer concepts like infrastructure as code and containers which helps to prepare IT specialists for the fast-changing environment.\n\nWhat Skills Will You Learn?\nSystem Management\nManage and configure software, storage, processes, and services.\n\nSecurity\nLearn the most effective methods of controlling permissions, authentication, firewalls, and files.\n\nScripting, Containers and Automation\nProduce simple shell scripts, execute BASH scripts, utilize GIT for version control, and orchestrate workflows.\n\nTroubleshooting\nAnalyze system characteristics and processes and troubleshoot user, application, and hardware problems.\n\nJob Roles You Can Land with the CompTIA Linux+ (XK0-005) Certification\nData Scientist\nPenetration Tester\nData Architect\nSolution Architect\nLinux Engineer\nWeb Administrator/Developer\nNetwork Administrator\nCybersecurity Engineer\n\nBesides all the benefits you can harness with CompTIA Linux+ (XK0-005), you can book your CompTIA Linux+ (XK0-005) certification exam by paying less using our authorized discounted exam voucher. Invest smart and maximize your savings on your certification journey. Save Rs 5630 (28%) by paying just Rs 14802/- against the actual fee of Rs 20432/- on your exam. Your excellence should not cost you a fortune. Get a discount and save more.\n\nPrerequisite\nCompTIA A+, Network+, Server+, and 1 year as a junior Linux engineer.",
@@ -284,7 +310,7 @@ export const CompTIA = [
     name: "CompTIA Server+ (SK0-005)",
     category: "CompTIA",
     actualPrice: 28026,
-    ourPrice: 14802,
+    ourPrice: 13999,
     image: "/Certificates/CompTIA/CompTIA_Server_SK0-005.webp",
     content:
       "CompTIA Server+ (SK0-005)\nCompTIA Server+ Certification acknowledges the skills and knowledge of IT professionals in data centers or server environments. The exam includes essential hardware and software technologies including high availability, cloud computing, and scripting. A CompTIA Server+ certification proves that a certified professional has the skills to administer the latest servers. The certification tests the test-taker’s ability to demonstrate multi-step knowledge to install securely, manage, and troubleshoot servers.\n\nThe certification will empower you with the skills to install, manage, troubleshoot, and secure server environments in various IT infrastructures. Moreover, you can perform routine maintenance, diagnose performance issues, and apply disaster recovery strategies.\n\nWhat Skills Will You Learn?\nInstallation and Management of Server Hardware\nHardware and Backup Storage\nSystem Office\nVulnerability Management and Disaster Recovery Planning\nDisaster and Backup Recovery Methods and information, along with vulnerability techniques for physical and network security\nDiagnosing Problems\nIssues related to the system’s hardware, software, network connectivity, data storage, and information security\n\nJobs you can land with the help of CompTIA Server+ certification\nSystem Administrator\nServer Support Technician\nData Center Technician\nNetwork Administrator\nIT Support Specialist\nCloud Administrator\nStorage Administrator\n\nWe offer authorized discounted exam vouchers to make your CompTIA Server+ certification journey easier. Book your exam with a discount and save Rs 5630 (28%). Our offer price is Rs 14802 against the standard price of Rs 20432.\n\nPrerequisite\nCompTIA A+ certified or equivalent. Hands-on experience of at least 2 years working in a server environment.",
@@ -295,7 +321,7 @@ export const CompTIA = [
     name: "CompTIA Data Sys+ (DS0-001)",
     category: "CompTIA",
     actualPrice: 28026,
-    ourPrice: 14802,
+    ourPrice: 13999,
     image: "/Certificates/CompTIA/CompTIA_DataSys_DS0-001.webp",
     content:
       "CompTIA Data Sys+ (DS0-001)\nThe CompTIA DataSys+ exam outlines the critical competencies for managing and safeguarding data. The exam focuses on data administration and security, assessing the fundamental skills for deploying, managing, and maintaining reliable high-availability systems. The DataSys+ exam also emphasizes security practices and business continuity while introducing introductory scripting and programming in a relational database environment. CompTIA DataSys+ certification demonstrates competency in building, supporting, and securing growing data systems. This is a vendor-neutral certification for data administrators (DBAs) to implement and demonstrate their skills, regardless of the tools used by specific vendors.\n\nWith the influx of big data, there is an increased need for skilled administrators. The CompTIA DataSys+ establishes that certified practitioners possess a reliable, standardized set of skills related to the management and security of data systems within a secure environment. This certification assures employers that individuals are preparing to meet their data administration needs.\n\nWith CompTIA DataSys+ (DS0-001) certification, you can confidently navigate through the IT job market. Take control of your career by validating the skills that matter and thrive in a tech-driven world.\n\nWhat Skills Will You Learn?\nBasics of Databases\nYou will learn to develop, modify, and execute Structured Query Language (SQL) code while understanding various types of database structures. This will lay the groundwork for collecting, storing, and managing data assets on any operating system.\n\nDatabase Implementation\nExplain the various stages of implementation, testing, deployment, and optimization of the gathered data, and compare and contrast different facets of database design and planning.\n\nAdministration and Upkeep of Databases\nUnderstand the importance and objectives of monitoring and reporting, explain typical database maintenance procedures, and create essential documentation.\n\nSecurity of Data and Databases\nMaintain governance and regulatory compliance while managing authorization, safeguarding the database, and defending against attacks.\n\nContinuity of Business\nAdopt best practices for database management system backup, restoration, and disaster recovery to plan and recover from incidents.\n\nJobs You Can Land with CompTIA DataSys+\nDatabase Administrator\n\nPrerequisites\nRecommended Experience: There are no strict prerequisites, but 2–3 years of experience in a database administrator role is recommended.",
@@ -306,7 +332,7 @@ export const CompTIA = [
     name: "CompTIA Project+ (PK0-005)",
     category: "CompTIA",
     actualPrice: 28026,
-    ourPrice: 14802,
+    ourPrice: 13999,
     image: "/Certificates/CompTIA/CompTIA_Project_PK0-005.webp",
     content:
       "CompTIA Project+ (PK0-005)\nThe new CompTIA Project+ (PK0-005) is meant for IT professionals who oversee smaller, less complicated projects as part of their responsibilities but still need fundamental project management skills. Project+ is versatile and teaches basic project management concepts outside the scope of one methodology or framework. It covers methodologies, frameworks, and Agile skills needed to manage and deliver IT projects while taking on new topics like change management and compliance.\n\nCompTIA Project+ is the sole industry certification designed to instruct IT professionals on the entry-level skills they must master to manage small to medium-sized projects.\n\nBuy a discounted exam voucher for your Project+ certification today. Investing in your career growth should be as smart as you. Save Rs 5630 (28%) and purchase a discount voucher at Rs 14802 against the standard fee of Rs 20432.\n\nSkills You’ll Learn\nProject Fundamentals\nThe fundamentals of project properties, phases, schedules, roles, responsibilities, cost controls, and the basic aspects of Agile methodology.\n\nProject Constraints\nThe effect of different constraint variables and influences throughout the project and the importance of risk strategies and activities.\n\nCommunication and Change Management\nThe correct communication methods of influence and change control processes within the project context.\n\nProject Tools and Documentation\nMultiple project management software and partner- and project-oriented documentation.\n\nJobs You Can Land with CompTIA Project+ Certification\nIT Project Manager\nProject Coordinator\nIT Support Manager\nBusiness Analyst\nIT Manager\n\nPrerequisites\nMinimum 6–12 months of experience managing projects in an IT environment.",
@@ -317,7 +343,7 @@ export const CompTIA = [
     name: "CompTIA Security+ (SY0-701)",
     category: "CompTIA",
     actualPrice: 30592,
-    ourPrice: 16086,
+    ourPrice: 15999,
     image: "/Certificates/CompTIA/CompTIA_Security_SY0-701.webp",
     content:
       "CompTIA Security+ (SY0-701)\nAs cyberattacks increase, IT job roles are increasingly being called upon to baseline security readiness and respond to modern cyber threats. CompTIA Security+ (SY0-701) updates include the latest skills needed to be proactive in stopping cyberattacks. The certification covers current cybersecurity trends and methods, focusing on fundamental technical skills in risk management and assessment, incident handling, forensics, enterprise networks, hybrid and cloud operations, security controls, and ensuring high job performance.\n\nCompTIA Security+ (SY0-701) is recognized worldwide and addresses the most sought-after skills related to current threats, automation, zero trust, IoT, and risk management. Security+ certified professionals gain the knowledge to prevent and respond to attacks, apply risk mitigation concepts, handle incidents, understand vulnerabilities, secure hybrid environments, and implement policies, procedures, and controls for organizational security. This certification is ideal for professionals looking to advance their careers in cybersecurity.\n\nThere are many benefits that CompTIA Security+ (SY0-701) certification provides; however, high exam fees can be a barrier. Global IT Success offers discounted CompTIA Security+ exam vouchers to help professionals validate their skills affordably and achieve career growth without financial strain.\n\nThe CompTIA Security+ job roles include:\nSecurity Specialist\nSecurity Administrator\nSystems Administrator\nSecurity Analyst\nSecurity Engineer\nHelp Desk Analyst\n\nPrerequisite\nWhile there are no mandatory requirements for CompTIA Security+, it is recommended that candidates have 2 years of IT administrative experience with a security focus and hold the CompTIA Network+ certification before attempting the exam.",
@@ -328,7 +354,7 @@ export const CompTIA = [
     name: "CompTIA CySA+ (CS0-003)",
     category: "CompTIA",
     actualPrice: 30592,
-    ourPrice: 16086,
+    ourPrice: 15999,
     image: "/Certificates/CompTIA/CompTIA_CySA_CS0-003.webp",
     content:
       "CompTIA CySA+ (CS0-003)\nThe CompTIA Cybersecurity Analyst (CySA+) certification validates that successful candidates have the knowledge and skills to detect and analyze indicators of malicious activity, understand threat intelligence and management, respond to attacks and vulnerabilities, perform incident response, and communicate security-related activities effectively.\n\nCompTIA CySA+ certified professionals possess advanced security operations skills to distinguish between threat intelligence and threat hunting using the correct tools to detect and analyze malicious activity. The certification focuses heavily on vulnerability management, teaching professionals how to perform vulnerability assessments, prioritize threats, and execute mitigation strategies.\n\nIncident management and response are core components of the certification, covering attack methods, response models, and the incident life cycle to ensure effective threat containment. Additionally, the certification emphasizes reporting and communication best practices so professionals can clearly convey vulnerability management and incident response plans to stakeholders through structured action plans, escalation processes, and performance metrics.\n\nEarning the CompTIA CySA+ certification enhances career opportunities for cybersecurity professionals and strengthens organizational security operations.\n\nJob Roles You Can Land with CompTIA CySA+\nIncident Response Analyst\nSecurity Architect\nCybersecurity Engineer\nThreat Hunter\nCybersecurity Analyst\nVulnerability Analyst\nSecurity Operations (SOC) Analyst\nApplication Security Analyst\nThreat Intelligence Analyst\n\nPrerequisite\nNetwork+, Security+, or equivalent certifications are recommended.\nAt least 4 years of hands-on experience as an incident response analyst, SOC analyst, or in a related cybersecurity role is advised.\n\nImportant Note\nThe CS0-003 exam is the successor to CS0-002 and reflects the latest trends and best practices in cybersecurity.",
@@ -339,7 +365,7 @@ export const CompTIA = [
     name: "CompTIA PenTest+ (PT0-002)",
     category: "CompTIA",
     actualPrice: 30592,
-    ourPrice: 16086,
+    ourPrice: 15999,
     image: "/Certificates/CompTIA/CompTIA_PenTest_PT0-002.webp",
     content:
       "CompTIA PenTest+ (PT0-002)\nThe CompTIA PenTest+ certification validates that successful candidates possess the knowledge and skills required to plan and scope penetration testing engagements and perform vulnerability management activities such as vulnerability scanning, understanding legal and compliance requirements, analyzing results, and producing written reports with appropriate remediation techniques.\n\nCertified professionals are highly valued by employers as the certification proves their ability to execute real-world penetration testing techniques. PenTest+ covers all vulnerability management components, including artificial intelligence (AI), hands-on inventory, scanning and analysis, attacks, lateral movement, and critical areas such as planning, scoping, and reporting.\n\nPenTest+ certification equips professionals with practical, job-ready skills to assess system security and identify weaknesses before attackers exploit them.\n\nSkills You’ll Learn\nEngagement Management\nScoping and organizational requirements, governance, risk and compliance principles, reporting, communication, remediation strategies, and ethical hacking practices.\n\nReconnaissance and Enumeration\nInformation gathering, enumeration, and passive and active reconnaissance, including understanding scripting concepts without requiring advanced coding skills.\n\nVulnerability Discovery and Analysis\nUse of vulnerability scanning tools, analysis techniques, vulnerability management, and identification of physical security weaknesses.\n\nAttacks and Exploits\nTarget analysis, technique selection, and execution of network, wireless, application-based, and cloud-based attacks, including AI-based attacks and scripting automation.\n\nPost-exploitation and Lateral Movement\nPersistence techniques, lateral movement, staging, data exfiltration, and post-exploitation activities such as cleanup and system restoration.\n\nJobs You Can Land with CompTIA PenTest+ Certification\nPenetration Tester\nCybersecurity Analyst\n\nPrerequisites\nNetwork+, Security+, or equivalent knowledge is recommended, along with 3–4 years of hands-on experience in information security or a related domain.\n\nImportant Note\nThis certification will retire by June 17, 2025, and will be replaced by the PT0-003 exam launched on December 17, 2024.",
@@ -350,7 +376,7 @@ export const CompTIA = [
     name: "CompTIA SecurityX (CAS-005)",
     category: "CompTIA",
     actualPrice: 37984,
-    ourPrice: 22420,
+    ourPrice: 21999,
     image: "/Certificates/CompTIA/CompTIA_SecurityX_CAS-005.webp",
     content:
       "CompTIA SecurityX (CAS-005)\nCompTIA SecurityX, formerly known as CASP+, is a top-level certification designed for experienced cybersecurity professionals. It is ideal for security architects and senior security engineers responsible for protecting organizations against advanced security threats. SecurityX stands out for its real-world, performance-based approach that validates advanced technical skills rather than managerial knowledge.\n\nThe SecurityX certification covers security architecture and engineering, focusing on the expertise required to architect, engineer, integrate, and deploy secure solutions in complex enterprise environments. It supports resilient enterprises while addressing governance, risk, and compliance requirements. Achieving this certification demonstrates mastery of advanced cybersecurity concepts and can significantly elevate professional growth.\n\nWhat Skills Will You Learn?\nSecurity Architecture\nAssess security requirements within hybrid networks to design enterprise-wide, zero-trust security environments incorporating secure cloud and virtualization solutions.\n\nSecurity Operations\nHandle advanced threat management, vulnerability assessments, risk reduction strategies, incident response, and digital forensics analysis.\n\nRisk, Governance, and Compliance\nDemonstrate organizational cybersecurity resilience and compliance with regulations such as CMMC, PCI-DSS, SOX, HIPAA, GDPR, FISMA, NIST, and CCPA.\n\nSecurity Engineering and Cryptography\nConfigure and manage endpoint security, enterprise mobility, hybrid and cloud PKI, and cryptographic solutions.\n\nJobs You Can Land with CompTIA SecurityX\nSecurity Architect\nCybersecurity Engineer\nSOC Manager\nCyber Risk Analyst\nChief Information Security Officer\n\nPrerequisites\nAt least 10 years of general hands-on IT experience with 5 years of hands-on security experience is recommended. Prior knowledge equivalent to Network+, Security+, CySA+, Cloud+, and PenTest+ is advised.",
@@ -361,7 +387,7 @@ export const CompTIA = [
     name: "CompTIA CloudNetX (CNX-001)",
     category: "CompTIA",
     actualPrice: 37984,
-    ourPrice: 22420,
+    ourPrice: 21999,
     image: "/Certificates/CompTIA/CompTIA_CloudNetX_CNX-001.webp",
     content:
       "CompTIA CloudNetX (CNX-001)\nThe CompTIA CloudNetX certification validates advanced skills required to design, engineer, and integrate secure and scalable networking solutions in hybrid environments. This certification confirms a professional’s ability to analyze business needs and create secure network architectures for both on-premises and cloud infrastructures.\n\nCloudNetX authenticates proficiency in critical areas such as network security, availability, Zero Trust principles, and identity and access management. Certified professionals are prepared to apply and configure tools for network monitoring, performance optimization, automation, and scripting, while resolving challenges related to connectivity, access, performance, and security. The certification also validates expertise in managing network operations and ongoing maintenance.\n\nKey Benefits and Features\nPremier Network Architecture Certification\nCompTIA CloudNetX is a leading certification for validating hybrid network architecture skills, enabling professionals to advance into senior-level roles.\n\nVendor-Neutral Expertise\nIt is a vendor-neutral certification that confirms the skills required for secure hybrid networking operations across all platforms.\n\nMaps to NICE/DCWF Job Roles\nThe certification aligns with NICE/DCWF work roles including Network Operations Specialist, Security Architect, and Enterprise Architect.\n\nWhat Skills Will You Learn?\nArchitecture of Networks\nDesign and implement secure network architectures for on-premises and cloud environments by analyzing business requirements.\n\nDesign for Security\nDesign identity and access management, network security, availability, and Zero Trust solutions.\n\nNetwork Surveillance\nImplement scripting, automation, and network performance monitoring tools and techniques.\n\nTroubleshooting\nDiagnose and resolve network issues related to security, access, performance, and connectivity.\n\nUpkeep\nPerform network operations, maintenance, and lifecycle management.\n\nJobs You Can Land with CompTIA CloudNetX\nNetwork Architect\nSecurity Architect\nEnterprise Architect\n\nPrerequisites\nApproximately 10 years of IT experience, including 5 years in a network architect role. Network+, Security+, Cloud+, or equivalent experience is recommended.",
@@ -372,7 +398,7 @@ export const CompTIA = [
     name: "CompTIA DataX (DY0-001)",
     category: "CompTIA",
     actualPrice: 37984,
-    ourPrice: 22420,
+    ourPrice: 21999,
     image: "/Certificates/CompTIA/CompTIA_DataX_DY0-001.webp",
     content:
       "CompTIA DataX (DY0-001)\nThe updated CompTIA DataX (DY0-001) certification is designed for professionals with five or more years of experience in computer science, data science, or related fields. This elite-level certification validates expert knowledge and provides certified data scientists with a standardized, vendor-neutral skill set.\n\nCompTIA DataX confirms advanced proficiency in analyzing massive data sets and transforming them into actionable insights. By validating expertise in essential data tools, techniques, and concepts, DataX helps professionals stand out in the highly competitive data science job market.\n\nThis vendor-neutral certification ensures consistent, tool-agnostic data science skills regardless of the specific platforms or technologies used.\n\nWhat Skills Will You Learn?\nStatistics and Mathematics\nApply mathematical and statistical techniques, including data processing, data cleaning, statistical modeling, linear algebra, and calculus.\n\nAnalysis, Modeling, and Results\nSelect and apply appropriate modeling and analysis techniques to deliver accurate, data-driven recommendations.\n\nMachine Learning\nUtilize machine learning models and understand deep learning principles.\n\nProcedures and Activities\nApply data science workflows, processes, and operational best practices.\n\nSpecific Uses of Data Science\nDemonstrate knowledge of industry-specific data science applications and emerging trends.\n\nJobs You Can Land with CompTIA DataX\nData Scientist\n\nPrerequisites\nFive or more years of professional experience in data science or a related role is recommended.",
@@ -386,7 +412,7 @@ export const ORACLE = [
     name: "Oracle Certification Exam Vouchers",
     category: "Oracle",
     actualPrice: 25212,
-    ourPrice: 14750,
+    ourPrice: 13999,
     image: "/Certificates/Oracle/Oracle_Certification_Exam_Vouchers.webp",
     content: `Oracle Certification program requires you to have Computer and database knowledge. Oracle Certificate demonstrates IT expertise in the marketplace. IT professionals without Oracle experience can acquire the core knowledge and skills through the Oracle exam essential to jump into the most lucrative and challenging Oracle profession. Furthermore, the Oracle Certification Exams which begin from 1Z0 are the most in-demand certification ensuring a specific Oracle expertise level and knowledge. Global IT Success provides Oracle Certification Exam vouchers at discounted prices. Individuals preparing for Oracle SQL certification, Oracle DBA certification, Oracle Java certification, and other Oracle certifications can take advantage of our highly discounted exam vouchers.
 
@@ -419,7 +445,7 @@ export const AWS = [
     name: "AWS Certified Cloud Practitioner (CLF-C02)",
     category: "AWS",
     actualPrice: 10266,
-    ourPrice: 8260,
+    ourPrice: 7999,
     image: "/Certificates/AWS/AWS_Certified_Cloud_Practitioner_CLF-C02.webp",
     content: `AWS Certified Cloud Practitioner (CLF-C02)
 The AWS Certified Cloud Practitioner (CLF-C02) is a foundational certification designed for individuals seeking to validate their overall understanding of the AWS Cloud, regardless of their job role. This certification demonstrates the ability to explain the value of AWS Cloud services, understand the AWS shared responsibility model, and apply essential security best practices.
@@ -491,7 +517,7 @@ Basic understanding of AWS Cloud economics`,
     name: "AWS Certified AI Practitioner (AIF-C01)",
     category: "AWS",
     actualPrice: 10266,
-    ourPrice: 8260,
+    ourPrice: 7999,
     image: "/Certificates/AWS/AWS_Certified_AI_Practitioner_AIF-C01.webp",
 
     content: `AWS Certified AI Practitioner (AIF-C01)
@@ -567,7 +593,7 @@ This certification is valid for 3 years. You may recertify by passing the latest
   {
     name: "AWS Certified SysOps Administrator - Associate (SOA-C02)",
     category: "AWS",
-    actualPrice: 15399,
+    actualPrice: 9999,
     ourPrice: 12390,
     image:
       "/Certificates/AWS/AWS_Certified_SysOps_Administrator__Associate_SOA-C02.webp",
@@ -645,7 +671,7 @@ Recommended AWS Knowledge and Experience
     name: "AWS Certified Developer - Associate (DVA-C02)",
     category: "AWS",
     actualPrice: 15399,
-    ourPrice: 12390,
+    ourPrice: 9999,
     image: "/Certificates/AWS/AWS_Certified_Developer__Associate_DVA-C02.webp",
 
     content: `AWS Certified Developer – Associate (DVA-C02)
@@ -719,7 +745,7 @@ Recommended General IT Knowledge
     name: "AWS Certified Solutions Architect - Associate (SAA-C03)",
     category: "AWS",
     actualPrice: 15399,
-    ourPrice: 12390,
+    ourPrice: 9999,
     image:
       "/Certificates/AWS/AWS_Certified_Solutions_Architect__Associate_SAA-C03.webp",
 
@@ -789,7 +815,7 @@ Prerequisites
     name: "AWS Certified Data Engineer - Associate (DEA-C01)",
     category: "AWS",
     actualPrice: 15399,
-    ourPrice: 12390,
+    ourPrice: 9999,
     image:
       "/Certificates/AWS/AWS_Certified_Data_Engineer__Associate_DEA-C01.webp",
 
@@ -856,7 +882,7 @@ Prerequisites
     name: "AWS Certified Machine Learning Engineer - Associate (MLA-C01)",
     category: "AWS",
     actualPrice: 15399,
-    ourPrice: 12390,
+    ourPrice: 9999,
     image:
       "/Certificates/AWS/AWS_Certified_Machine_Learning_Engineer__Associate_MLA-C01.webp",
 
@@ -918,7 +944,7 @@ Prerequisites
     name: "AWS Certified Solutions Architect - Professional (SAP-C02)",
     category: "AWS",
     actualPrice: 30798,
-    ourPrice: 24780,
+    ourPrice: 21999,
     image:
       "/Certificates/AWS/AWS_Certified_Solutions_Architect__Professional.webp",
 
@@ -987,7 +1013,7 @@ Prerequisites
     name: "AWS Certified DevOps Engineer - Professional (DOP-C02)",
     category: "AWS",
     actualPrice: 30798,
-    ourPrice: 24780,
+    ourPrice: 21999,
     image: "/Certificates/AWS/AWS_Certified_DevOps_Engineer_DOP-C02.webp",
 
     content: `AWS Certified DevOps Engineer – Professional (DOP-C02)
@@ -1055,7 +1081,7 @@ Prerequisites
     name: "AWS Certified Advanced Networking - Specialty (ANS-C01)",
     category: "AWS",
     actualPrice: 30798,
-    ourPrice: 24780,
+    ourPrice: 21999,
     image: "/Certificates/AWS/AWS_Certified_Advanced_Networking.webp",
 
     content: `AWS Certified Advanced Networking – Specialty (ANS-C01)
@@ -1120,7 +1146,7 @@ Prerequisites
     name: "AWS Certified Machine Learning - Specialty (MLS-C01)",
     category: "AWS",
     actualPrice: 30798,
-    ourPrice: 24780,
+    ourPrice: 21999,
     image: "/Certificates/AWS/AWS_Certified_Machine_Learning.webp",
 
     content: `AWS Certified Machine Learning – Specialty (MLS-C01)
@@ -1177,7 +1203,7 @@ Prerequisites
     name: "AWS Certified Security - Specialty (SCS-C01)",
     category: "AWS",
     actualPrice: 30798,
-    ourPrice: 24780,
+    ourPrice: 21999,
     image: "/Certificates/AWS/AWS_Certified_Security.webp",
 
     content: `AWS Certified Security – Specialty (SCS-C01)
@@ -1236,12 +1262,174 @@ Prerequisites
   },
 ];
 
+export const Databricks = [
+    {
+    name: "Databricks Certified Associate Data Engineer",
+    category: "Databricks",
+    actualPrice: 21240,
+    ourPrice: 14999,
+    image: "/Certificates/Databricks/associate.svg",
+
+    content: `VMware Certified Advanced Professional (VCAP-DCV)
+
+The VMware Certified Advanced Professional (VCAP) certification is an elite credential designed for experienced IT professionals who want to validate advanced expertise in VMware technologies. This certification recognizes professionals who can design, implement, optimize, and manage VMware solutions at an enterprise level.
+
+VCAP certification validates advanced skills in VMware vSphere, vCloud, and vSAN. It is ideal for seasoned system administrators, infrastructure engineers, and consultants who work with complex virtualized environments. Certified professionals are recognized for their ability to deliver high-performance, scalable, and reliable VMware infrastructures.
+
+Earning this certification positions you as a trusted VMware specialist and opens doors to higher-paying roles, better career opportunities, and increased job satisfaction. While the exam is known for its rigor, Global IT Success makes it affordable by offering authorized discounted exam vouchers so you can certify without financial stress.
+
+Prerequisites & Certification Paths
+• Recommended attendance of VMware vSphere: Design [V8] training  
+• Passing the VMware vSphere 8.x Advanced Design exam (3V0-21.23)  
+• Applicable pathways exist for candidates holding:
+  – VCAP-DCV Design 2021 or newer  
+  – VCAP-DCV Deploy 2021 or newer  
+  – Any VCAP track from 2021 or later  
+  – VCAP-DCV Design 2023 (with VCP-DCV 2024 or VCP-DCV 2023)
+
+NOTE: Training courses are strongly recommended to ensure exam readiness and success.`,
+
+    examDetails: `
+<table width="100%">
+  <tbody>
+    <tr>
+      <th>Exam Code</th>
+      <td>VCAP-DCV</td>
+    </tr>
+    <tr>
+      <th>Exam Duration</th>
+      <td>205 minutes</td>
+    </tr>
+    <tr>
+      <th>Number of Questions</th>
+      <td>60</td>
+    </tr>
+    <tr>
+      <th>Question Format</th>
+      <td>Drag and Drop, Matching, Multiple Choice, Design Tool items</td>
+    </tr>
+    <tr>
+      <th>Passing Score</th>
+      <td>300 (on a scale of 100–500)</td>
+    </tr>
+  </tbody>
+</table>
+`,
+  },
+  {
+    name: "Databricks Certified Professional Data Engineer",
+    category: "Databricks",
+    actualPrice: 21240,
+    ourPrice: 14999,
+    image: "/Certificates/Databricks/professional.svg",
+
+    content: `VMware Certified Advanced Professional (VCAP-DCV)
+
+The VMware Certified Advanced Professional (VCAP) certification is an elite credential designed for experienced IT professionals who want to validate advanced expertise in VMware technologies. This certification recognizes professionals who can design, implement, optimize, and manage VMware solutions at an enterprise level.
+
+VCAP certification validates advanced skills in VMware vSphere, vCloud, and vSAN. It is ideal for seasoned system administrators, infrastructure engineers, and consultants who work with complex virtualized environments. Certified professionals are recognized for their ability to deliver high-performance, scalable, and reliable VMware infrastructures.
+
+Earning this certification positions you as a trusted VMware specialist and opens doors to higher-paying roles, better career opportunities, and increased job satisfaction. While the exam is known for its rigor, Global IT Success makes it affordable by offering authorized discounted exam vouchers so you can certify without financial stress.
+
+Prerequisites & Certification Paths
+• Recommended attendance of VMware vSphere: Design [V8] training  
+• Passing the VMware vSphere 8.x Advanced Design exam (3V0-21.23)  
+• Applicable pathways exist for candidates holding:
+  – VCAP-DCV Design 2021 or newer  
+  – VCAP-DCV Deploy 2021 or newer  
+  – Any VCAP track from 2021 or later  
+  – VCAP-DCV Design 2023 (with VCP-DCV 2024 or VCP-DCV 2023)
+
+NOTE: Training courses are strongly recommended to ensure exam readiness and success.`,
+
+    examDetails: `
+<table width="100%">
+  <tbody>
+    <tr>
+      <th>Exam Code</th>
+      <td>VCAP-DCV</td>
+    </tr>
+    <tr>
+      <th>Exam Duration</th>
+      <td>205 minutes</td>
+    </tr>
+    <tr>
+      <th>Number of Questions</th>
+      <td>60</td>
+    </tr>
+    <tr>
+      <th>Question Format</th>
+      <td>Drag and Drop, Matching, Multiple Choice, Design Tool items</td>
+    </tr>
+    <tr>
+      <th>Passing Score</th>
+      <td>300 (on a scale of 100–500)</td>
+    </tr>
+  </tbody>
+</table>
+`,
+  },
+    {
+    name: "Databricks Vouchers(Applies to all Databricks Exams)",
+    category: "Databricks",
+    actualPrice: 21240,
+    ourPrice: 14999,
+    image: "/Certificates/Databricks/databrick.webp",
+
+    content: `VMware Certified Advanced Professional (VCAP-DCV)
+
+The VMware Certified Advanced Professional (VCAP) certification is an elite credential designed for experienced IT professionals who want to validate advanced expertise in VMware technologies. This certification recognizes professionals who can design, implement, optimize, and manage VMware solutions at an enterprise level.
+
+VCAP certification validates advanced skills in VMware vSphere, vCloud, and vSAN. It is ideal for seasoned system administrators, infrastructure engineers, and consultants who work with complex virtualized environments. Certified professionals are recognized for their ability to deliver high-performance, scalable, and reliable VMware infrastructures.
+
+Earning this certification positions you as a trusted VMware specialist and opens doors to higher-paying roles, better career opportunities, and increased job satisfaction. While the exam is known for its rigor, Global IT Success makes it affordable by offering authorized discounted exam vouchers so you can certify without financial stress.
+
+Prerequisites & Certification Paths
+• Recommended attendance of VMware vSphere: Design [V8] training  
+• Passing the VMware vSphere 8.x Advanced Design exam (3V0-21.23)  
+• Applicable pathways exist for candidates holding:
+  – VCAP-DCV Design 2021 or newer  
+  – VCAP-DCV Deploy 2021 or newer  
+  – Any VCAP track from 2021 or later  
+  – VCAP-DCV Design 2023 (with VCP-DCV 2024 or VCP-DCV 2023)
+
+NOTE: Training courses are strongly recommended to ensure exam readiness and success.`,
+
+    examDetails: `
+<table width="100%">
+  <tbody>
+    <tr>
+      <th>Exam Code</th>
+      <td>VCAP-DCV</td>
+    </tr>
+    <tr>
+      <th>Exam Duration</th>
+      <td>205 minutes</td>
+    </tr>
+    <tr>
+      <th>Number of Questions</th>
+      <td>60</td>
+    </tr>
+    <tr>
+      <th>Question Format</th>
+      <td>Drag and Drop, Matching, Multiple Choice, Design Tool items</td>
+    </tr>
+    <tr>
+      <th>Passing Score</th>
+      <td>300 (on a scale of 100–500)</td>
+    </tr>
+  </tbody>
+</table>
+`,
+  },
+];
+
 export const VMWARE = [
   {
     name: "VMware Certified Advanced Professional (VCAP-DCV)",
     category: "Vmware",
     actualPrice: 24780,
-    ourPrice: 23010,
+    ourPrice: 22999,
     image: "/Certificates/Vmware/Vmware_Certified_Advanced_Professional.webp",
 
     content: `VMware Certified Advanced Professional (VCAP-DCV)
@@ -1294,7 +1482,7 @@ NOTE: Training courses are strongly recommended to ensure exam readiness and suc
     name: "VMware Certified Professional (VCP-NV)",
     category: "Vmware",
     actualPrice: 24780,
-    ourPrice: 23010,
+    ourPrice: 22999,
     image: "/Certificates/Vmware/Vmware_Certified_Professional.webp",
 
     content: `VMware Certified Professional (VCP)
@@ -1346,7 +1534,7 @@ export const Microsoft = [
     name: "Microsoft Fundamentals",
     category: "Microsoft",
     actualPrice: 4355,
-    ourPrice: 3100,
+    ourPrice: 2999,
     image: "/Certificates/Microsoft/Microsoft_Fundamentals.webp",
 
     content: `Microsoft Fundamentals Certification
@@ -1402,10 +1590,10 @@ Prerequisites
 </table>`,
   },
   {
-    name: "Microsoft Single Shot",
+    name: "Microsoft Common Vouchers (Applies to all Microsoft Exams)",
     category: "Microsoft",
     actualPrice: 5741,
-    ourPrice: 4020,
+    ourPrice: 3999,
     image: "/Certificates/Microsoft/Microsoft_Single_Shot.webp",
 
     content: `Microsoft Single Shot Certification
@@ -1525,7 +1713,7 @@ Invest smartly in your career by booking your ISTQB Foundation Level certificati
     name: "ISTQB Advanced Test Manager (CTAL-TM)",
     category: "ISTQB",
     actualPrice: 18287,
-    ourPrice: 14160,
+    ourPrice: 13999,
     image: "/Certificates/ISTQB/ISTQB_Advanced_Test_Manager.webp",
 
     content: `ISTQB Advanced Test Manager (CTAL-TM)
@@ -1611,7 +1799,7 @@ Global IT Success offers authorized and discounted ISTQB Advanced Test Manager e
     name: "ISTQB Advanced Level Test Automation Engineer (CTAL-TAE)",
     category: "ISTQB",
     actualPrice: 18287,
-    ourPrice: 14160,
+    ourPrice: 13999,
     image:
       "/Certificates/ISTQB/ISTQB_Advanced_Level_Test_Automation_Engineer.webp",
 
@@ -1684,7 +1872,7 @@ Global IT Success offers authorized and discounted ISTQB Advanced Level Test Aut
     name: "ISTQB Advanced Level Test Analyst (CTAL-TA)",
     category: "ISTQB",
     actualPrice: 18287,
-    ourPrice: 14160,
+    ourPrice: 13999,
     image: "/Certificates/ISTQB/ISTQB_Advanced_Level_Test_Analyst.webp",
 
     content: `ISTQB Advanced Level Test Analyst (CTAL-TA)
@@ -1746,7 +1934,7 @@ Invest smartly in your career growth with an authorized discounted exam voucher 
     name: "ISTQB Advanced Level Technical Test Analyst",
     category: "ISTQB",
     actualPrice: 18287,
-    ourPrice: 14160,
+    ourPrice: 13999,
     image:
       "/Certificates/ISTQB/ISTQB_Advanced_Level_Technical_Test_Analyst.webp",
 
@@ -1818,7 +2006,7 @@ export const KUBERNETES = [
     name: "Certified Kubernetes Application Developer (CKAD)",
     category: "Kubernetes",
     actualPrice: 45588,
-    ourPrice: 28320,
+    ourPrice: 26999,
     image:
       "/Certificates/Kubernetes/Certified_Kubernetes_Application_Developer_CKAD.webp",
 
@@ -1884,7 +2072,7 @@ Book your CKAD exam smartly using authorized discounted exam vouchers and make y
     name: "Certified Kubernetes Administrator (CKA)",
     category: "Kubernetes",
     actualPrice: 45588,
-    ourPrice: 28320,
+    ourPrice: 26999,
     image:
       "/Certificates/Kubernetes/Certified_Kubernetes_Administrator_CKA.webp",
 
@@ -1944,8 +2132,64 @@ Book your CKA exam smartly with authorized discounted exam vouchers and make you
 ];
 
 export const SALESFORCE = [
+        {
+    name: "Salesforce Exam Vouchers (Applies to all $150 Exam)",
+    category: "Salesforce",
+    actualPrice: 15750,
+    ourPrice: 11999,
+    image: "/Certificates/Salesforce/Salesforce_Exam_Vouchers.webp",
+
+    content: `Salesforce Exam Vouchers
+
+Salesforce Certifications are your gateway to some of the most in-demand roles in the CRM and cloud ecosystem. These certifications validate your ability to design, implement, and manage Salesforce solutions that drive customer engagement and business growth.
+
+Salesforce is a powerful cloud-based ecosystem trusted by organizations worldwide. With over 45 Salesforce certifications available across Administration, App Development, Consulting, Marketing, and Architecture roles, Salesforce certifications help professionals stand out in a highly competitive job market.
+
+Becoming Salesforce certified demonstrates your commitment to continuous learning and positions you as a valuable asset capable of optimizing business processes and improving customer relationships. Certified Salesforce professionals are highly sought after due to the rapid growth of Salesforce adoption across industries.
+
+Global IT Success offers authorized discounted Salesforce exam vouchers, helping you reduce the high cost of certification exams. These vouchers provide a smart and affordable way to advance your Salesforce career without financial stress.
+
+Start your Salesforce certification journey today and unlock new career opportunities in one of the fastest-growing technology ecosystems.`,
+
+    examDetails: `
+<table width="100%">
+  <tbody>
+    <tr>
+      <th>Exam Pattern</th>
+      <td>Multiple-choice questions</td>
+    </tr>
+    <tr>
+      <th>Total Questions</th>
+      <td>60 Questions</td>
+    </tr>
+    <tr>
+      <th>Exam Duration</th>
+      <td>105 Minutes</td>
+    </tr>
+    <tr>
+      <th>Passing Score</th>
+      <td>65% or higher</td>
+    </tr>
+    <tr>
+      <th>Voucher Validity</th>
+      <td>Applicable for Salesforce exams priced at ₹19,824</td>
+    </tr>
+    <tr>
+      <th>Prerequisites</th>
+      <td>
+        No strict prerequisites <br/>
+        Hands-on Salesforce experience and Trailhead training recommended
+      </td>
+    </tr>
+    <tr>
+      <th>Certification Provider</th>
+      <td>Salesforce</td>
+    </tr>
+  </tbody>
+</table>`,
+  },
   {
-    name: "Salesforce Exam Vouchers ($200 Exam)",
+    name: "Salesforce Exam Vouchers (Applies to all $200 Exam)",
     category: "Salesforce",
     actualPrice: 19824,
     ourPrice: 14999,
@@ -2001,10 +2245,10 @@ Start your Salesforce certification journey today and unlock new career opportun
 </table>`,
   },
     {
-    name: "Salesforce Exam Vouchers ($400 Exam)",
+    name: "Salesforce Exam Vouchers (Applies to all $400 Exam)",
     category: "Salesforce",
     actualPrice: 35965,
-    ourPrice: 18999,
+    ourPrice: 19999,
     image: "/Certificates/Salesforce/Salesforce_Exam_Vouchers.webp",
 
     content: `Salesforce Exam Vouchers
@@ -2063,7 +2307,7 @@ export const ISACA = [
     name: "Certified Information Security Manager (CISM)",
     category: "ISACA",
     actualPrice: 80712,
-    ourPrice: 61360,
+    ourPrice: 59999,
     image:
       "/Certificates/ISACA/Certified_Information_Security_Manager_CISM.webp",
 
@@ -2136,7 +2380,7 @@ Skills You’ll Learn
     name: "Certified in Risk and Information Systems Control (CRISC)",
     category: "ISACA",
     actualPrice: 80712,
-    ourPrice: 61360,
+    ourPrice: 59999,
     image:
       "/Certificates/ISACA/Certified_in_Risk_and_Information_Systems_Control_CRISC.webp",
 
@@ -2214,7 +2458,7 @@ Skills You’ll Learn
     name: "Certified in the Governance of Enterprise IT (CGEIT)",
     category: "ISACA",
     actualPrice: 80712,
-    ourPrice: 61360,
+    ourPrice: 59999,
     image:
       "/Certificates/ISACA/Certified_in_the_Governance_of_Enterprise_IT_CGEIT.webp",
 
@@ -2304,7 +2548,7 @@ Key Benefits of CGEIT Certification
     name: "Certified Information Systems Auditor (CISA)",
     category: "ISACA",
     actualPrice: 80712,
-    ourPrice: 61360,
+    ourPrice: 59999,
     image:
       "/Certificates/ISACA/Certified_Information_Systems_Auditor_CISA.webp",
 
@@ -2388,7 +2632,7 @@ Key Benefits of CISA Certification
     name: "COBIT® 2019 Foundation Certification",
     category: "ISACA",
     actualPrice: 18585,
-    ourPrice: 18054,
+    ourPrice: 17999,
     image: "/Certificates/ISACA/COBIT_2019_Foundation_Certification.webp",
 
     content: `COBIT® 2019 Foundation Certification
@@ -2471,7 +2715,7 @@ export const ECCouncil = [
     name: "CEH v13 Exam Voucher",
     category: "ECCouncil",
     actualPrice: 42480,
-    ourPrice: 34220,
+    ourPrice: 33999,
     image: "/Certificates/EC-Council/CEH_v13_Exam_Voucher.webp",
 
     content: `CEH v13 Exam Voucher
@@ -2561,7 +2805,7 @@ Book your CEH v13 exam smartly with our authorized discounted voucher and accele
     name: "CEH Practical",
     category: "ECCouncil",
     actualPrice: 21240,
-    ourPrice: 17700,
+    ourPrice: 16999,
     image: "/Certificates/EC-Council/CEH_Practical.webp",
 
     content: `CEH Practical Exam Voucher
@@ -2634,7 +2878,7 @@ Earning the CEH Practical certification demonstrates that you not only understan
     name: "Computer Hacking Forensic Investigator (CHFI)",
     category: "ECCouncil",
     actualPrice: 41300,
-    ourPrice: 35400,
+    ourPrice: 34999,
     image:
       "/Certificates/EC-Council/Computer_Hacking_Forensic_Investigator_CHFI.webp",
 
@@ -2882,7 +3126,7 @@ export const PEGA = [
     name: "PEGA Certification Exam Voucher",
     category: "PEGA",
     actualPrice: 19470,
-    ourPrice: 16520,
+    ourPrice: 15999,
     image: "/Certificates/Pega/PEGA_Certification_Exam_Voucher.webp",
 
     content: `PEGA Certification Exam Voucher
@@ -2946,7 +3190,7 @@ export const SPLUNK = [
     name: "Splunk Certification Exam Voucher",
     category: "Splunk",
     actualPrice: 14632,
-    ourPrice: 10620,
+    ourPrice: 9999,
     image: "/Certificates/Splunk/Splunk_Certification_Exam_Voucher.webp",
 
     content: `Splunk Certification Exam Voucher
@@ -3035,7 +3279,7 @@ export const DELLEMC = [
     name: "DellEMC Certification Exam Voucher",
     category: "DELLEMC",
     actualPrice: 22600,
-    ourPrice: 16520,
+    ourPrice: 15999,
     image: "/Certificates/Dell/Dell_EMC_Certification_Exam_Voucher.webp",
 
     content: `Dell EMC Certification Exam Voucher
@@ -3086,7 +3330,7 @@ export const SAS = [
     name: "SAS Certification Exam Vouchers",
     category: "SAS",
     actualPrice: 17936,
-    ourPrice: 14750,
+    ourPrice: 14499,
     image: "/Certificates/SAS/SAS_Certification_Exam_Vouchers.webp",
 
     content: `SAS Certification Exam Vouchers
@@ -3139,7 +3383,7 @@ export const Fortinet = [
     name: "Fortinet Certification Exam Voucher",
     category: "Fortinet",
     actualPrice: 21000,
-    ourPrice: 17853,
+    ourPrice: 16999,
     image: "/Certificates/Fortinet/Fortinet_Certification_Exam_Voucher.webp",
 
     content: `Fortinet Certification Exam Voucher
@@ -3192,7 +3436,7 @@ export const Checkpoint = [
     name: "Checkpoint Certification Exam Voucher",
     category: "Checkpoint",
     actualPrice: 31860,
-    ourPrice: 18000,
+    ourPrice: 16999,
     image:
       "/Certificates/Checkpoint/Checkpoint_Certification_Exam_Voucher.webp",
 

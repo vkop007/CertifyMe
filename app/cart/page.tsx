@@ -21,6 +21,103 @@ export default function CheckoutPage() {
 
   const [phone, setPhone] = useState("");
   const [hasGST, setHasGST] = useState(false);
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+
+  const [errors, setErrors] = useState<{
+    fullName?: string;
+    email?: string;
+    phone?: string;
+  }>({});
+
+  const handleRazorpayPayment = async () => {
+    if (cartItems.length === 0) return;
+
+    const newErrors: typeof errors = {};
+
+    if (!fullName.trim()) {
+      newErrors.fullName = "Full name is required";
+    }
+
+    if (!email.trim()) {
+      newErrors.email = "Email is required";
+    }
+
+    if (!phone.trim() || phone.length < 10) {
+      newErrors.phone = "Enter a valid mobile number";
+    }
+
+    setErrors(newErrors);
+
+    if (Object.keys(newErrors).length > 0) return;
+
+    try {
+      // 1️⃣ Create Razorpay Order
+      const res = await fetch("/api/razorpay/order", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          amount: grandTotal, // ₹ total
+        }),
+      });
+
+      const order = await res.json();
+
+      // 2️⃣ Razorpay Options
+      const options = {
+        key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
+        amount: order.amount,
+        currency: "INR",
+        name: "CERTIFY",
+        description: "Course Purchase",
+        order_id: order.id,
+
+        handler: async function (response: any) {
+          const verifyRes = await fetch("/api/razorpay/verify", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              ...response,
+              customer_email: email,
+              customer_name: fullName,
+              amount: grandTotal,
+            }),
+          });
+
+          const data = await verifyRes.json();
+
+          if (data.success) {
+            alert("Payment Verified & Successful!");
+          } else {
+            alert("Payment verification failed!");
+          }
+        },
+
+        prefill: {
+          name: fullName || "Customer",
+          email: email || "customer@example.com",
+          contact: phone || "9999999999",
+        },
+
+        notes: {
+          customer_name: fullName,
+          customer_email: email,
+          customer_phone: phone,
+        },
+
+        theme: {
+          color: "#22c55e",
+        },
+      };
+
+      // 4️⃣ Open Razorpay
+      const rzp = new (window as any).Razorpay(options);
+      rzp.open();
+    } catch (err) {
+      console.error(err);
+      alert("Payment failed. Please try again.");
+    }
+  };
 
   const totalAmount = cartItems.reduce(
     (sum, item) => sum + item.price * item.quantity,
@@ -62,41 +159,67 @@ export default function CheckoutPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="md:col-span-2">
                   <label className="text-[11px] font-bold text-slate-400 uppercase mb-2 block tracking-wider">
-                    Full Name
+                    Full Name*
                   </label>
                   <input
                     type="text"
                     placeholder="John Doe"
+                    value={fullName}
+                    onChange={(e) => setFullName(e.target.value)}
                     className="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none transition-all"
                   />
+                  {errors.fullName && (
+                    <p className="mt-1 text-xs text-red-500">
+                      {errors.fullName}
+                    </p>
+                  )}
                 </div>
 
                 <div>
                   <label className="text-[11px] font-bold text-slate-400 uppercase mb-2 block tracking-wider">
-                    Phone Number
+                    Phone Number*
                   </label>
+
                   <div className="flex gap-2">
                     <span className="flex items-center px-3 bg-slate-50 border border-slate-200 rounded-xl text-sm font-medium text-slate-600">
                       +91
                     </span>
-                    <input
-                      type="tel"
-                      value={phone}
-                      onChange={(e) => setPhone(e.target.value)}
-                      className="flex-1 border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none"
-                    />
+
+                    <div className="flex-1">
+                      <input
+                        type="tel"
+                        value={phone}
+                        onChange={(e) => setPhone(e.target.value)}
+                        className="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none"
+                      />
+
+                      {errors.phone && (
+                        <p className="mt-1 text-xs text-red-500 leading-tight">
+                          {errors.phone}
+                        </p>
+                      )}
+                    </div>
                   </div>
                 </div>
 
                 <div>
                   <label className="text-[11px] font-bold text-slate-400 uppercase mb-2 block tracking-wider">
-                    Email Address
+                    Email Address*
                   </label>
+
                   <input
                     type="email"
                     placeholder="john@example.com"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     className="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none"
                   />
+
+                  {errors.email && (
+                    <p className="mt-1 text-xs text-red-500 leading-tight">
+                      {errors.email}
+                    </p>
+                  )}
                 </div>
 
                 <div className="md:col-span-2">
@@ -256,6 +379,7 @@ export default function CheckoutPage() {
                 </div>
 
                 <button
+                  onClick={handleRazorpayPayment}
                   disabled={cartItems.length === 0}
                   className={`w-full py-4 rounded-2xl font-bold flex items-center justify-center gap-3 transition-all
     ${

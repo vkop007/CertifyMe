@@ -8,6 +8,7 @@ import CourseGrid from "@/components/CourseGrid";
 import {
   VENDORS,
   Checkpoint,
+  Databricks,
   DELLEMC,
   Fortinet,
   PEGA,
@@ -46,6 +47,7 @@ const COURSE_MAP: Record<string, Course[]> = {
   AWS: AWS,
   Checkpoint: Checkpoint,
   Pega: PEGA,
+  Databricks: Databricks,
   ISACA: ISACA,
   DELLEMC: DELLEMC,
   CompTIA: CompTIA,

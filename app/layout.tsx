@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ReduxProvider from "../lib/redux/ReduxProvider";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script"; // ✅ ADD THIS
 import "./globals.css";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
@@ -29,6 +30,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* ✅ Razorpay Checkout Script */}
+        <Script
+          src="https://checkout.razorpay.com/v1/checkout.js"
+          strategy="beforeInteractive"
+        />
+
         <ReduxProvider>
           {children}
 
