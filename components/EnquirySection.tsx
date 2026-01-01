@@ -6,7 +6,8 @@ import ContactForm from "@/components/ContactForm";
 
 export default function EnquirySection() {
   return (
-    <section className="py-10 bg-green-50/30">
+    /* Updated to the 'Mixed' background: Green -> White mix */
+    <section className="py-16 bg-linear-to-b from-green-100/70 via-white/40 to-green-100/70">
       <div className="container-custom">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -27,7 +28,8 @@ export default function EnquirySection() {
               {VENDORS.map((vendor, index) => (
                 <div
                   key={index}
-                  className="bg-white border border-gray-100 rounded-xl h-17
+                  /* cards stay white for that "pop" against the mix background */
+                  className="bg-white border border-green-50 rounded-xl h-17
                  relative overflow-hidden
                  flex items-center justify-center
                  shadow-sm hover:shadow-md transition-shadow"
@@ -44,7 +46,7 @@ export default function EnquirySection() {
           </div>
 
           {/* Right Column: Enquiry Form */}
-          <div className="bg-white p-8 md:p-10 rounded-3xl shadow-lg border border-gray-100 relative overflow-hidden">
+          <div className="bg-white p-8 md:p-10 rounded-3xl shadow-lg border border-green-50 relative overflow-hidden">
             {/* Decorative top border */}
             <div className="absolute top-0 left-0 w-full h-2 bg-linear-to-r from-secondary to-primary"></div>
 

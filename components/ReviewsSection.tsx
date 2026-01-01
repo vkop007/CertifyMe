@@ -6,10 +6,12 @@ import Image from "next/image";
 
 export default function ReviewsSection() {
   return (
-    <section className="relative py-20 lg:py-32 bg-white overflow-hidden">
-      {/* Abstract Background Glow */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] -mr-64 -mt-64 pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[120px] -ml-64 -mb-64 pointer-events-none" />
+    /* Updated to a gradient: Green -> Soft White -> Green mix */
+    <section className="relative py-20 lg:py-32 bg-linear-to-b from-green-100/70 via-white/40 to-green-100/70 overflow-hidden">
+      
+      {/* Abstract Background Glow - Kept very subtle to assist the "mix" */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-green-200/20 rounded-full blur-[120px] -mr-64 -mt-64 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-green-200/20 rounded-full blur-[120px] -ml-64 -mb-64 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
         
@@ -35,7 +37,8 @@ export default function ReviewsSection() {
           {REVIEWS.map((review) => (
             <div
               key={review.id}
-              className="group relative bg-white rounded-[2.5rem] p-8 md:p-10 border border-gray-100 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.02),0_4px_25px_-2px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] transition-all duration-500 flex flex-col"
+              /* Card remains white to stand out against the mixed background */
+              className="group relative bg-white rounded-[2.5rem] p-8 md:p-10 border border-green-50 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.02),0_4px_25px_-2px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500 flex flex-col"
             >
               {/* Decorative Quote Icon */}
               <div className="absolute top-8 right-8 text-gray-100 group-hover:text-primary/20 group-hover:rotate-12 transition-all duration-500">
@@ -86,9 +89,6 @@ export default function ReviewsSection() {
             </div>
           ))}
         </div>
-
-        {/* --- OPTIONAL SOCIAL PROOF BAR --- */}
-
       </div>
     </section>
   );

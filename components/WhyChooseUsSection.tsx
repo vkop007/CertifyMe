@@ -107,7 +107,7 @@ export default function WhyChooseUsSection() {
         </div>
 
         {/* Bottom Call to Action (Optional) */}
-        <div className="mt-20 p-8 md:p-12 bg-gray-900 rounded-[3rem] relative overflow-hidden shadow-2xl shadow-gray-950/20">
+        {/* <div className="mt-20 p-8 md:p-12 bg-gray-900 rounded-[3rem] relative overflow-hidden shadow-2xl shadow-gray-950/20">
             <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-[100px]" />
             <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
                 <div className="text-center md:text-left">
@@ -121,7 +121,7 @@ export default function WhyChooseUsSection() {
   EXPLORE VOUCHERS
 </Link>
             </div>
-        </div>
+        </div> */}
 
       </div>
     </section>

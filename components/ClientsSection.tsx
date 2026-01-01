@@ -7,7 +7,7 @@ const LOGOS = [...clients, ...clients];
 
 export default function ClientsSection() {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-10 bg-background">
       <div className="container-custom">
 
         {/* Heading – SAME AS REVIEWS */}

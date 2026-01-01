@@ -8,6 +8,7 @@ import {
   BookOpen,
   MessageSquare,
   Briefcase,
+  ChevronDown,
 } from "lucide-react";
 import { sendContactEmail } from "@/app/actions/email";
 import {
@@ -29,7 +30,30 @@ import {
   SAS,
   SPLUNK,
   VMWARE,
+  TABLEAU,
+  Databricks,
+  GCP,
+  SAP,
+  Snowflake,
+  SERVICENOW,
+  GRE,
+  TOEFL,
 } from "@/lib/index";
+
+const COUNTRIES = [
+  { name: "India", code: "+91", flag: "🇮🇳" },
+  { name: "USA", code: "+1", flag: "🇺🇸" },
+  { name: "UK", code: "+44", flag: "🇬🇧" },
+  { name: "Canada", code: "+1", flag: "🇨🇦" },
+  { name: "Australia", code: "+61", flag: "🇦🇺" },
+  { name: "UAE", code: "+971", flag: "🇦🇪" },
+  { name: "Singapore", code: "+65", flag: "🇸🇬" },
+  { name: "Germany", code: "+49", flag: "🇩🇪" },
+  { name: "France", code: "+33", flag: "🇫🇷" },
+  { name: "Saudi Arabia", code: "+966", flag: "🇸🇦" },
+  { name: "Nigeria", code: "+234", flag: "🇳🇬" },
+  { name: "South Africa", code: "+27", flag: "🇿🇦" },
+];
 
 export default function ContactForm() {
   const [selectedVendor, setSelectedVendor] = useState("");
@@ -46,30 +70,18 @@ export default function ContactForm() {
     "idle" | "success" | "error"
   >("idle");
 
+  const currentCountryData = COUNTRIES.find((c) => c.name === country) || COUNTRIES[0];
+
   const vendorToCertificates = {
-    AWS: AWS,
-    Checkpoint: Checkpoint,
-    CompTIA: CompTIA,
-    DELLEMC: DELLEMC,
-    Juniper: Juniper,
-    ECCouncil: ECCouncil,
-    Fortinet: Fortinet,
-    ISACA: ISACA,
-    ISTQB: ISTQB,
-    Kubernetes: KUBERNETES,
-    Microsoft: Microsoft,
-    Oracle: ORACLE,
-    Pega: PEGA,
-    Salesforce: SALESFORCE,
-    SAS: SAS,
-    Splunk: SPLUNK,
-    VMware: VMWARE,
+    AWS, Checkpoint, CompTIA, DELLEMC, Juniper, ECCouncil, Fortinet, 
+    ISACA, ISTQB, Kubernetes: KUBERNETES, Microsoft, Oracle: ORACLE, 
+    Pega: PEGA, Salesforce: SALESFORCE, SAS, Splunk: SPLUNK, VMware: VMWARE,
+    TABLEAU: TABLEAU, Databricks: Databricks, GCP: GCP, SAP: SAP, Snowflake: Snowflake,
+    ServiceNow: SERVICENOW, GRE: GRE, TOEFL: TOEFL,
   };
 
   const availableCourses = selectedVendor
-    ? vendorToCertificates[
-        selectedVendor as keyof typeof vendorToCertificates
-      ] || []
+    ? vendorToCertificates[selectedVendor as keyof typeof vendorToCertificates] || []
     : [];
 
   return (
@@ -82,7 +94,7 @@ export default function ContactForm() {
 
         const formData = {
           fullName,
-          phone,
+          phone: `${currentCountryData.code} ${phone}`,
           email,
           country,
           vendor: selectedVendor,
@@ -94,14 +106,8 @@ export default function ContactForm() {
 
         if (result.success) {
           setSubmitStatus("success");
-          // Reset form
-          setFullName("");
-          setPhone("");
-          setEmail("");
-          setCountry("India");
-          setSelectedVendor("");
-          setSelectedCourse("");
-          setMessage("");
+          setFullName(""); setPhone(""); setEmail(""); setCountry("India");
+          setSelectedVendor(""); setSelectedCourse(""); setMessage("");
         } else {
           setSubmitStatus("error");
         }
@@ -121,12 +127,23 @@ export default function ContactForm() {
         />
       </div>
 
-      {/* Phone Number */}
+      {/* Phone Number with Country Code Dropdown */}
       <div className="flex gap-3">
-        <div className="flex items-center gap-1 px-3 py-3 rounded-xl border border-gray-200 bg-gray-50 min-w-[90px]">
-          <span className="text-lg">🇮🇳</span>
-          <span className="text-gray-600 font-medium">+91</span>
+        <div className="relative min-w-[110px]">
+          <select
+            value={country}
+            onChange={(e) => setCountry(e.target.value)}
+            className="w-full h-full pl-3 pr-8 py-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-700 font-medium appearance-none outline-none focus:border-primary transition-all cursor-pointer"
+          >
+            {COUNTRIES.map((c) => (
+              <option key={c.name} value={c.name}>
+                {c.flag} {c.code}
+              </option>
+            ))}
+          </select>
+          <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
         </div>
+        
         <input
           type="tel"
           placeholder="Phone Number..."
@@ -150,21 +167,6 @@ export default function ContactForm() {
         />
       </div>
 
-      {/* Country */}
-      <div className="relative">
-        <Globe className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-        <select
-          value={country}
-          onChange={(e) => setCountry(e.target.value)}
-          className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all appearance-none bg-white text-gray-600"
-        >
-          <option>India</option>
-          <option>USA</option>
-          <option>UK</option>
-          <option>Canada</option>
-        </select>
-      </div>
-
       {/* Select Vendor */}
       <div className="relative">
         <Briefcase className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -172,17 +174,16 @@ export default function ContactForm() {
           value={selectedVendor}
           onChange={(e) => {
             setSelectedVendor(e.target.value);
-            setSelectedCourse(""); // Reset course when vendor changes
+            setSelectedCourse("");
           }}
-          className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all appearance-none bg-white text-gray-400"
+          className="w-full pl-12 pr-10 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all appearance-none bg-white text-gray-600"
         >
           <option value="">Select Vendor</option>
           {VENDORS.map((v) => (
-            <option key={v.name} value={v.name}>
-              {v.name}
-            </option>
+            <option key={v.name} value={v.name}>{v.name}</option>
           ))}
         </select>
+        <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
       </div>
 
       {/* Select Course */}
@@ -192,15 +193,14 @@ export default function ContactForm() {
           value={selectedCourse}
           onChange={(e) => setSelectedCourse(e.target.value)}
           disabled={!selectedVendor}
-          className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all appearance-none bg-white text-gray-400 disabled:bg-gray-100 disabled:cursor-not-allowed"
+          className="w-full pl-12 pr-10 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all appearance-none bg-white text-gray-600 disabled:bg-gray-100 disabled:cursor-not-allowed"
         >
           <option value="">Select Course</option>
           {availableCourses.map((course, index) => (
-            <option key={index} value={course.name}>
-              {course.name}
-            </option>
+            <option key={index} value={course.name}>{course.name}</option>
           ))}
         </select>
+        <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
       </div>
 
       {/* Message */}
@@ -223,14 +223,10 @@ export default function ContactForm() {
       </button>
 
       {submitStatus === "success" && (
-        <p className="text-green-600 text-center font-semibold mt-2">
-          Message sent successfully!
-        </p>
+        <p className="text-green-600 text-center font-semibold mt-2">Message sent successfully!</p>
       )}
       {submitStatus === "error" && (
-        <p className="text-red-500 text-center font-semibold mt-2">
-          Failed to send message. Please try again.
-        </p>
+        <p className="text-red-500 text-center font-semibold mt-2">Failed to send. Please try again.</p>
       )}
     </form>
   );
