@@ -1,6 +1,6 @@
 "use server";
 
-import { resend } from "@/lib/resend";
+import { transporter } from "@/lib/nodemailer";
 
 interface ContactFormData {
   fullName: string;
@@ -14,12 +14,15 @@ interface ContactFormData {
 
 export async function sendContactEmail(formData: ContactFormData) {
   const { fullName, phone, email, vendor, course, message, country } = formData;
-  const ownerEmail = "";
+
+  // Use environment variable for owner email, fallback to hardcoded if needed
+  const ownerEmail = process.env.OWNER_EMAIL;
+  const senderEmail = process.env.SMTP_USER;
 
   try {
     // 1. Send detailed email to Owner
-    const ownerEmailResult = await resend.emails.send({
-      from: "CertifyMe <onboarding@resend.dev>", // Replace with your verified domain
+    await transporter.sendMail({
+      from: `"CertifyMe" <${senderEmail}>`,
       to: ownerEmail,
       subject: `New Contact Enquiry from ${fullName}`,
       html: `
@@ -35,12 +38,21 @@ export async function sendContactEmail(formData: ContactFormData) {
       `,
     });
 
-    if (ownerEmailResult.error) {
-      console.error("Error sending owner email:", ownerEmailResult.error);
-      return { success: false, error: ownerEmailResult.error.message };
-    }
+    // 2. Send "Thank You" email to User
+    await transporter.sendMail({
+      from: `"CertifyMe" <${senderEmail}>`,
+      to: email,
+      subject: "Thank you for contacting CertifyMe",
+      html: `
+        <h2>Hello ${fullName},</h2>
+        <p>Thank you for reaching out to us. We have received your enquiry regarding <strong>${vendor || "our services"}</strong>.</p>
+        <p>Our team will get back to you shortly.</p>
+        <br />
+        <p>Best regards,</p>
+        <p><strong>The CertifyMe Team</strong></p>
+      `,
+    });
 
-    // We only send email to owner now.
     return { success: true };
   } catch (error) {
     console.error("Server action error:", error);
