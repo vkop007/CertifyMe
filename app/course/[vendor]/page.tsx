@@ -14,16 +14,24 @@ import {
   Fortinet,
   VMWARE,
   SAS,
+  SAP,
   SPLUNK,
+  Snowflake,
   ECCouncil,
   Checkpoint,
   DELLEMC,
   Juniper,
+  TABLEAU,
   KUBERNETES,
   PEGA,
   ISTQB,
+  GCP,
+  GRE,
+  TOEFL,
   SERVICENOW,
+  Databricks,
 } from "@/lib/index";
+import { table } from "console";
 
 /* 🔁 Vendor → Courses map */
 const COURSE_MAP: Record<string, any[]> = {
@@ -33,9 +41,15 @@ const COURSE_MAP: Record<string, any[]> = {
   salesforce: SALESFORCE,
   oracle: ORACLE,
   isaca: ISACA,
+  tableau: TABLEAU,
+  sap: SAP,
+  snowflake: Snowflake,
   fortinet: Fortinet,
   vmware: VMWARE,
   sas: SAS,
+  gcp: GCP,
+  gre: GRE,
+  toefl: TOEFL,
   splunk: SPLUNK,
   eccouncil: ECCouncil,
   checkpoint: Checkpoint,
@@ -44,7 +58,8 @@ const COURSE_MAP: Record<string, any[]> = {
   kubernetes: KUBERNETES,
   pega: PEGA,
   istqb: ISTQB,
-  SERVICENOW: SERVICENOW,
+  servicenow: SERVICENOW,
+  databricks: Databricks,
 };
 
 export default function VendorCoursePage() {

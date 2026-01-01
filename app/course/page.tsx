@@ -92,10 +92,8 @@ export default function CoursePage() {
   const [userSelectedVendor, setUserSelectedVendor] = useState(false);
 
   // 🔹 ALL COURSES
-  const ALL_COURSES = useMemo(
-    () => Object.values(COURSE_MAP).flat(),
-    []
-  );
+  const ALL_COURSES = useMemo(() => Object.values(COURSE_MAP).flat(), []);
+  console.log(searchParams);
 
   // 🔥 RESET vendor-click WHEN SEARCH QUERY CHANGES
   useEffect(() => {
@@ -155,14 +153,12 @@ export default function CoursePage() {
   return (
     <main className="min-h-screen bg-gray-50/50">
       <Header />
-
       <div className="pt-5 pb-8">
         <div className="container-custom mx-auto px-4 md:px-8">
           {/* HEADER */}
           <div className="text-left max-w-3xl mb-10">
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Browse Certification{" "}
-              <span className="text-primary">Courses</span>
+              Browse Certification <span className="text-primary">Courses</span>
             </h1>
             <p className="text-gray-600 max-w-2xl">
               Select a vendor below to explore our comprehensive collection of
@@ -183,8 +179,8 @@ export default function CoursePage() {
               {userSelectedVendor
                 ? `${selectedVendor} Courses`
                 : searchQuery
-                ? "Search Results"
-                : `${selectedVendor} Courses`}
+                  ? "Search Results"
+                  : `${selectedVendor} Courses`}
               <span className="ml-3 text-sm text-gray-500">
                 ({courses.length} Available)
               </span>
@@ -192,18 +188,11 @@ export default function CoursePage() {
 
             <CourseGrid
               courses={courses}
-              vendorName={
-                userSelectedVendor
-                  ? selectedVendor
-                  : searchQuery
-                  ? "Search Results"
-                  : selectedVendor
-              }
+              vendorName={encodeURIComponent(selectedVendor)}
             />
           </div>
         </div>
       </div>
-
       <Footer />
     </main>
   );
