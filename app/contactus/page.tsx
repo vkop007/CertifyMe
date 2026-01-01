@@ -1,66 +1,18 @@
 "use client";
 
-import { useState } from "react";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 import Link from "next/link";
-import {
-  AWS,
-  Microsoft,
-  CompTIA,
-  ECCouncil,
-  ORACLE,
-  Fortinet,
-  ISACA,
-  PEGA,
-  SAS,
-  SPLUNK,
-  VMWARE,
-  Juniper,
-  KUBERNETES,
-  Checkpoint,
-  DELLEMC,
-  SALESFORCE,
-  ISTQB,
-} from "@/lib/index";
-
-/* ---------------- VENDOR → COURSE MAP ---------------- */
-const VENDOR_COURSE_MAP: Record<string, any[]> = {
-  AWS,
-  Microsoft,
-  CompTIA,
-  "EC-Council": ECCouncil,
-  Oracle: ORACLE,
-  Fortinet,
-  ISACA,
-  PEGA,
-  SAS,
-  Splunk: SPLUNK,
-  VMware: VMWARE,
-  Juniper,
-  Kubernetes: KUBERNETES,
-  Checkpoint,
-  DELLEMC,
-  Salesforce: SALESFORCE,
-  ISTQB,
-};
+import ContactForm from "@/components/ContactForm";
 
 export default function ContactUsPage() {
-  const [selectedVendor, setSelectedVendor] = useState("");
-  const [courses, setCourses] = useState<any[]>([]);
-
-  const handleVendorChange = (vendor: string) => {
-    setSelectedVendor(vendor);
-    setCourses(VENDOR_COURSE_MAP[vendor] || []);
-  };
-
   return (
     <>
       <Header />
 
       {/* 🌿 BACKGROUND */}
-      <section className="relative py-24 bg-gradient-to-br from-[#ECFDF5] via-[#F0FDFA] to-[#FFFFFF]">
+      <section className="relative py-24 bg-linear-to-br from-[#ECFDF5] via-[#F0FDFA] to-[#FFFFFF]">
         <div className="container-custom mx-auto px-6 grid lg:grid-cols-2 gap-20 relative z-10">
           {/* LEFT CONTENT */}
           <div className="pt-6">
@@ -102,8 +54,7 @@ export default function ContactUsPage() {
     px-8 py-4 rounded-full
     bg-[#059669]
     hover:bg-[#047857]
-    text-white font-semibold
-    shadow-lg shadow-green-900/10
+    text-white font-semibold shadow-green-900/10
     shadow-[0_20px_45px_rgba(16,185,129,0.45)]
     hover:scale-[1.03]
     transition-all
@@ -132,91 +83,7 @@ export default function ContactUsPage() {
               We usually respond within minutes
             </p>
 
-            <form className="space-y-5">
-              {["Full Name", "Phone Number", "Email Address"].map((label) => (
-                <input
-                  key={label}
-                  placeholder={label}
-                  className="
-                    w-full px-6 py-3.5 rounded-full
-                    border border-gray-200
-                    focus:ring-2 focus:ring-green-300
-                    focus:border-green-400
-                    transition
-                    outline-none
-                  "
-                />
-              ))}
-
-              {/* VENDOR */}
-              <select
-                value={selectedVendor}
-                onChange={(e) => handleVendorChange(e.target.value)}
-                className="
-                  w-full px-6 py-3.5 rounded-full
-                  border border-gray-200
-                  focus:ring-2 focus:ring-green-300
-                  focus:border-green-400
-                  transition outline-none
-                "
-              >
-                <option value="">Select Vendor</option>
-                {Object.keys(VENDOR_COURSE_MAP).map((vendor) => (
-                  <option key={vendor} value={vendor}>
-                    {vendor}
-                  </option>
-                ))}
-              </select>
-
-              {/* COURSE */}
-              <select
-                disabled={!selectedVendor}
-                className="
-                  w-full px-6 py-3.5 rounded-full
-                  border border-gray-200
-                  bg-gray-50
-                  focus:ring-2 focus:ring-green-300
-                  transition outline-none
-                "
-              >
-                <option>
-                  {selectedVendor
-                    ? "Select Course"
-                    : "Select Course (Select Vendor First)"}
-                </option>
-                {courses.map((course, idx) => (
-                  <option key={idx}>
-                    {course.title || course.name || course.courseName}
-                  </option>
-                ))}
-              </select>
-
-              <textarea
-                rows={3}
-                placeholder="Message"
-                className="
-                  w-full px-6 py-4 rounded-2xl
-                  border border-gray-200
-                  focus:ring-2 focus:ring-green-300
-                  transition outline-none resize-none
-                "
-              />
-
-              <button
-                type="submit"
-                className="
-    w-full py-4 rounded-full
-    bg-[#059669]
-    hover:bg-[#047857]
-    text-white font-bold text-lg
-    shadow-[0_20px_50px_rgba(16,185,129,0.45)]
-    hover:scale-[1.02]
-    transition-all
-  "
-              >
-                Send Message
-              </button>
-            </form>
+            <ContactForm />
           </div>
         </div>
       </section>

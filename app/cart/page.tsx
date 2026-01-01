@@ -6,8 +6,6 @@ import {
   addToCartRequest,
   decreaseQuantity,
 } from "@/lib/redux/slices/cartSlice";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import Image from "next/image";
@@ -47,17 +45,17 @@ export default function CheckoutPage() {
       newErrors.fullName = "Full name is required";
     }
 
-if (!email.trim()) {
-  newErrors.email = "Email is required";
-} else if (!isValidEmail(email)) {
-  newErrors.email = "Enter a valid email address";
-}
+    if (!email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!isValidEmail(email)) {
+      newErrors.email = "Enter a valid email address";
+    }
 
-if (!phone.trim()) {
-  newErrors.phone = "Mobile number is required";
-} else if (!isValidPhone(phone)) {
-  newErrors.phone = "Enter a valid 10-digit mobile number";
-}
+    if (!phone.trim()) {
+      newErrors.phone = "Mobile number is required";
+    } else if (!isValidPhone(phone)) {
+      newErrors.phone = "Enter a valid 10-digit mobile number";
+    }
 
     setErrors(newErrors);
 
