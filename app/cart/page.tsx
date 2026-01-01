@@ -5,22 +5,24 @@ import { RootState } from "@/lib/redux/store";
 import {
   addToCartRequest,
   decreaseQuantity,
+  clearCart,
 } from "@/lib/redux/slices/cartSlice";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, ShieldCheck, CreditCard } from "lucide-react";
-import { useState } from "react";
-import { clearCart } from "@/lib/redux/slices/cartSlice";
+import { ArrowLeft, ShieldCheck, CreditCard, ChevronDown } from "lucide-react";
 
 export default function CheckoutPage() {
   const dispatch = useDispatch();
   const cartItems = useSelector((state: RootState) => state.cart.items);
   const router = useRouter();
+  
+  // States
   const [phone, setPhone] = useState("");
+  const [countryCode, setCountryCode] = useState("+91"); // Added for international support
   const [hasGST, setHasGST] = useState(false);
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
@@ -37,7 +39,8 @@ export default function CheckoutPage() {
     };
 
     const isValidPhone = (phone: string) => {
-      return /^[6-9]\d{9}$/.test(phone); // Indian 10-digit mobile
+      // Basic international validation: 7 to 15 digits
+      return phone.length >= 7 && phone.length <= 15;
     };
 
     if (cartItems.length === 0) return;
@@ -57,7 +60,7 @@ export default function CheckoutPage() {
     if (!phone.trim()) {
       newErrors.phone = "Mobile number is required";
     } else if (!isValidPhone(phone)) {
-      newErrors.phone = "Enter a valid 10-digit mobile number";
+      newErrors.phone = "Enter a valid phone number";
     }
 
     setErrors(newErrors);
@@ -65,12 +68,11 @@ export default function CheckoutPage() {
     if (Object.keys(newErrors).length > 0) return;
 
     try {
-      // 1️⃣ Create Razorpay Order
       const res = await fetch("/api/razorpay/order", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          amount: grandTotal, // ₹ total
+          amount: grandTotal,
         }),
       });
 
@@ -82,7 +84,6 @@ export default function CheckoutPage() {
         price: item.price * item.quantity,
       }));
 
-      // 2️⃣ Razorpay Options
       const options = {
         key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
         amount: order.amount,
@@ -100,19 +101,16 @@ export default function CheckoutPage() {
               customer_email: email,
               customer_name: fullName,
               amount: grandTotal,
-              products: purchasedProducts, // ✅ IMPORTANT
+              products: purchasedProducts,
             }),
           });
 
           if (!verifyRes.ok) {
-            const text = await verifyRes.text();
-            console.error("Verify API error:", text);
             alert("Payment verification failed on server");
             return;
           }
 
           const data = await verifyRes.json();
-
           if (data.success) {
             dispatch(clearCart());
             router.push("/order-success");
@@ -122,15 +120,15 @@ export default function CheckoutPage() {
         },
 
         prefill: {
-          name: fullName || "Customer",
-          email: email || "customer@example.com",
-          contact: phone || "9999999999",
+          name: fullName,
+          email: email,
+          contact: `${countryCode}${phone}`, // Combined code and phone
         },
 
         notes: {
           customer_name: fullName,
           customer_email: email,
-          customer_phone: phone,
+          customer_phone: `${countryCode}${phone}`,
         },
 
         theme: {
@@ -138,7 +136,6 @@ export default function CheckoutPage() {
         },
       };
 
-      // 4️⃣ Open Razorpay
       const rzp = new (window as any).Razorpay(options);
       rzp.open();
     } catch (err) {
@@ -158,7 +155,6 @@ export default function CheckoutPage() {
     <div className="bg-gray-50 min-h-screen">
       <Header />
 
-      {/* Added mt-[10px] here to create exactly 10px space below the nav */}
       <section className="container-custom mt-[10px] pb-20">
         <div className="mb-8 pt-6">
           <Link
@@ -203,46 +199,56 @@ export default function CheckoutPage() {
                   )}
                 </div>
 
+                {/* UPDATED PHONE FIELD WITH COUNTRY SELECT */}
                 <div>
                   <label className="text-[11px] font-bold text-slate-400 uppercase mb-2 block tracking-wider">
                     Phone Number*
                   </label>
 
-                  <div className="flex gap-2">
-                    <span className="flex items-center px-3 bg-slate-50 border border-slate-200 rounded-xl text-sm font-medium text-slate-600">
-                      +91
-                    </span>
-
-                    <div className="flex-1">
-                      <input
-                        type="tel"
-                        inputMode="numeric"
-                        pattern="[0-9]*"
-                        maxLength={10}
-                        value={phone}
-                        onChange={(e) => {
-                          const value = e.target.value.replace(/\D/g, ""); // remove non-numbers
-                          if (value.length <= 10) {
-                            setPhone(value);
-                          }
-                        }}
-                        className="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none"
-                      />
-
-                      {errors.phone && (
-                        <p className="mt-1 text-xs text-red-500 leading-tight">
-                          {errors.phone}
-                        </p>
-                      )}
+                  <div className="flex border border-slate-200 rounded-xl overflow-hidden focus-within:ring-2 focus-within:ring-primary/10 focus-within:border-primary transition-all">
+                    <div className="relative border-r border-slate-100 bg-slate-50">
+                      <select
+                        value={countryCode}
+                        onChange={(e) => setCountryCode(e.target.value)}
+                        className="appearance-none bg-transparent pl-4 pr-8 py-3 text-sm font-semibold text-slate-700 outline-none cursor-pointer"
+                      >
+                        <option value="+91">🇮🇳 +91</option>
+                        <option value="+1">🇺🇸 +1</option>
+                        <option value="+44">🇬🇧 +44</option>
+                        <option value="+971">🇦🇪 +971</option>
+                        <option value="+61">🇦🇺 +61</option>
+                        <option value="+65">🇸🇬 +65</option>
+                        <option value="+49">🇩🇪 +49</option>
+                      </select>
+                      <ChevronDown className="w-3 h-3 absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" />
                     </div>
+
+                    <input
+                      type="tel"
+                      inputMode="numeric"
+                      placeholder="99999 99999"
+                      value={phone}
+                      onChange={(e) => {
+                        const value = e.target.value.replace(/\D/g, "");
+                        if (value.length <= 15) {
+                          setPhone(value);
+                        }
+                      }}
+                      className="flex-1 px-4 py-3 outline-none text-sm text-slate-800"
+                    />
                   </div>
+
+                  {errors.phone && (
+                    <p className="mt-1 text-xs text-red-500 leading-tight">
+                      {errors.phone}
+                    </p>
+                  )}
                 </div>
 
                 <div>
                   <label className="text-[11px] font-bold text-slate-400 uppercase mb-2 block tracking-wider">
                     Email Address*
                   </label>
-
                   <input
                     type="email"
                     placeholder="john@example.com"
@@ -250,7 +256,6 @@ export default function CheckoutPage() {
                     onChange={(e) => setEmail(e.target.value.trim())}
                     className="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none"
                   />
-
                   {errors.email && (
                     <p className="mt-1 text-xs text-red-500 leading-tight">
                       {errors.email}
@@ -303,7 +308,7 @@ export default function CheckoutPage() {
             </div>
           </div>
 
-          {/* RIGHT: ORDER SUMMARY (Sticky with 2-item scroll) */}
+          {/* RIGHT: ORDER SUMMARY */}
           <div className="lg:col-span-5 lg:sticky lg:top-[80px]">
             <div className="bg-white border border-slate-200 rounded-3xl shadow-sm overflow-hidden">
               <div className="p-6">
@@ -314,102 +319,46 @@ export default function CheckoutPage() {
                   </span>
                 </h3>
 
-                {/* SCROLLABLE CONTAINER: Fixed height for exactly 2 items */}
                 <div className="space-y-3 overflow-y-auto h-[185px] pr-2 custom-scrollbar">
                   {cartItems.length === 0 ? (
                     <div className="h-[185px] flex flex-col items-center justify-center text-center px-6">
                       <ShieldCheck className="w-10 h-10 text-slate-300 mb-3" />
-                      <p className="text-sm font-semibold text-slate-600">
-                        Your cart is empty
-                      </p>
-                      <p className="text-xs text-slate-400 mt-1">
-                        Redirecting you to courses...
-                      </p>
-
-                      <Link
-                        href="/course"
-                        className="mt-4 inline-block text-sm font-bold text-primary hover:underline"
-                      >
+                      <p className="text-sm font-semibold text-slate-600">Your cart is empty</p>
+                      <Link href="/course" className="mt-4 inline-block text-sm font-bold text-primary hover:underline">
                         Browse Courses →
                       </Link>
                     </div>
                   ) : (
-                    <div className="space-y-3 overflow-y-auto h-[185px] pr-2 custom-scrollbar">
-                      {cartItems.map((item) => (
-                        <div
-                          key={item.id}
-                          className="flex gap-4 items-center p-3 rounded-2xl bg-slate-50 border border-slate-100"
-                        >
-                          <div className="relative h-14 w-14 flex-shrink-0">
-                            <Image
-                              src={item.image}
-                              alt={item.name}
-                              fill
-                              className="rounded-lg object-cover bg-white"
-                            />
-                          </div>
-
-                          <div className="flex-1 min-w-0">
-                            <p className="text-sm font-bold text-slate-800 truncate">
-                              {item.name}
-                            </p>
-
-                            <div className="flex items-center gap-3 mt-1">
-                              <div className="flex items-center border rounded-lg bg-white overflow-hidden shadow-sm">
-                                <button
-                                  onClick={() =>
-                                    dispatch(decreaseQuantity(item.id))
-                                  }
-                                  className="px-2 py-0.5 border-r hover:bg-slate-50 text-xs"
-                                >
-                                  –
-                                </button>
-                                <span className="px-2 text-[10px] font-bold">
-                                  {item.quantity}
-                                </span>
-                                <button
-                                  onClick={() =>
-                                    dispatch(addToCartRequest(item))
-                                  }
-                                  className="px-2 py-0.5 border-l hover:bg-slate-50 text-xs"
-                                >
-                                  +
-                                </button>
-                              </div>
-
-                              <span className="text-sm font-bold text-primary">
-                                ₹{item.price * item.quantity}
-                              </span>
+                    cartItems.map((item) => (
+                      <div key={item.id} className="flex gap-4 items-center p-3 rounded-2xl bg-slate-50 border border-slate-100">
+                        <div className="relative h-14 w-14 flex-shrink-0">
+                          <Image src={item.image} alt={item.name} fill className="rounded-lg object-cover bg-white" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="text-sm font-bold text-slate-800 truncate">{item.name}</p>
+                          <div className="flex items-center gap-3 mt-1">
+                            <div className="flex items-center border rounded-lg bg-white overflow-hidden shadow-sm">
+                              <button onClick={() => dispatch(decreaseQuantity(item.id))} className="px-2 py-0.5 border-r hover:bg-slate-50 text-xs">–</button>
+                              <span className="px-2 text-[10px] font-bold">{item.quantity}</span>
+                              <button onClick={() => dispatch(addToCartRequest(item))} className="px-2 py-0.5 border-l hover:bg-slate-50 text-xs">+</button>
                             </div>
+                            <span className="text-sm font-bold text-primary">₹{item.price * item.quantity}</span>
                           </div>
                         </div>
-                      ))}
-                    </div>
+                      </div>
+                    ))
                   )}
                 </div>
               </div>
 
-              {/* Dark Payment Section */}
-              <div className="bg-gradient-to-b from-[#f3faf7] to-white overflow-hidden p-6 text-black">
+              <div className="bg-gradient-to-b from-[#f3faf7] to-white p-6 text-black">
                 <div className="space-y-3 mb-6">
-                  <div className="flex justify-between text-black text-sm">
-                    <span>Subtotal</span>
-                    <span className="text-black font-medium">
-                      ₹{totalAmount}
-                    </span>
-                  </div>
-                  <div className="flex justify-between text-black text-sm">
-                    <span>Tax (GST 18%)</span>
-                    <span className="text-black font-medium">₹{gst}</span>
-                  </div>
+                  <div className="flex justify-between text-sm"><span>Subtotal</span><span className="font-medium">₹{totalAmount}</span></div>
+                  <div className="flex justify-between text-sm"><span>Tax (GST 18%)</span><span className="font-medium">₹{gst}</span></div>
                   <div className="pt-4 border-t border-slate-800 flex justify-between items-end">
                     <div>
-                      <p className="text-[10px] text-black uppercase font-black tracking-[0.2em] mb-1">
-                        Total Payable
-                      </p>
-                      <p className="text-3xl font-black text-black">
-                        ₹{grandTotal}
-                      </p>
+                      <p className="text-[10px] uppercase font-black tracking-[0.2em] mb-1">Total Payable</p>
+                      <p className="text-3xl font-black">₹{grandTotal}</p>
                     </div>
                   </div>
                 </div>
@@ -418,11 +367,7 @@ export default function CheckoutPage() {
                   onClick={handleRazorpayPayment}
                   disabled={cartItems.length === 0}
                   className={`w-full py-4 rounded-2xl font-bold flex items-center justify-center gap-3 transition-all
-      ${
-        cartItems.length === 0
-          ? "bg-slate-700 text-slate-400 cursor-not-allowed"
-          : "bg-primary text-white hover:brightness-110 active:scale-[0.98] shadow-xl shadow-primary/20"
-      }`}
+                  ${cartItems.length === 0 ? "bg-slate-700 text-slate-400" : "bg-primary text-white hover:brightness-110 active:scale-[0.98] shadow-xl shadow-primary/20"}`}
                 >
                   <CreditCard className="w-5 h-5" />
                   Proceed to Payment
@@ -436,16 +381,9 @@ export default function CheckoutPage() {
       <Footer />
 
       <style jsx global>{`
-        .custom-scrollbar::-webkit-scrollbar {
-          width: 4px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-          background: transparent;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-          background: #e2e8f0;
-          border-radius: 10px;
-        }
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 10px; }
       `}</style>
     </div>
   );
