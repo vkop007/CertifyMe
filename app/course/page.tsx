@@ -22,9 +22,12 @@ import {
   Microsoft,
   SALESFORCE,
   ISTQB,
+  CISCO,
   SAS,
   SPLUNK,
   ECCouncil,
+  TOEFL,
+  GRE,
 } from "@/lib/index";
 import { useSearchParams, useRouter } from "next/navigation";
 
@@ -47,6 +50,7 @@ const COURSE_MAP: Record<string, Course[]> = {
   AWS: AWS,
   Checkpoint: Checkpoint,
   Pega: PEGA,
+  Cisco: CISCO,
   Databricks: Databricks,
   ISACA: ISACA,
   DELLEMC: DELLEMC,
@@ -57,6 +61,8 @@ const COURSE_MAP: Record<string, Course[]> = {
   Kubernetes: KUBERNETES,
   VMware: VMWARE,
   SAS: SAS,
+  TOEFL: TOEFL,
+  GRE: GRE,
   ECCouncil: ECCouncil,
   Microsoft: Microsoft,
   Salesforce: SALESFORCE,

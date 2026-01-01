@@ -440,6 +440,157 @@ To boost your career prospects Oracle Certifications can prove most rewarding. T
   },
 ];
 
+
+
+export const TOEFL = [
+  {
+    name: "TOEFL Exam Voucher",
+    category: "English Exam",
+    actualPrice: 18000,
+    ourPrice: 13999,
+    image: "/Certificates/Toefl/toefl.webp",
+
+    content: `TOEFL Exam Voucher
+
+The TOEFL iBT is one of the world’s most widely accepted English language proficiency tests, recognized by universities, employers, and immigration authorities across the globe. Conducted by ETS (Educational Testing Service), the TOEFL exam evaluates a candidate’s ability to read, listen, speak, and write in English within an academic context.
+
+Because the TOEFL exam fee can be expensive, many candidates in India prefer using a TOEFL exam voucher to complete their registration at a discounted price. TOEFL vouchers allow students to securely book their exam without extra card charges or hidden fees, making the entire registration process more affordable and hassle-free.
+
+This TOEFL voucher is valid for all TOEFL formats, including:
+• TOEFL iBT (Internet-based Test)  
+• TOEFL Paper-based Test  
+• TOEFL iBT Home Edition  
+
+The voucher is exclusively valid for test-takers in India and comes with a 12-month validity period from the date of issuance, giving candidates complete flexibility to schedule their exam.
+
+How Can You Use the TOEFL Voucher?
+
+Book the Test Yourself
+• Contact us to purchase your TOEFL voucher  
+• Receive your voucher code instantly via email  
+• Log in to your ETS TOEFL account  
+• Select your preferred test date and center  
+• Enter the 12-digit voucher code at payment  
+• Confirm booking – exam fee is fully covered  
+
+Let Us Handle the Booking for You
+• 100% genuine and valid TOEFL vouchers  
+• Discounted pricing to save on exam fees  
+• End-to-end booking support across India  
+• Expert assistance to avoid registration errors  
+
+This ensures a smooth, secure, and stress-free exam booking experience.`,
+
+    examDetails: `
+<table width="100%">
+  <tbody>
+    <tr>
+      <th>Exam Name</th>
+      <td>TOEFL iBT</td>
+    </tr>
+    <tr>
+      <th>Exam Provider</th>
+      <td>ETS (Educational Testing Service)</td>
+    </tr>
+    <tr>
+      <th>Exam Duration</th>
+      <td>Approximately 2 hours</td>
+    </tr>
+    <tr>
+      <th>Exam Formats</th>
+      <td>iBT, Paper-based, iBT Home Edition</td>
+    </tr>
+    <tr>
+      <th>Voucher Validity</th>
+      <td>12 Months (India Only)</td>
+    </tr>
+    <tr>
+      <th>Scoring Scale</th>
+      <td>0 – 120</td>
+    </tr>
+  </tbody>
+</table>
+`,
+  },
+];
+
+export const GRE = [
+  {
+    name: "GRE Exam Voucher",
+    category: "English Exam",
+    actualPrice: 22500,
+    ourPrice: 20999,
+    image: "/Certificates/GRE/gre.webp",
+
+    content: `GRE Exam Voucher
+
+The GRE General Test is a globally recognized entrance examination for admission into graduate and business schools. Conducted by ETS (Educational Testing Service), the GRE assesses a candidate’s verbal reasoning, quantitative reasoning, critical thinking, and analytical writing skills—core competencies required for academic success in higher education.
+
+Due to the high cost of the GRE exam, many candidates in India prefer purchasing a GRE exam voucher to register at a discounted price without additional card charges or hidden fees. Using a voucher makes the GRE registration process more affordable, secure, and hassle-free across India.
+
+This GRE voucher is valid for all GRE test formats, including:
+• GRE at Home  
+• Computer-delivered GRE  
+• Paper-delivered GRE  
+
+The voucher is exclusively applicable for candidates in India and comes with a 12-month validity period from the date of purchase, allowing flexibility in scheduling the exam.
+
+How Can You Use the GRE Voucher?
+
+Book the Test Yourself
+• Contact us to purchase your GRE voucher  
+• Receive your unique 12-digit alphanumeric voucher code via email  
+• Log in or sign up on the official ETS GRE portal  
+• Choose your preferred test date, time, and location  
+• Enter the voucher code at checkout instead of card payment  
+• Confirm booking – exam fees are fully covered  
+
+Let Us Manage the Booking for You
+• 100% genuine GRE vouchers with guaranteed validity  
+• Discounted pricing to save on exam fees  
+• Professional booking support across India  
+• Expert guidance to prevent registration errors  
+
+This ensures a smooth, secure, and stress-free GRE exam booking experience.`,
+
+    examDetails: `
+<table width="100%">
+  <tbody>
+    <tr>
+      <th>Exam Name</th>
+      <td>GRE General Test</td>
+    </tr>
+    <tr>
+      <th>Exam Provider</th>
+      <td>ETS (Educational Testing Service)</td>
+    </tr>
+    <tr>
+      <th>Exam Duration</th>
+      <td>1 hour 58 minutes</td>
+    </tr>
+    <tr>
+      <th>Exam Formats</th>
+      <td>GRE at Home, Computer-delivered, Paper-delivered</td>
+    </tr>
+    <tr>
+      <th>Voucher Validity</th>
+      <td>12 Months (India Only)</td>
+    </tr>
+    <tr>
+      <th>Scoring Scale</th>
+      <td>
+        Verbal: 130–170<br/>
+        Quantitative: 130–170<br/>
+        Analytical Writing: 0–6
+      </td>
+    </tr>
+  </tbody>
+</table>
+`,
+  },
+];
+
+
 export const AWS = [
   {
     name: "AWS Certified Cloud Practitioner (CLF-C02)",
@@ -1263,59 +1414,58 @@ Prerequisites
 ];
 
 export const Databricks = [
-    {
+  {
     name: "Databricks Certified Associate Data Engineer",
     category: "Databricks",
     actualPrice: 21240,
     ourPrice: 14999,
     image: "/Certificates/Databricks/associate.svg",
 
-    content: `VMware Certified Advanced Professional (VCAP-DCV)
+    content: `Databricks Certified Associate Data Engineer
 
-The VMware Certified Advanced Professional (VCAP) certification is an elite credential designed for experienced IT professionals who want to validate advanced expertise in VMware technologies. This certification recognizes professionals who can design, implement, optimize, and manage VMware solutions at an enterprise level.
+The Databricks Certified Associate Data Engineer certification validates the foundational skills required to build and manage data pipelines using the Databricks Lakehouse Platform. This certification is designed for professionals who work with data ingestion, transformation, and orchestration in modern analytics environments.
 
-VCAP certification validates advanced skills in VMware vSphere, vCloud, and vSAN. It is ideal for seasoned system administrators, infrastructure engineers, and consultants who work with complex virtualized environments. Certified professionals are recognized for their ability to deliver high-performance, scalable, and reliable VMware infrastructures.
+It focuses on core concepts such as Apache Spark, Delta Lake, ETL pipelines, data modeling, and SQL-based analytics within Databricks. Certified professionals demonstrate the ability to create reliable, scalable, and efficient data workflows that support business intelligence and analytics use cases.
 
-Earning this certification positions you as a trusted VMware specialist and opens doors to higher-paying roles, better career opportunities, and increased job satisfaction. While the exam is known for its rigor, Global IT Success makes it affordable by offering authorized discounted exam vouchers so you can certify without financial stress.
+This certification is ideal for aspiring data engineers, analytics engineers, and professionals transitioning into data engineering roles. Earning the Associate certification helps establish credibility, improves job prospects, and serves as a stepping stone toward advanced Databricks certifications.
 
-Prerequisites & Certification Paths
-• Recommended attendance of VMware vSphere: Design [V8] training  
-• Passing the VMware vSphere 8.x Advanced Design exam (3V0-21.23)  
-• Applicable pathways exist for candidates holding:
-  – VCAP-DCV Design 2021 or newer  
-  – VCAP-DCV Deploy 2021 or newer  
-  – Any VCAP track from 2021 or later  
-  – VCAP-DCV Design 2023 (with VCP-DCV 2024 or VCP-DCV 2023)
+Global IT Success offers authorized discounted Databricks exam vouchers, allowing you to earn your certification affordably and with confidence.
 
-NOTE: Training courses are strongly recommended to ensure exam readiness and success.`,
+Prerequisites & Certification Path
+• Basic understanding of SQL and data concepts  
+• Familiarity with Databricks and Apache Spark fundamentals  
+• Ideal starting point for the Databricks Data Engineer certification track  
+
+NOTE: Hands-on practice with Databricks is strongly recommended for exam success.`,
 
     examDetails: `
 <table width="100%">
   <tbody>
     <tr>
       <th>Exam Code</th>
-      <td>VCAP-DCV</td>
+      <td>Databricks Certified Associate Data Engineer</td>
     </tr>
     <tr>
       <th>Exam Duration</th>
-      <td>205 minutes</td>
+      <td>90 minutes</td>
     </tr>
     <tr>
       <th>Number of Questions</th>
-      <td>60</td>
+      <td>45</td>
     </tr>
     <tr>
       <th>Question Format</th>
-      <td>Drag and Drop, Matching, Multiple Choice, Design Tool items</td>
+      <td>Multiple Choice and Multiple Select</td>
     </tr>
     <tr>
       <th>Passing Score</th>
-      <td>300 (on a scale of 100–500)</td>
+      <td>Approximately 70%</td>
     </tr>
   </tbody>
 </table>
 `,
   },
+
   {
     name: "Databricks Certified Professional Data Engineer",
     category: "Databricks",
@@ -1323,35 +1473,33 @@ NOTE: Training courses are strongly recommended to ensure exam readiness and suc
     ourPrice: 14999,
     image: "/Certificates/Databricks/professional.svg",
 
-    content: `VMware Certified Advanced Professional (VCAP-DCV)
+    content: `Databricks Certified Professional Data Engineer
 
-The VMware Certified Advanced Professional (VCAP) certification is an elite credential designed for experienced IT professionals who want to validate advanced expertise in VMware technologies. This certification recognizes professionals who can design, implement, optimize, and manage VMware solutions at an enterprise level.
+The Databricks Certified Professional Data Engineer certification validates advanced expertise in designing, building, and optimizing large-scale data solutions using the Databricks Lakehouse Platform. It is intended for experienced data engineers who work with complex data pipelines and production-grade workloads.
 
-VCAP certification validates advanced skills in VMware vSphere, vCloud, and vSAN. It is ideal for seasoned system administrators, infrastructure engineers, and consultants who work with complex virtualized environments. Certified professionals are recognized for their ability to deliver high-performance, scalable, and reliable VMware infrastructures.
+This certification tests your ability to implement advanced data engineering concepts, including performance optimization, streaming data processing, data governance, security, and troubleshooting in Databricks environments. Certified professionals are recognized for their ability to manage enterprise-grade analytics systems with high reliability and scalability.
 
-Earning this certification positions you as a trusted VMware specialist and opens doors to higher-paying roles, better career opportunities, and increased job satisfaction. While the exam is known for its rigor, Global IT Success makes it affordable by offering authorized discounted exam vouchers so you can certify without financial stress.
+Achieving this certification positions you as a senior-level data engineer and significantly enhances career opportunities in big data, cloud analytics, and data platform engineering roles.
 
-Prerequisites & Certification Paths
-• Recommended attendance of VMware vSphere: Design [V8] training  
-• Passing the VMware vSphere 8.x Advanced Design exam (3V0-21.23)  
-• Applicable pathways exist for candidates holding:
-  – VCAP-DCV Design 2021 or newer  
-  – VCAP-DCV Deploy 2021 or newer  
-  – Any VCAP track from 2021 or later  
-  – VCAP-DCV Design 2023 (with VCP-DCV 2024 or VCP-DCV 2023)
+Global IT Success provides authorized discounted Databricks exam vouchers to help you certify at a reduced cost without compromising authenticity.
 
-NOTE: Training courses are strongly recommended to ensure exam readiness and success.`,
+Prerequisites & Certification Path
+• Strong hands-on experience with Databricks and Apache Spark  
+• Proficiency in SQL, Python, or Scala  
+• Recommended progression after Associate Data Engineer certification  
+
+NOTE: Extensive real-world Databricks experience is strongly recommended before attempting this exam.`,
 
     examDetails: `
 <table width="100%">
   <tbody>
     <tr>
       <th>Exam Code</th>
-      <td>VCAP-DCV</td>
+      <td>Databricks Certified Professional Data Engineer</td>
     </tr>
     <tr>
       <th>Exam Duration</th>
-      <td>205 minutes</td>
+      <td>120 minutes</td>
     </tr>
     <tr>
       <th>Number of Questions</th>
@@ -1359,70 +1507,69 @@ NOTE: Training courses are strongly recommended to ensure exam readiness and suc
     </tr>
     <tr>
       <th>Question Format</th>
-      <td>Drag and Drop, Matching, Multiple Choice, Design Tool items</td>
+      <td>Multiple Choice and Multiple Select</td>
     </tr>
     <tr>
       <th>Passing Score</th>
-      <td>300 (on a scale of 100–500)</td>
+      <td>Approximately 70%</td>
     </tr>
   </tbody>
 </table>
 `,
   },
-    {
-    name: "Databricks Vouchers(Applies to all Databricks Exams)",
+
+  {
+    name: "Databricks Vouchers (Applies to All Databricks Exams)",
     category: "Databricks",
     actualPrice: 21240,
     ourPrice: 14999,
     image: "/Certificates/Databricks/databrick.webp",
 
-    content: `VMware Certified Advanced Professional (VCAP-DCV)
+    content: `Databricks Certification Exam Vouchers
 
-The VMware Certified Advanced Professional (VCAP) certification is an elite credential designed for experienced IT professionals who want to validate advanced expertise in VMware technologies. This certification recognizes professionals who can design, implement, optimize, and manage VMware solutions at an enterprise level.
+Databricks certification vouchers provide access to all Databricks certification exams, including Associate and Professional-level credentials. These vouchers are ideal for individuals and organizations looking for a flexible and cost-effective way to schedule Databricks exams.
 
-VCAP certification validates advanced skills in VMware vSphere, vCloud, and vSAN. It is ideal for seasoned system administrators, infrastructure engineers, and consultants who work with complex virtualized environments. Certified professionals are recognized for their ability to deliver high-performance, scalable, and reliable VMware infrastructures.
+Using an official Databricks voucher ensures secure exam registration, global exam availability, and compatibility with all Databricks certification tracks. Whether you are beginning your data engineering journey or advancing to professional-level credentials, Databricks vouchers offer complete flexibility.
 
-Earning this certification positions you as a trusted VMware specialist and opens doors to higher-paying roles, better career opportunities, and increased job satisfaction. While the exam is known for its rigor, Global IT Success makes it affordable by offering authorized discounted exam vouchers so you can certify without financial stress.
+Global IT Success offers authorized discounted Databricks exam vouchers, helping candidates save on certification costs while ensuring a smooth and legitimate exam experience.
 
-Prerequisites & Certification Paths
-• Recommended attendance of VMware vSphere: Design [V8] training  
-• Passing the VMware vSphere 8.x Advanced Design exam (3V0-21.23)  
-• Applicable pathways exist for candidates holding:
-  – VCAP-DCV Design 2021 or newer  
-  – VCAP-DCV Deploy 2021 or newer  
-  – Any VCAP track from 2021 or later  
-  – VCAP-DCV Design 2023 (with VCP-DCV 2024 or VCP-DCV 2023)
+Voucher Highlights
+• Valid for all Databricks certification exams  
+• Can be used globally  
+• Official and authorized vouchers  
+• Flexible scheduling based on exam availability  
 
-NOTE: Training courses are strongly recommended to ensure exam readiness and success.`,
+NOTE: Voucher validity and usage terms are subject to Databricks certification policies.`,
 
     examDetails: `
 <table width="100%">
   <tbody>
     <tr>
-      <th>Exam Code</th>
-      <td>VCAP-DCV</td>
+      <th>Applicable Exams</th>
+      <td>All Databricks Certification Exams</td>
     </tr>
     <tr>
-      <th>Exam Duration</th>
-      <td>205 minutes</td>
+      <th>Exam Provider</th>
+      <td>Databricks</td>
     </tr>
     <tr>
-      <th>Number of Questions</th>
-      <td>60</td>
+      <th>Exam Format</th>
+      <td>Online Proctored</td>
     </tr>
     <tr>
-      <th>Question Format</th>
-      <td>Drag and Drop, Matching, Multiple Choice, Design Tool items</td>
+      <th>Voucher Validity</th>
+      <td>As per Databricks policy</td>
     </tr>
     <tr>
       <th>Passing Score</th>
-      <td>300 (on a scale of 100–500)</td>
+      <td>Defined per individual exam</td>
     </tr>
   </tbody>
 </table>
 `,
   },
 ];
+
 
 export const VMWARE = [
   {
@@ -2948,7 +3095,7 @@ export const CISCO = [
     name: "Associate CCNA / CCNP Concentration Specialist Exam",
     category: "CISCO",
     actualPrice: 31860,
-    ourPrice: 27140,
+    ourPrice: 26999,
     image:
       "/Certificates/Cisco/Associate_CCNACCNP_Concentration_Specialist_Exam.webp",
 
@@ -3033,7 +3180,7 @@ Achieve your Cisco certification affordably with our authorized discounted vouch
     name: "CCNP Technology Core Exam",
     category: "CISCO",
     actualPrice: 42480,
-    ourPrice: 36108,
+    ourPrice: 35999,
     image: "/Certificates/Cisco/CCNP_Technology_Core_Exam.webp",
 
     content: `CCNP Technology Core Exam

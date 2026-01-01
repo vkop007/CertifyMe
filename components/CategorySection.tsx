@@ -16,15 +16,15 @@ export default function CategorySection() {
               <div
                 key={index}
                 className="mx-6 w-48 h-24 bg-white rounded-xl shadow-sm border border-gray-100
-                           flex items-center justify-center p-4
-                           hover:shadow-md hover:-translate-y-1 transition-all"
+             relative overflow-hidden
+             flex items-center justify-center
+             hover:shadow-md hover:-translate-y-1 transition-all"
               >
                 <Image
                   src={vendor.src}
                   alt={vendor.name}
-                  width={160}
-                  height={80}
-                  className="object-contain transition"
+                  fill
+                  className="object-contain p-4"
                 />
               </div>
             ))}

@@ -31,6 +31,14 @@ export default function CheckoutPage() {
   }>({});
 
   const handleRazorpayPayment = async () => {
+    const isValidEmail = (email: string) => {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    };
+
+    const isValidPhone = (phone: string) => {
+      return /^[6-9]\d{9}$/.test(phone); // Indian 10-digit mobile
+    };
+
     if (cartItems.length === 0) return;
 
     const newErrors: typeof errors = {};
@@ -39,13 +47,17 @@ export default function CheckoutPage() {
       newErrors.fullName = "Full name is required";
     }
 
-    if (!email.trim()) {
-      newErrors.email = "Email is required";
-    }
+if (!email.trim()) {
+  newErrors.email = "Email is required";
+} else if (!isValidEmail(email)) {
+  newErrors.email = "Enter a valid email address";
+}
 
-    if (!phone.trim() || phone.length < 10) {
-      newErrors.phone = "Enter a valid mobile number";
-    }
+if (!phone.trim()) {
+  newErrors.phone = "Mobile number is required";
+} else if (!isValidPhone(phone)) {
+  newErrors.phone = "Enter a valid 10-digit mobile number";
+}
 
     setErrors(newErrors);
 
@@ -188,8 +200,16 @@ export default function CheckoutPage() {
                     <div className="flex-1">
                       <input
                         type="tel"
+                        inputMode="numeric"
+                        pattern="[0-9]*"
+                        maxLength={10}
                         value={phone}
-                        onChange={(e) => setPhone(e.target.value)}
+                        onChange={(e) => {
+                          const value = e.target.value.replace(/\D/g, ""); // remove non-numbers
+                          if (value.length <= 10) {
+                            setPhone(value);
+                          }
+                        }}
                         className="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none"
                       />
 
@@ -211,7 +231,7 @@ export default function CheckoutPage() {
                     type="email"
                     placeholder="john@example.com"
                     value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    onChange={(e) => setEmail(e.target.value.trim())}
                     className="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none"
                   />
 

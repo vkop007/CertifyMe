@@ -16,6 +16,9 @@ import {
   SAS,
   SPLUNK,
   ECCouncil,
+  Databricks,
+  TOEFL,
+  GRE,
 } from "@/lib/index";
 
 export const generateSlug = (text: string) => {
@@ -46,6 +49,9 @@ const ALL_COURSES = [
   ...(SAS || []),
   ...(SPLUNK || []),
   ...(VMWARE || []),
+  ...(Databricks || []),  
+  ...(TOEFL || []),
+  ...(GRE || []),
 ];
 
 export const getCourseBySlug = (slug: string) => {

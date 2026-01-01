@@ -56,25 +56,25 @@ export default function EnquirySection() {
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left Column: Exam Vouchers Grid */}
           <div>
-            <h3 className="text-2xl font-bold text-text-dark mb-8">
-              Exam Vouchers
-            </h3>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {VENDORS.map((vendor, index) => (
-                <div
-                  key={index}
-                  className="bg-white border border-gray-100 rounded-xl p-4 h-20 flex items-center justify-center shadow-sm hover:shadow-md transition-shadow"
-                >
-                  <Image
-                    src={vendor.src}
-                    alt={vendor.name}
-                    width={160}
-                    height={80}
-                    className="object-contain transition"
-                  />
-                </div>
-              ))}
-            </div>
+  {VENDORS.map((vendor, index) => (
+    <div
+      key={index}
+      className="bg-white border border-gray-100 rounded-xl h-17
+                 relative overflow-hidden
+                 flex items-center justify-center
+                 shadow-sm hover:shadow-md transition-shadow"
+    >
+      <Image
+        src={vendor.src}
+        alt={vendor.name}
+        fill
+        className="object-contain p-3 transition"
+      />
+    </div>
+  ))}
+</div>
+
           </div>
 
           {/* Right Column: Enquiry Form */}
