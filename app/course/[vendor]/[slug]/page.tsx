@@ -18,6 +18,7 @@ export default function CourseDetailsPage() {
   const router = useRouter();
   const [course, setCourse] = useState<any>(null);
   const [loading, setLoading] = useState(true);
+  console.log(params);
 
   useEffect(() => {
     if (params.slug) {
@@ -91,7 +92,6 @@ export default function CourseDetailsPage() {
             <ArrowLeft className="w-4 h-4" />
             Back to {params.vendor?.toString().toUpperCase()} Courses
           </Link>
-
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
             {/* Left Content */}
             <div className="lg:col-span-2">
