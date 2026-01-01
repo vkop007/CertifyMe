@@ -28,6 +28,11 @@ import {
   ECCouncil,
   TOEFL,
   GRE,
+  GCP,
+  Snowflake,
+  SERVICENOW,
+  SAP,
+  TABLEAU,
 } from "@/lib/index";
 import { useSearchParams, useRouter } from "next/navigation";
 
@@ -50,7 +55,9 @@ const COURSE_MAP: Record<string, Course[]> = {
   AWS: AWS,
   Checkpoint: Checkpoint,
   Pega: PEGA,
+  GCP: GCP,
   Cisco: CISCO,
+  Snowflake: Snowflake,
   Databricks: Databricks,
   ISACA: ISACA,
   DELLEMC: DELLEMC,
@@ -68,6 +75,9 @@ const COURSE_MAP: Record<string, Course[]> = {
   Salesforce: SALESFORCE,
   ISTQB: ISTQB,
   Splunk: SPLUNK,
+  SERVICENOW: SERVICENOW,
+  SAP: SAP,
+  TABLEAU: TABLEAU,
 };
 
 export default function CoursePage() {

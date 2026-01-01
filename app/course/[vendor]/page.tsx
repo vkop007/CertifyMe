@@ -22,6 +22,7 @@ import {
   KUBERNETES,
   PEGA,
   ISTQB,
+  SERVICENOW,
 } from "@/lib/index";
 
 /* 🔁 Vendor → Courses map */
@@ -43,6 +44,7 @@ const COURSE_MAP: Record<string, any[]> = {
   kubernetes: KUBERNETES,
   pega: PEGA,
   istqb: ISTQB,
+  SERVICENOW: SERVICENOW,
 };
 
 export default function VendorCoursePage() {
