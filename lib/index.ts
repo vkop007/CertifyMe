@@ -861,7 +861,6 @@ Global IT Success provides discounted and genuine Tableau exam vouchers to suppo
   },
 ];
 
-
 export const SERVICENOW = [
   {
     name: "ServiceNow Certified System Administrator (CSA) Exam Voucher",
@@ -1012,7 +1011,6 @@ Global IT Success offers discounted and genuine ServiceNow exam vouchers.`,
 `,
   },
 ];
-
 
 export const Snowflake = [
   {

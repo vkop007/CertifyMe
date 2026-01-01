@@ -14,11 +14,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ShieldCheck, CreditCard } from "lucide-react";
 import { useState } from "react";
+import { clearCart } from "@/lib/redux/slices/cartSlice";
 
 export default function CheckoutPage() {
   const dispatch = useDispatch();
   const cartItems = useSelector((state: RootState) => state.cart.items);
-
+  const router = useRouter();
   const [phone, setPhone] = useState("");
   const [hasGST, setHasGST] = useState(false);
   const [fullName, setFullName] = useState("");
@@ -47,17 +48,17 @@ export default function CheckoutPage() {
       newErrors.fullName = "Full name is required";
     }
 
-if (!email.trim()) {
-  newErrors.email = "Email is required";
-} else if (!isValidEmail(email)) {
-  newErrors.email = "Enter a valid email address";
-}
+    if (!email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!isValidEmail(email)) {
+      newErrors.email = "Enter a valid email address";
+    }
 
-if (!phone.trim()) {
-  newErrors.phone = "Mobile number is required";
-} else if (!isValidPhone(phone)) {
-  newErrors.phone = "Enter a valid 10-digit mobile number";
-}
+    if (!phone.trim()) {
+      newErrors.phone = "Mobile number is required";
+    } else if (!isValidPhone(phone)) {
+      newErrors.phone = "Enter a valid 10-digit mobile number";
+    }
 
     setErrors(newErrors);
 
@@ -74,6 +75,12 @@ if (!phone.trim()) {
       });
 
       const order = await res.json();
+
+      const purchasedProducts = cartItems.map((item) => ({
+        name: item.name,
+        quantity: item.quantity,
+        price: item.price * item.quantity,
+      }));
 
       // 2️⃣ Razorpay Options
       const options = {
@@ -93,13 +100,22 @@ if (!phone.trim()) {
               customer_email: email,
               customer_name: fullName,
               amount: grandTotal,
+              products: purchasedProducts, // ✅ IMPORTANT
             }),
           });
+
+          if (!verifyRes.ok) {
+            const text = await verifyRes.text();
+            console.error("Verify API error:", text);
+            alert("Payment verification failed on server");
+            return;
+          }
 
           const data = await verifyRes.json();
 
           if (data.success) {
-            alert("Payment Verified & Successful!");
+            dispatch(clearCart());
+            router.push("/order-success");
           } else {
             alert("Payment verification failed!");
           }
@@ -402,11 +418,11 @@ if (!phone.trim()) {
                   onClick={handleRazorpayPayment}
                   disabled={cartItems.length === 0}
                   className={`w-full py-4 rounded-2xl font-bold flex items-center justify-center gap-3 transition-all
-    ${
-      cartItems.length === 0
-        ? "bg-slate-700 text-slate-400 cursor-not-allowed"
-        : "bg-primary text-white hover:brightness-110 active:scale-[0.98] shadow-xl shadow-primary/20"
-    }`}
+      ${
+        cartItems.length === 0
+          ? "bg-slate-700 text-slate-400 cursor-not-allowed"
+          : "bg-primary text-white hover:brightness-110 active:scale-[0.98] shadow-xl shadow-primary/20"
+      }`}
                 >
                   <CreditCard className="w-5 h-5" />
                   Proceed to Payment
