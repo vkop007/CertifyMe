@@ -54,9 +54,9 @@ export default function CourseGrid({ courses, vendorName }: CourseGridProps) {
             <Image
               src={course.image}
               alt={course.name}
-              width={200}
-              height={120}
-              className="max-h-full max-w-full object-contain hover:scale-105 transition-transform"
+              width={250}
+              height={130}
+              className="object-contain hover:scale-105 transition-transform"
             />
           </div>
 

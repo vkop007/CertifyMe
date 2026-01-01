@@ -44,34 +44,35 @@ export default function VendorSlider({
               onClick={() => onSelect(vendor.name)}
               className={`
                 flex-shrink-0 snap-start
-                w-36 h-36 box-border
+                w-60 h-30 box-border
                 rounded-2xl
+                bg-gray-600
                 flex flex-col items-center justify-center gap-3
                 transition-all duration-300
                 ${
                   isActive
-                    ? "bg-white border-2 border-[#059669] shadow-lg scale-105"
+                    ? "border-2 border-[#059669] shadow-lg bg-white scale-105"
                     : "bg-white border border-gray-200 hover:border-[#059669]/60 hover:shadow-md"
                 }
               `}
             >
-              <div className="w-14 h-14 flex items-center justify-center">
+              <div className="w-35 h-35 flex items-center justify-center">
                 <Image
                   src={vendor.src}
                   alt={vendor.name}
-                  width={56}
-                  height={56}
-                  className="object-contain"
+                  width={200}
+                  height={200}
+                  className=""
                 />
               </div>
 
-              <span
+              {/* <span
                 className={`text-sm font-semibold text-center truncate max-w-[120px] ${
                   isActive ? "text-[#059669]" : "text-gray-600"
                 }`}
               >
                 {vendor.name}
-              </span>
+              </span> */}
             </button>
           );
         })}
