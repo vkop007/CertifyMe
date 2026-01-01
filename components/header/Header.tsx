@@ -7,26 +7,35 @@ import { useRouter, usePathname } from "next/navigation";
 import { useSelector } from "react-redux";
 import { RootState } from "@/lib/redux/store";
 
-const VOUCHERS = [
+/* ================== VOUCHER GROUPS ================== */
+const IT_VOUCHERS = [
   "AWS",
-  "Microsoft",
-  "Salesforce",
-  "Oracle",
-  "CompTIA",
-  "Kubernetes",
+  "Databricks",
+  "GCP",
   "Checkpoint",
-  "Red Hat",
-  "DELLEMC",
-  "VMware",
+  "SAP",
+  "Salesforce",
+  "Microsoft",
+  "Kubernetes",
   "Juniper",
+  "ISTQB",
+  "Snowflake",
+  "CompTIA",
+  "Oracle",
+  "Tableau",
+  "ServiceNow",
+  "DELLEMC",
+  "Cisco",
   "ECCouncil",
   "Fortinet",
   "ISACA",
-  "ISTQB",
   "Pega",
   "SAS",
   "Splunk",
+  "VMware",
 ];
+
+const ENGLISH_VOUCHERS = ["GRE", "TOEFL"];
 
 export default function Header() {
   const [openSearch, setOpenSearch] = useState(false);
@@ -61,20 +70,18 @@ export default function Header() {
             <span className="w-2 h-2 rounded-full bg-secondary mb-3" />
           </Link>
 
-          {/* DESKTOP NAV */}
+          {/* ================= DESKTOP NAV ================= */}
           <nav className="hidden lg:flex items-center gap-8">
             <Link
               href="/"
               className={`font-medium ${
-                pathname === "/"
-                  ? "text-primary"
-                  : "text-text-light hover:text-primary"
+                pathname === "/" ? "text-primary" : "text-text-light hover:text-primary"
               }`}
             >
               HOME
             </Link>
 
-            {/* VOUCHERS */}
+            {/* -------- VOUCHERS DROPDOWN -------- */}
             <div className="relative group">
               <Link
                 href="/course"
@@ -88,17 +95,45 @@ export default function Header() {
                 <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
               </Link>
 
-              <div className="absolute left-0 top-full mt-3 w-[420px] bg-white rounded-2xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
-                <div className="grid grid-cols-2 gap-2 p-4 max-h-72 overflow-y-auto">
-                  {VOUCHERS.map((item) => (
-                    <Link
-                      key={item}
-                      href={`/course?q=${encodeURIComponent(item)}`}
-                      className="px-3 py-2 rounded-lg text-sm hover:bg-green-50 hover:text-primary"
-                    >
-                      {item}
-                    </Link>
-                  ))}
+              <div className="absolute left-0 top-full mt-3 w-[520px] bg-white rounded-2xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+                <div className="p-5 space-y-6 max-h-[420px] overflow-y-auto">
+
+                  {/* IT CERTIFICATIONS */}
+                  <div>
+                    <p className="text-xs font-semibold text-gray-500 uppercase mb-3">
+                      IT Certifications
+                    </p>
+                    <div className="grid grid-cols-3 gap-2">
+                      {IT_VOUCHERS.map((item) => (
+                        <Link
+                          key={item}
+                          href={`/course?q=${encodeURIComponent(item)}`}
+                          className="px-3 py-2 rounded-lg text-sm hover:bg-green-50 hover:text-primary transition"
+                        >
+                          {item}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* ENGLISH CERTIFICATIONS */}
+                  <div className="border-t pt-4">
+                    <p className="text-xs font-semibold text-gray-500 uppercase mb-3">
+                      English Certifications
+                    </p>
+                    <div className="grid grid-cols-2 gap-2">
+                      {ENGLISH_VOUCHERS.map((item) => (
+                        <Link
+                          key={item}
+                          href={`/course?q=${encodeURIComponent(item)}`}
+                          className="px-3 py-2 rounded-lg text-sm hover:bg-blue-50 hover:text-primary transition"
+                        >
+                          {item}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+
                 </div>
               </div>
             </div>
@@ -137,10 +172,9 @@ export default function Header() {
             </Link>
           </nav>
 
-          {/* RIGHT ACTIONS */}
+          {/* ================= RIGHT ACTIONS ================= */}
           <div className="flex items-center gap-3 relative">
 
-            {/* SEARCH ICON */}
             <button
               onClick={() => setOpenSearch(!openSearch)}
               className="p-2 rounded-full hover:bg-gray-100 transition"
@@ -148,7 +182,6 @@ export default function Header() {
               <Search className="w-5 h-5" />
             </button>
 
-            {/* SEARCH INPUT (DESKTOP/TABLET) */}
             {openSearch && (
               <input
                 autoFocus
@@ -160,7 +193,6 @@ export default function Header() {
               />
             )}
 
-            {/* CART – VISIBLE ON ALL SCREENS */}
             <button
               onClick={() => router.push("/cart")}
               className="relative flex p-2 rounded-full hover:bg-gray-100 transition"
@@ -173,14 +205,11 @@ export default function Header() {
               )}
             </button>
 
-            {/* HAMBURGER */}
             <button
               onClick={() => setMobileMenu(!mobileMenu)}
               className="lg:hidden p-2"
             >
-              {mobileMenu ? (
-                <X className="w-6 h-6" />
-              ) : (
+              {mobileMenu ? <X className="w-6 h-6" /> : (
                 <>
                   <div className="w-6 h-0.5 bg-black mb-1.5" />
                   <div className="w-6 h-0.5 bg-black mb-1.5" />
@@ -191,7 +220,7 @@ export default function Header() {
           </div>
         </div>
 
-        {/* MOBILE / TABLET MENU */}
+        {/* ================= MOBILE MENU ================= */}
         {mobileMenu && (
           <div className="lg:hidden border-t py-4 space-y-2">
             {[
