@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, Suspense } from "react";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import VendorSlider from "@/components/VendorSlider";
@@ -81,6 +81,33 @@ const COURSE_MAP: Record<string, Course[]> = {
 };
 
 export default function CoursePage() {
+  return (
+    <Suspense fallback={<CoursePageSkeleton />}>
+      <CoursePageContent />
+    </Suspense>
+  );
+}
+
+function CoursePageSkeleton() {
+  return (
+    <main className="min-h-screen bg-gray-50/50">
+      <Header />
+      <div className="pt-5 pb-8">
+        <div className="container-custom mx-auto px-4 md:px-8">
+          <div className="text-left max-w-3xl mb-10">
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Browse Certification <span className="text-primary">Courses</span>
+            </h1>
+            <p className="text-gray-600 max-w-2xl">Loading courses...</p>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </main>
+  );
+}
+
+function CoursePageContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
 
@@ -107,7 +134,7 @@ export default function CoursePage() {
     if (!searchQuery || userSelectedVendor) return;
 
     const matchedVendor = VENDORS.find(
-      (v) => v.name.toLowerCase() === searchQuery
+      (v) => v.name.toLowerCase() === searchQuery,
     );
 
     if (matchedVendor) {
